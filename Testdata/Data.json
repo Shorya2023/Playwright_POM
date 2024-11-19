@@ -1,0 +1,19 @@
+{
+    "LoginDetails":{
+                        "url":"https://automationexercise.com/login",
+                        "username": "mon@tsl.com",
+                        "password": "india",
+                        "invalid_username":"hello@gmail.com",
+                        "invalid_password":"helo123"
+
+
+                    },
+     "OrderInfoDetails":   {
+                            "Name":"Newton",
+                            "City":"London",
+                            "Country": "UK",
+                            "CreditCard": "1254786234",
+                            "Month": "May",
+                            "Year": "2025" 
+                        }                     
+}

@@ -1,0 +1,34 @@
+Locator found with XPath: //form[@action='/login']//input[@name='email']
+Locator found with XPath: //form[@action='/login']//input[@name='password']
+Locator found with XPath: //button[text()='Login']
+Locator found with XPath: 
+Locator found with XPath: #search_product
+Locator found with XPath: #submit_search
+Locator found with XPath: #susbscribe_email
+Locator found with XPath: #subscribe
+Locator found with XPath: //input[@name='name']
+Locator found with XPath: //input[@name='email']
+Locator found with XPath: //input[@name='subject']
+Locator found with XPath: //input[@name='upload_file']
+Locator found with XPath: //input[@name='submit']
+Locator found with XPath: #message
+Locator found with XPath: //div[@class='features_items']//img
+Locator found with XPath: //div[@class='product-information']//h2
+Locator found with XPath: //div[@class='product-information']//p[1]
+Locator found with XPath: //div[@class='product-information']//span//span
+Locator found with XPath: //div[@class='product-information']//span//label
+Locator found with XPath: //div[@class='product-information']//p[2]
+Locator found with XPath: //div[@class='product-information']//p[3]
+Locator found with XPath: //div[@class='product-information']//p[4]
+Locator found with XPath: //div[@class='productinfo text-center']//p
+Locator found with XPath: //div[@class='productinfo text-center']//img
+Locator found with XPath: //div[@class='productinfo text-center']//h2
+Navigated to URL successfully.
+Text Entered successfully.
+Text Entered successfully.
+locator('//button[text()=\'Login\']')Element clicked successfully.
+Home -------   Home both ae same
+click on header-- Home
+Text Entered successfully.
+locator('#subscribe')Element clicked successfully.
+getByText(/^You have been successfully subscribed!/i) Element is visible.

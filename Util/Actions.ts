@@ -280,6 +280,7 @@ export class Actions {
       console.log('Checkbox unchecked successfully.');
     } catch (error) {
       console.error('Error unchecking checkbox:', error);
+      FAIL("Error while checking");
       throw error;
 
     }
@@ -291,6 +292,7 @@ export class Actions {
       console.log('Element hovered successfully.');
     } catch (error) {
       console.error('Error hovering over element:', error);
+      FAIL("Error while hover to element");
       throw error;
 
     }
@@ -312,6 +314,7 @@ export class Actions {
       console.log('Screenshot taken successfully.');
     } catch (error) {
       console.error('Error taking screenshot:', error);
+       FAIL("Error while taking screnshot");
       throw error;
     }
   }

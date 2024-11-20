@@ -11,7 +11,8 @@ export class Assert {
         await expect(locator).toBeChecked({ timeout });
         console.log(locator,'Element is checked.');
       } catch (error) {
-        console.error(locator , 'Error: Element is not checked.', error);
+        FAIL("Error: Element is not checked");
+        throw error;
       }
     }
   
@@ -22,6 +23,8 @@ export class Assert {
         console.log(locator ,'Element is disabled.');
       } catch (error) {
         console.error(locator , 'Error: Element is not disabled.', error);
+        FAIL("Error: Element is not Disabled");
+        throw error;
       }
     }
   
@@ -109,6 +112,9 @@ export class Assert {
         console.log(locator ,'Element has the correct text.');
       } catch (error) {
         console.error(locator , 'Error: Element does not have the correct text.', error);
+        FAIL("Error: Element does not have the correct text ");
+        throw error;
+
       }
     }
   
@@ -141,7 +147,8 @@ export class Assert {
         await expect(sharedPage).toHaveURL(url, { timeout });
         console.log('Page has the correct URL.');
       } catch (error) {
-        console.error('Error: Page does not have the correct URL.', error);
+        FAIL("Error: Incorrect URL");
+        throw error;
       }
     }
   

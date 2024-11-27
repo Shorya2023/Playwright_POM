@@ -11,7 +11,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@playwright/test": "^1.48.2",
+    "@playwright/test": "^1.49.0",
     "@types/node": "^22.8.7",
     "allure-commandline": "^2.32.0",
     "ortoni-report": "^2.0.8",

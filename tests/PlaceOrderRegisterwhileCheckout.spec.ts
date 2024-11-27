@@ -27,11 +27,11 @@ test("PLace Order while register account",{
     logstep("click on view Product for the product to add ");
     await Actions.clickON_ViewProduct('Sleeveless Unicorn Patch Gown - Pink');
 
-    logstep("Cick on Add to cart");
-    await Actions.waitForElement(pages.objsearchResulsProduct.addToCart);
+    logstep("Cick on Add to cart for the above product to be in cart");
     await pages.objsearchResulsProduct.clickOnAddToCart();
 
     logstep("Verify message-'Your product has been added to cart'");
+    await Actions.waitForElement(pages.objAllProducts.productAddedLabel);
     await Assert.expectToBeVisible(pages.objAllProducts.productAddedLabel); 
 
     logstep("Click on view cart");
@@ -46,19 +46,8 @@ test("PLace Order while register account",{
     logstep("Verify message-Register / Login account to proceed on checkout");
     await Assert.expectToBeVisible(pages.objsearchResulsProduct.LabelRegisterLogin); 
     
-
-})
-
-test("SignUp",{
-    annotation:{
-       type:"Signup with new use Login",
-       description:"Signup with new use Login"
-    },tag:"@smoke"
-}, async ({pages,LoginFixture,LogoutFixture}) => {
-
     logstep("Click on Register/Login");
     await pages.objsearchResulsProduct.clickOnregister();
 
-    
-});
+})
 

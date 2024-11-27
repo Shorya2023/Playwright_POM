@@ -55,7 +55,7 @@ import { sharedPage } from '../Fixtures/CustomFixtures';
 
     async totalLink()
     {
-        const Links = await Actions.getArrayOfElement(this.allLinks);
+        const Links = await Actions.getArrayOfElement("//a");
         return Links.length;
 
     }

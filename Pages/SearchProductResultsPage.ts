@@ -32,7 +32,8 @@ import { logstep } from '../Util/AllurLogs';
 
         async clickOnAddToCart()
         {
-            await Actions.clickElement(this.addToCart);
+            await Actions.highlightElement(this.addToCart)
+            await Actions.hoverAndClick(this.addToCart);
         }
 
         async clickOnProceedToCheckout()
@@ -42,7 +43,7 @@ import { logstep } from '../Util/AllurLogs';
 
         async clickOnregister()
         {
-            await Actions.clickElement(this.RegisterLogin);
+            await Actions.hoverAndClick(this.RegisterLogin);
         }
 
     }

@@ -93,11 +93,26 @@ export class Actions {
 
   }
 
+
+  public static async hoverAndClick(locator: Locator) {
+    try {
+
+      await locator.hover();
+      await locator.click();
+      console.log(locator + ' hover and Element clicked successfully.');
+    } catch (error) {
+      console.error('Error clicking element:', locator,error);
+      throw error;
+
+    }
+  }
+
+
   public static async clickElement(locator: Locator) {
     try {
 
       await locator.click();
-      console.log(locator + 'Element clicked successfully.');
+      console.log(locator + ' hover and Element clicked successfully.');
     } catch (error) {
       console.error('Error clicking element:', locator,error);
       throw error;

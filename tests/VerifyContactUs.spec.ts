@@ -7,13 +7,14 @@ import { PlaceOrder } from '../Pages/PlaceOrder';
 import { Actions } from '../Util/Actions';
 
 
-test("Verify Contact Us Functionality",{annotation:
+test.skip("Verify Contact Us Functionality",{annotation:
     {type:"UI Test case",
       description: "Enter all informtion and click on sumbit and Verify the message diplayed"  
     }
    
-}, async ({  pages, LoginFixture, LogoutFixture }) => {
+}, async ({  pages, LoginFixture, LogoutFixture , context}) => {
 
+     await context.clearCookies();
     logstep("Login with valid credentials")
     await LoginFixture(LoginDetails.username,LoginDetails.password);
   

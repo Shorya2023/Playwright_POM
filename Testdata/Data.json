@@ -8,6 +8,17 @@
 
 
                     },
+    "NewUserDetails":{
+                        "url":"https://automationexercise.com/login",
+                        "username": "new@tsl.com",
+                        "password": "Canada",
+                        "invalid_username":"New@gmail.com",
+                        "invalid_password":"new"
+
+
+                    },
+                
+                    
      "OrderInfoDetails":   {
                             "Name":"Newton",
                             "City":"London",

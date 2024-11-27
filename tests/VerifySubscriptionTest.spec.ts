@@ -6,12 +6,14 @@ import { attachmentOnFailure, FAIL ,PASS,logstep} from '../Util/AllurLogs';
 import { Actions } from '../Util/Actions';
 
 
-test("Verify product added successfully Functionality",{annotation:
+test("Verify  subscription message-",{annotation:
     {type:"UI Test case",
-      description: "Verifying product added succeefully by clicking on add to cart link functionality"  
+      description: "Verify subscription message-'You have been successfully subscribed!"  
     }
    
-}, async ({  pages, LoginFixture, LogoutFixture }) => {
+}, async ({  pages, LoginFixture, LogoutFixture,context }) => {
+
+  await context.clearCookies();
 
     logstep("Login with valid credentials");
     await LoginFixture(LoginDetails.username,LoginDetails.password);
@@ -23,7 +25,7 @@ test("Verify product added successfully Functionality",{annotation:
     await Actions.scrollTOTheElement(pages.objhomepage.susbscribe_email);
     await pages.objhomepage.Susbscribe_email("abcv@gmail.com")
 
-    logstep("Verify message-'You have been successfully subscribed!");
+    logstep("Verify subscription message-'You have been successfully subscribed!");
     await Assert.expectToBeVisible(pages.objhomepage.LabelEmail);
     sharedPage.waitForTimeout(4000);
 })

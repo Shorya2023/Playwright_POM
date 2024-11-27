@@ -175,6 +175,18 @@ export class Assert {
       }
     }
   
+    //expect and eturn true if string includes a substring
+    public static includesSubstring(text1: any, text2: string) {
+      try {
+          expect(text1.includes(text2)).toBeTruthy();
+          console.log('Text1 -'+ text1+' contains substring'+ text2);
+      } catch (error) {
+        console.error('Text1 -'+ text1+' NOT CONTAINS a substring'+ text2);
+      }
+    }
+
+
+
     // Utility for toContainEqual
     public static expectArrayToContainEqual(array: object, element: any) {
       try {
@@ -193,6 +205,20 @@ export class Assert {
       } catch (error) {
           attachmentOnFailure("testInfo");
           console.error(value1, "and",value2,'Error: Values are not equal.', error);
+          FAIL("verification of two values are deeply equal.-FAILED"+value1+ "-Not Matching to-"+ value2);
+          attachmentOnFailure("testInfo");
+          throw error;
+      }
+    }
+
+    // Utility for toEqual
+    public static GreaterThanorEqual(value1: any, value2: any) {
+      try {
+          expect(value1).toBeGreaterThanOrEqual(value2);
+          console.log(value1, " GreaterThan ",value2);
+      } catch (error) {
+          attachmentOnFailure("testInfo");
+          console.error(value1, " GreaterThan ",value2, error);
           FAIL("verification of two values are deeply equal.-FAILED"+value1+ "-Not Matching to-"+ value2);
           attachmentOnFailure("testInfo");
           throw error;

@@ -1,7 +1,9 @@
 import { expect, Page } from '@playwright/test';
-import { sharedPage, sharedcontext, Locator } from '../Fixtures/CustomFixtures'
+import { sharedPage, sharedcontext, Locator} from '../Fixtures/CustomFixtures'
 import { FAIL, logstep, PASS } from './AllurLogs';
 import { error, log } from 'console';
+import { Assert } from './Assert';
+import { TIMEOUT } from 'dns/promises';
 
 export class Actions {
 
@@ -26,11 +28,27 @@ export class Actions {
           const regexp = new RegExp(`^${sText}`,'i')
           const locator =sharedPage.getByText(regexp,{exact:true});
           return locator;
-      }
-      catch(error)
-      {
+        }
+        catch(error)
+       {
         console.error('Error occurred getBYText locator:'+error);
-        
+      }
+
+  }
+
+  
+  public static async getLocatorHasText(element: string,stext: string):Locator
+  {
+        let locator:Locator;
+     try{ 
+
+        const locator= sharedPage.locator(element,{hasText: stext});
+        await locator;
+        return locator;
+        }
+        catch(error)
+       {
+        console.error('Error occurred getLocatorHasText locator:'+error);
       }
 
   }
@@ -78,11 +96,10 @@ export class Actions {
   public static async clickElement(locator: Locator) {
     try {
 
-      await locator.highlight();
       await locator.click();
       console.log(locator + 'Element clicked successfully.');
     } catch (error) {
-      console.error('Error clicking element:', error);
+      console.error('Error clicking element:', locator,error);
       throw error;
 
     }
@@ -473,11 +490,22 @@ export class Actions {
   }
 
 
+public static async clickON_ViewProduct(sProductName: string)
+{
+          try{
+                const ViewProduct = Actions.getXPATHCSSLocator(`//div[@class='features_items']//div[@class='productinfo text-center']//p[text()='${sProductName }']//following::ul[1]//li[1]//a`)
+                        //click on view Product for  specific sproduct name
+                    await ViewProduct.click();
+              }
+              catch(error)
+              {
+                console.error("view product not clicked : Error:"+ error)
+              }
+}
+  
+  
 
-  public static async addTocart_productDetail() {
-    
-    Actions.getXPATHCSSLocator("//div[@class='product-information']//button").click();
-  }
+
 
   public static async clickOnView_Product(sproductName: string) {
     try {
@@ -488,23 +516,57 @@ export class Actions {
 
     catch (error) {
       console.log(sproductName + "-Element add to cart not clicked ERROR:" + error);
-
     }
   }
 
-  public static async waitForElement(selector:Locator, timeout = 5000) {
-    try {
-          //  sharedPage.waitForSelector(selector,timeout);
-           selector.waitFor();
-           console.log(`Element with selector "${selector}" is within ${timeout}ms.`);
-        } 
-          catch (error) {
-          console.error(selector , 'Error: Element is not visible.', error);
-          FAIL("'Error: Element is not visible.'");
-          throw error;
-    }
+  public static async waitForElement(selector:any, timeout = 5000) {
+      try {
+            //  sharedPage.waitForSelector(selector,timeout);
+            selector.waitFor();
+            console.log(`Element with selector "${selector}" is within ${timeout}ms.`);
+          } 
+            catch (error) {
+            console.error(selector , 'Error: Element is not visible.', error);
+            FAIL("'Error: Element is not visible.'");
+            throw error;
+      }
   }
 
+
+
+  public static async productsInCart(sProductInCart :string)
+  {
+        const headers =  sharedPage.locator("//table//thead//tr[1]//td");
+        const rows = sharedPage.locator("//table//tbody/tr//td");
+
+      //  const allRowsvalue = await rows.allTextContents();
+        const  allColsvalue= await headers.allTextContents();
+         Assert.includesSubstring(allColsvalue,"Item");
+         Assert.includesSubstring(allColsvalue,"Description");
+          Assert.includesSubstring(allColsvalue,"Price");
+        Assert.includesSubstring(allColsvalue,"Quantity");
+        Assert.includesSubstring(allColsvalue,"Total");
+
+
+
+        // console.log("allRowsvalue-"+allRowsvalue);
+        // console.log("allColsvalue-"+allColsvalue);
+        // // console.log("Total cols- "+await headers.count());
+        // console.log("Total rows --"+await rows.count());        
+        
+        const matchedRows=await rows.filter({
+              has:sharedPage.locator('td'),
+              hasText: sProductInCart
+        })
+
+       const  matchedRowsCount = matchedRows.count();
+       for(let i=0;i<=matchedRowsCount;i++)
+       {
+            console.log(matchedRows.nth(i).textContent());
+          //  Assert.expectToEqual(matchedRows.nth(i).textContent(),sProductInCart)           
+       }
+                      
+  }
 
 
 }   

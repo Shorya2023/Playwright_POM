@@ -11,13 +11,15 @@ test("Login to Application with Invalid Credentials",{
        type: "Login in",
        description: "Test Case 2: Login User with INcorrect email and password"},
        tag:"@smoke"
-}, async ({pages,LoginFixture,LogoutFixture}) => {
+}, async ({pages,LoginFixture,LogoutFixture,context}) => {
 
     
-   await LoginFixture(LoginDetails.invalid_username,LoginDetails.invalid_password);
+   // await context.clearCookies();
+    await LoginFixture(LoginDetails.invalid_username,LoginDetails.invalid_password);
 
    logstep("Verify that 'Your email or password is incorrect!' error displayed");
    Assert.expectToBeVisible(pages.objloginpage.IncorrectLoginMessage);
 
+   //logout from application
    await LogoutFixture();   
 })

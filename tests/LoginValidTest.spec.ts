@@ -5,6 +5,8 @@ import  dotenv from "dotenv"
 import { Actions } from '../Util/Actions'
 import { logstep } from '../Util/AllurLogs';
 
+
+test.use({storageState: {cookies: [], origins:[]}});
  
 test("Login to Application",{
    annotation:{
@@ -17,9 +19,8 @@ test("Login to Application",{
    await LoginFixture(LoginDetails.username,LoginDetails.password);
 
    logstep("Verify that 'Logged in as username' is visible");
-   Actions.highlightElement(pages.objhomepage.userName);
-   Assert.expectToBeVisible(pages.objhomepage.userName);
-
+   //await Assert.expectToBeVisible(pages.objhomepage.userName,11000);
+   await Assert.expectToBeVisible(pages.objhomepage.userName);
    const pgtitle =await  Actions.getPageTitle();
 
    logstep("Verifying page Title")

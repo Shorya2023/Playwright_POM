@@ -1,5 +1,6 @@
 import{Page,Locator, expect}  from '@playwright/test'
 import { Actions } from '../Util/Actions';
+import { sharedPage } from '../Fixtures/CustomFixtures';
  export class Homepage{
     readonly demo_page: Page;
   //  readonly Monitor_link: Locator;
@@ -14,14 +15,16 @@ import { Actions } from '../Util/Actions';
     readonly susbscribe_email:Locator;
     readonly btnSubscribe: Locator;
     readonly LabelEmail:Locator;
+    readonly NewuserSignUp: Locator;
+    readonly allLinks:Locator;
 
     constructor(demo_page:Page)
     {     
         this.demo_page= demo_page;
-        this.userName=Actions.getXPATHCSSLocator("")
+        //this.userName=Actions.getXPATHCSSLocator("")
         this.logout_link=Actions.getCustomLocator('xpath_css','#logout2');
         this.HomePageTitle = Actions.getCustomLocator("xpath_css","//a[@id='nava']");
-        this.userName=Actions.getCustomLocatorByText("Logged in as gdr");
+        this.userName=Actions.getXPATHCSSLocator("//ul[@class='nav navbar-nav']//li[10]")
         this.btnTestCase=Actions.getRoleLocator({'role':'button',name:'Test Cases'});
         this.btnApiListForPractice=Actions.getRoleLocator({'role':'button',name:'APIs list for practice'});
         this.labelTestCases = Actions.getCustomLocatorByText("Cases");
@@ -30,6 +33,8 @@ import { Actions } from '../Util/Actions';
         this.susbscribe_email=Actions.getXPATHCSSLocator('#susbscribe_email');
         this.btnSubscribe=Actions.getXPATHCSSLocator('#subscribe')
         this.LabelEmail=Actions.getCustomLocatorByText("You have been successfully subscribed!");       
+        this.NewuserSignUp=Actions.getCustomLocatorByText("New User Signup!");
+        this.allLinks=Actions.getXPATHCSSLocator("//a");
     }
 
     async pagetitle() 
@@ -50,7 +55,7 @@ import { Actions } from '../Util/Actions';
 
     async totalLink()
     {
-        const Links = await Actions.getArrayOfElement("//a");
+        const Links = await Actions.getArrayOfElement(this.allLinks);
         return Links.length;
 
     }
@@ -60,7 +65,7 @@ import { Actions } from '../Util/Actions';
         const Links =await Actions.getArrayOfElement("//a");
         for(const ln of Links)
         {
-            const value = await ln.textContent();
+            const value = await ln.innerText();
             console.log(value);     
         }
     }

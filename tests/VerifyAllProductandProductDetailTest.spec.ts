@@ -11,11 +11,12 @@ test("Verify product added successfully Functionality",{annotation:
       description: "Verifying product added succeefully by clicking on add to cart link functionality"  
     }
    
-}, async ({  pages, LoginFixture, LogoutFixture }) => {
+}, async ({  pages, LoginFixture, LogoutFixture,context }) => {
 
     logstep("Login with valid credentials");
+  //  await context.clearCookies();
     await LoginFixture(LoginDetails.username,LoginDetails.password);
-
+  
     logstep("On All products page");
     const allproductPGTitle=await pages.objAllProducts.getAllproductsPageTiltle();
     await Assert.expectToHaveTitle(allproductPGTitle);
@@ -41,7 +42,7 @@ test("Verify product added successfully Functionality",{annotation:
     await Assert.expectToBeVisible(pages.objviewProduct.Product_category);
     
     logstep("click on Add to cart from product detail page");
-    await Actions.addTocart_productDetail();
+     pages.objviewProduct.addTocart_productDetail();
 
     logstep("Verify message-'Your product has been added to cart'");
     await Assert.expectToBeVisible(pages.objAllProducts.productAddedLabel); 

@@ -11,11 +11,12 @@ test("Search product and Verify product the details",{annotation:
       description: "Search product and verify all the details displayed correctly"  
     }
    
-}, async ({  pages, LoginFixture, LogoutFixture }) => {
+}, async ({  pages, LoginFixture, LogoutFixture,context }) => {
 
-    logstep("Login with valid credentials");
+    // logstep("Login with valid credentials");
+    await context.clearCookies();
     await LoginFixture(LoginDetails.username,LoginDetails.password);
-
+  
     logstep("On All products page");
     const allproductPGTitle=await pages.objAllProducts.getAllproductsPageTiltle();
     await Assert.expectToHaveTitle(allproductPGTitle);

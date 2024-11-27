@@ -12,6 +12,7 @@ import { logstep } from '../Util/AllurLogs';
     readonly Brands: Locator;
     readonly productAddedLabel: Locator;
     readonly productImage: Locator;
+    readonly view_cart:Locator;
 
     constructor(page:Page)
         {
@@ -20,6 +21,7 @@ import { logstep } from '../Util/AllurLogs';
             this.Brands=Actions.getCustomLocatorByText("BRANDS");
             this.productAddedLabel=Actions.getCustomLocatorByText("Your product has been added to cart.");
             this.productImage=Actions.getXPATHCSSLocator("//div[@class='features_items']//img");
+            this.view_cart= Actions.getCustomLocatorByText("View Cart");
         }
 
 

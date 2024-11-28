@@ -11,10 +11,10 @@ import { logstep } from '../Util/AllurLogs';
         readonly input_username : Locator;
         readonly input_passsword : Locator ;
         readonly btn_Login : Locator;
-        readonly input_Newusername : Locator;
-        readonly input_Newpasssword : Locator ;
+        readonly input_newUsername : Locator;
+        readonly input_NewEmail : Locator ;
         readonly btn_Signup : Locator;
-
+        readonly accountCreated:Locator;
 
     constructor(demo_page:Page)
     {
@@ -23,11 +23,12 @@ import { logstep } from '../Util/AllurLogs';
         this.input_username=  Actions.getXPATHCSSLocator("//form[@action='/login']//input[@name='email']")
         this.input_passsword=Actions.getXPATHCSSLocator("//form[@action='/login']//input[@name='password']")
         this.btn_Login = Actions.getXPATHCSSLocator("//button[text()='Login']");
-        this.input_Newusername=  Actions.getXPATHCSSLocator("//form[@action='/signup']//input[@name='email']")
-        this.input_Newpasssword=Actions.getXPATHCSSLocator("//form[@action='/signup']//input[@name='password']")
+        this.input_newUsername=  Actions.getXPATHCSSLocator("//form[@action='/signup']//input[@name='name']")
+        this.input_NewEmail=Actions.getXPATHCSSLocator("//form[@action='/signup']//input[@name='email']")
         this.btn_Signup = Actions.getXPATHCSSLocator("//button[text()='Signup']");
         this.IncorrectLoginMessage=Actions.getCustomLocatorByText("Your email or password is incorrect!");
-    }
+        this.accountCreated=Actions.getCustomLocatorByText("Account Created!");
+      }
 
     async loginToApp(username:string, password:string)
     {
@@ -48,8 +49,8 @@ import { logstep } from '../Util/AllurLogs';
 
     async newUserSignup()
     {
-        await Actions.fill(this.input_Newusername,newUserName);
-        await Actions.fill(this.input_Newpasssword,newPassword);
-
+        await Actions.fill(this.input_newUsername,"newUserName");
+        await Actions.fill(this.input_NewEmail,"newemil@gmail.com");
+        await Actions.clickElement(this.btn_Signup);
     }
 }

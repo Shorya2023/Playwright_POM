@@ -42,8 +42,7 @@ export class Actions {
         let locator:Locator;
      try{ 
 
-        const locator= sharedPage.locator(element,{hasText: stext});
-        await locator;
+        const locator= await sharedPage.locator(element,{hasText: stext});
         return locator;
         }
         catch(error)
@@ -154,6 +153,18 @@ export class Actions {
 
     }
   }
+  
+  public static async SelectFromDropDown(locator: Locator, value:any) {
+    try {
+        await locator.selectOption(value)
+        console.log('Element highlight successfully.');
+    } catch (error) {
+      console.error('Error highlight element:', error);
+      throw error;
+
+    }
+  }
+
 
   public static async acceptDialogs() {
     try { // Listen for the dialog event and automatically accept it 

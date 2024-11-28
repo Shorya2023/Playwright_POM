@@ -13,7 +13,7 @@ import {AllProducts} from '../Pages/ALLProductPage';
 import { viewProduct } from '../Pages/ViewProductDetailPage';
 import { Context } from 'vm';
 import { searchResults } from '../Pages/SearchProductResultsPage';
-
+import { SignupPage } from '../Pages/SignUpPage';
 
 let sharedPage: Page;
 let sharedcontext: Context;
@@ -29,6 +29,7 @@ type Fixtures = {
         objAllProducts:AllProducts;
         objviewProduct: viewProduct;
         objsearchResulsProduct:searchResults;
+        objSignUp: SignupPage;
     },
     LoginFixture: (username: string, password: string) => Promise<void>;
     LogoutFixture: () => Promise<void>;
@@ -49,10 +50,11 @@ export const test = basetest.extend<Fixtures>({
         const objAllProducts= new AllProducts(sharedPage);  
         const objviewProduct= new viewProduct(sharedPage);  
         const objsearchResulsProduct= new searchResults(sharedPage);  
+        const objSignUp= new SignupPage(sharedPage);
 
 
         await use({objloginpage,objAllProducts, objviewProduct,objhomepage,
-                     objorderinfo, objplaceorder,objContactus,objsearchResulsProduct});
+                     objorderinfo, objplaceorder,objContactus,objsearchResulsProduct,objSignUp});
     },
 
      //login to app Fixture

@@ -4,7 +4,7 @@ import { Actions } from '../Util/Actions';
 import { logstep } from '../Util/AllurLogs';
 import { Assert } from '../Util/Assert';
 
-test.only("Home Page test",{
+test("Home Page test",{
       annotation:{
          type:"HomePage verification",
          description:"Login to home Page , verifying Links displayed"

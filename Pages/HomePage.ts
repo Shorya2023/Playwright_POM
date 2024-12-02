@@ -16,6 +16,7 @@ import { sharedPage } from '../Fixtures/CustomFixtures';
     readonly btnSubscribe: Locator;
     readonly LabelEmail:Locator;
     readonly NewuserSignUp: Locator;
+    readonly featuredItem:Locator;
     readonly allLinks:Locator;
 
     constructor(demo_page:Page)
@@ -25,7 +26,7 @@ import { sharedPage } from '../Fixtures/CustomFixtures';
         this.logout_link=Actions.getCustomLocator('xpath_css','#logout2');
         this.HomePageTitle = Actions.getCustomLocator("xpath_css","//a[@id='nava']");
         this.userName=Actions.getXPATHCSSLocator("//ul[@class='nav navbar-nav']//li[10]")
-        this.btnTestCase=Actions.getRoleLocator({'role':'button',name:'Test Cases'});
+        this.btnTestCase=Actions.getXPATHCSSLocator("//div[@class='item active']//button[@type='button'][normalize-space()='Test Cases']")
         this.btnApiListForPractice=Actions.getRoleLocator({'role':'button',name:'APIs list for practice'});
         this.labelTestCases = Actions.getCustomLocatorByText("Cases");
         this.searchProduct=Actions.getXPATHCSSLocator('#search_product');
@@ -34,6 +35,7 @@ import { sharedPage } from '../Fixtures/CustomFixtures';
         this.btnSubscribe=Actions.getXPATHCSSLocator('#subscribe')
         this.LabelEmail=Actions.getCustomLocatorByText("You have been successfully subscribed!");       
         this.NewuserSignUp=Actions.getCustomLocatorByText("New User Signup!");
+        this.featuredItem =Actions.getXPATHCSSLocator(".features_items")
         this.allLinks=Actions.getXPATHCSSLocator("//a");
     }
 

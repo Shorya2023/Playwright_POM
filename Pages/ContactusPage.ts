@@ -36,18 +36,14 @@ export class ContactUs {
 
 
     async enterContactForm() {
-        Actions.wait(5000);
-        await Actions.fill(this.input_Name, "JOHN");
-        Actions.wait(2000);
-        await Actions.fill(this.input_Email, "JOHN@yahoo.com");
-        Actions.wait(2000);
-        await Actions.fill(this.input_Message, "poduct is damage and need return and reund which required additiona documents to supports the investigation");
-         Actions.wait(2000);
-        await Actions.fill(this.input_Subject,"required investigation"); 
         await Actions.uploadFile(this.file_Upload, "C:/Users/lenovo/Documents/Upload.txt");
-        Actions.wait(2000);
-        // await sharedPage.pause();
-        await Actions.pressEnter(this.btn_Submit);
+        // await Actions.fill(this.input_Name, "roni");
+         await Actions.fill(this.input_Email, "JOH2roniN@yahoo.com");
+        // await Actions.fill(this.input_Message, "poduct is damage and need return and reund which required additiona documents to supports the investigation");
+        // await Actions.fill(this.input_Subject,"required investigation"); 
+        // await Actions.uploadFile(this.file_Upload, "C:/Users/lenovo/Documents/Upload.txt");
+        await Actions.scrollTOTheElement(this.btn_Submit);
+        await Actions.clickElement(this.btn_Submit);
         await Actions.acceptDialogs();
     }
 

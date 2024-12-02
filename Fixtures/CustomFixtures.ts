@@ -2,7 +2,7 @@
 //shud return pageobject 
 //page as a fixture
 //export it
-import { Page,test as basetest } from '@playwright/test'
+import { Browser,Page,test as basetest } from '@playwright/test'
 
 import { LoginPage } from '../Pages/LoginPage';
 import { Homepage } from '../Pages/HomePage'
@@ -17,7 +17,7 @@ import { SignupPage } from '../Pages/SignUpPage';
 
 let sharedPage: Page;
 let sharedcontext: Context;
-
+let sharedbowser: Browser;
 
 type Fixtures = {
     pages: {
@@ -76,6 +76,8 @@ export const test = basetest.extend<Fixtures>({
 export { expect,Locator} from '@playwright/test';
 export {sharedPage} ;
 export {sharedcontext};
+export {sharedbowser};
+
 
 
 

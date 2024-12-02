@@ -1,4 +1,3 @@
-
 import {Locator, Page} from '@playwright/test'
 import {LoginDetails} from '../Testdata/Data.json'
 import {Actions} from '../Util/Actions'

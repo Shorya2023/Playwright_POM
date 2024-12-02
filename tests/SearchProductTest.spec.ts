@@ -14,7 +14,7 @@ test("Search product and Verify product the details",{annotation:
 }, async ({  pages, LoginFixture, LogoutFixture,context }) => {
 
     // logstep("Login with valid credentials");
-    await context.clearCookies();
+    // await context.clearCookies();
     await LoginFixture(LoginDetails.username,LoginDetails.password);
   
     logstep("On All products page");

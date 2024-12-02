@@ -1,12 +1,13 @@
-import { expect, Page } from '@playwright/test';
-import { sharedPage, sharedcontext, Locator} from '../Fixtures/CustomFixtures'
+import { expect, Page} from '@playwright/test';
+import { sharedPage, sharedcontext, Locator,sharedbowser} from '../Fixtures/CustomFixtures'
 import { FAIL, logstep, PASS } from './AllurLogs';
 import { error, log } from 'console';
 import { Assert } from './Assert';
 import { TIMEOUT } from 'dns/promises';
 
-export class Actions {
 
+
+export class Actions {
 
 
   public static getXPATHCSSLocator(xpath_css: string): Locator {
@@ -87,9 +88,24 @@ export class Actions {
   }
 
 
+
   public static getCustomLocator(a: string, b: string): Locator {
     return sharedPage.locator(a);
 
+  }
+
+
+  public static async highlightandclickElement(locator: Locator) {
+    try {
+
+      await locator.highlight();
+      await locator.click();
+      console.log(locator + ' highlisght and Element clicked successfully.');
+    } catch (error) {
+      console.error('Error clicking element:', locator,error);
+      throw error;
+
+    }
   }
 
 
@@ -133,14 +149,14 @@ export class Actions {
     }
   }
 
-  public static async newPageElement(locatorCurrentPage: Locator, locatorOnNewPage: Locator):
-    Locator {
-    const newPagePromise = sharedcontext.waitForEvent('Page');
-    await Actions.clickElement(locatorCurrentPage);
-    const newPage = await newPagePromise;
-    const Elemenet = newPage.locator()
-    return Elemenet;
-  }
+  // public static async newPageElement(locatorCurrentPage: Locator, locatorOnNewPage: Locator):
+  //   Locator {
+  //   const newPagePromise = sharedcontext.waitForEvent('Page');
+  //   await Actions.clickElement(locatorCurrentPage);
+  //   const newPage = await newPagePromise;
+  //   const Elemenet = newPage.locator()
+  //   return Elemenet;
+  // }
 
 
   public static async highlightElement(locator: Locator) {
@@ -437,6 +453,11 @@ export class Actions {
   }
 
 
+  //du to flaky in nature
+  // public static async waitForPageLoad()
+  // {
+  //     await sharedPage.waitForLoadState('networkidle',{timeout:50000});
+  // }
 
   public static async getArrayOfElement(locatorType: string) {
     try {
@@ -484,6 +505,20 @@ export class Actions {
   }
 
 
+    public static async CLickAndReturnNewPage(slocator:Locator)
+    {    
+           const context = await sharedbowser.newContext();
+           const page = (await context).newPage();
+
+        const [newpage] = await Promise.all(
+          [  
+               context.waitForEvent('page'),
+               Actions.clickElement(slocator),
+          ]);
+
+          return newpage;
+  }
+
   public static async clickOnLink_OnTopHeader(link: string) {
     const totalLinksinHeader = await Actions.getArrayOfElement("//div[@class='shop-menu pull-right']//a");
     for (let ln of totalLinksinHeader) {
@@ -520,7 +555,8 @@ public static async clickON_ViewProduct(sProductName: string)
 {
           try{
                 const ViewProduct = Actions.getXPATHCSSLocator(`//div[@class='features_items']//div[@class='productinfo text-center']//p[text()='${sProductName }']//following::ul[1]//li[1]//a`)
-                        //click on view Product for  specific sproduct name
+                Actions.waitForElement(ViewProduct,20000);        
+                //click on view Product for  specific sproduct name
                     await ViewProduct.click();
               }
               catch(error)
@@ -530,9 +566,6 @@ public static async clickON_ViewProduct(sProductName: string)
 }
   
   
-
-
-
   public static async clickOnView_Product(sproductName: string) {
     try {
       const productlocateElement = Actions.getXPATHCSSLocator(`//div[@class='productinfo text-center']//p[text()="${sproductName}"]//following::ul[1]`);
@@ -548,7 +581,7 @@ public static async clickON_ViewProduct(sProductName: string)
   public static async waitForElement(selector:any, timeout = 5000) {
       try {
             //  sharedPage.waitForSelector(selector,timeout);
-            selector.waitFor();
+            await selector.waitFor();
             console.log(`Element with selector "${selector}" is within ${timeout}ms.`);
           } 
             catch (error) {
@@ -563,6 +596,55 @@ public static async clickON_ViewProduct(sProductName: string)
      return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
+public static async deleteProduct(sProductName:string)
+          {
+            await sharedPage.locator("//table//thead//tr[1]").waitFor();
+            // const headers = await sharedPage.locator("//table//thead//tr//td");
+             const rows = await sharedPage.locator('tbody tr');
+             console.log("Total rows are in the cart:"+await rows.count());       
+               for (let a=0; a<await rows.count();a++)
+               {
+                    const productsInCart =  await rows.nth(a).locator('td h4').first().textContent();
+                    console.log("prod in cart is --",productsInCart);
+                    
+                    if ((productsInCart)?.trim()===sProductName)
+                    {
+                       await rows.nth(a).locator('td:last-child a').last().click();
+                      
+                       console.log(`${sProductName} deleted from cart`);
+                       
+                    }
+               }
+
+  }    
+
+public static async addedProductInCart(sProductName: string)
+    {
+
+        await sharedPage.locator("//table//thead//tr[1]").waitFor();
+       // const headers = await sharedPage.locator("//table//thead//tr//td");
+        const rows = await sharedPage.locator('tbody tr');
+        console.log("Total rows are:"+await rows.count());       
+        const totalRows = await rows.count()
+        const matchedRows= rows.filter({
+              has:sharedPage.locator('td'),
+              hasText: sProductName
+        })
+       const  NumberofRowsProducts = await matchedRows.count();
+        if (NumberofRowsProducts>0)
+           {
+            console.log(`poduct ${sProductName} exists in the  cart`);    
+            }
+            else
+            {
+              console.error(`poduct ${sProductName} NOT exists in the  cart`);    
+
+            }
+
+
+     }
+
+
   public static async productsInCart(sProductInCart :string)
   {
         const headers =  sharedPage.locator("//table//thead//tr[1]//td");
@@ -576,13 +658,6 @@ public static async clickON_ViewProduct(sProductName: string)
         Assert.includesSubstring(allColsvalue,"Quantity");
         Assert.includesSubstring(allColsvalue,"Total");
 
-
-
-        // console.log("allRowsvalue-"+allRowsvalue);
-        // console.log("allColsvalue-"+allColsvalue);
-        // // console.log("Total cols- "+await headers.count());
-        // console.log("Total rows --"+await rows.count());        
-        
         const matchedRows=await rows.filter({
               has:sharedPage.locator('td'),
               hasText: sProductInCart

@@ -1,4 +1,4 @@
-import {test,expect, chromium, Page} from '@playwright/test'
+import {test,expect, chromium, Page, Browser} from '@playwright/test'
 import {LoginDetails} from '../Testdata/Data.json'
 import { Context } from 'vm';
 

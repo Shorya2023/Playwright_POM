@@ -49,9 +49,8 @@ import { logstep } from '../Util/AllurLogs';
 
     async newUserSignup()
     {
-            let val = Actions.getRandomInt(10,250);
         await Actions.fill(this.input_newUsername,"newUserName");
-        await Actions.fill(this.input_NewEmail,"newemial_"+val+"@gmail.com");
+        await Actions.fill(this.input_NewEmail,"newemial_"+Date.now()+"@gmail.com");
         await Actions.clickElement(this.btn_Signup);
     }
 }

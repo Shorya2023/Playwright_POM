@@ -1,0 +1,22 @@
+{
+
+    "newUserSignupDetails":{
+
+        "input_fisrtName":"john",
+        "input_LastName":"davis",
+        "input_password":"231davis",
+        "input_address":"new street 29 NA CANADA 112233",
+        "input_city":"NY",
+        "input_state":"NC",
+        "input_zipcode":"457812",
+        "input_mobnumber":"+555852365896" ,
+        "list_country":"Canada"
+    },
+    "CardDetails":{"name":"john baggo",
+                    "cardNumber": "147895223658",
+                    "cvc": "125",
+                    "expMonth":"12",
+                    "expYear" :"2026"   
+                }
+
+}

@@ -18,6 +18,9 @@ import { sharedPage } from '../Fixtures/CustomFixtures';
     readonly NewuserSignUp: Locator;
     readonly featuredItem:Locator;
     readonly allLinks:Locator;
+    readonly Continue:Locator;
+    readonly OrderPlaced:Locator;
+    readonly DownoadInvoice:Locator;
 
     constructor(demo_page:Page)
     {     
@@ -25,7 +28,7 @@ import { sharedPage } from '../Fixtures/CustomFixtures';
         //this.userName=Actions.getXPATHCSSLocator("")
         this.logout_link=Actions.getCustomLocator('xpath_css','#logout2');
         this.HomePageTitle = Actions.getCustomLocator("xpath_css","//a[@id='nava']");
-        this.userName=Actions.getXPATHCSSLocator("//ul[@class='nav navbar-nav']//li[10]")
+        this.userName=Actions.getXPATHCSSLocator("//ul[@class='nav navbar-nav']//b")
         this.btnTestCase=Actions.getXPATHCSSLocator("//div[@class='item active']//button[@type='button'][normalize-space()='Test Cases']")
         this.btnApiListForPractice=Actions.getRoleLocator({'role':'button',name:'APIs list for practice'});
         this.labelTestCases = Actions.getCustomLocatorByText("Cases");
@@ -37,6 +40,9 @@ import { sharedPage } from '../Fixtures/CustomFixtures';
         this.NewuserSignUp=Actions.getCustomLocatorByText("New User Signup!");
         this.featuredItem =Actions.getXPATHCSSLocator(".features_items")
         this.allLinks=Actions.getXPATHCSSLocator("//a");
+        this.Continue=Actions.getXPATHCSSLocator(".pull-right .btn");
+        this.OrderPlaced=Actions.getXPATHCSSLocator(".title b");
+        this.DownoadInvoice=Actions.getCustomLocatorByText("Download Invoice");
     }
 
     async pagetitle() 

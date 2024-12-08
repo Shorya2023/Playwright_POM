@@ -4,6 +4,7 @@ import { FAIL, logstep, PASS } from './AllurLogs';
 import { error, log } from 'console';
 import { Assert } from './Assert';
 import { TIMEOUT } from 'dns/promises';
+import fs from 'fs'
 
 
 
@@ -593,7 +594,20 @@ public static async clickON_ViewProduct(sProductName: string)
 
   public static getRandomInt(min: number, max:number)
   {
-     return Math.floor(Math.random() * (max - min + 1)) + min;
+     return Math.floor(Math.random() * (max - min + 1));
+  }
+
+
+  public static async downloadfile(locator:Locator, filpath:string)
+  {
+          const downlaodPromise =  sharedPage.waitForEvent('download');
+          await Actions.clickElement(locator);
+          const downloadfile =  downlaodPromise;
+
+          //save download file
+           (await downloadfile).saveAs(filpath+ (await downloadfile).suggestedFilename());
+          //verify the file name
+          expect(fs.existsSync(filpath)).toBe(true);
   }
 
 public static async deleteProduct(sProductName:string)

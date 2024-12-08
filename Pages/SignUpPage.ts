@@ -6,6 +6,7 @@ import * as allure from "allure-js-commons";
 import { Assert } from '../Util/Assert';
 import { sharedPage } from '../Fixtures/CustomFixtures';
 import { logstep } from '../Util/AllurLogs';
+import {newUserSignupDetails} from '../Testdata/newUserSignupDetails.json'
   export  class SignupPage{
         readonly demo_page: Page;
         readonly input_password: Locator
@@ -38,15 +39,15 @@ import { logstep } from '../Util/AllurLogs';
     async newUserSignupDetails()
     {
         
-        await Actions.fill(this.input_fisrtName,"john");
-        await Actions.fill(this.input_LastName,"davis");
-        await Actions.fill(this.input_password,"231davis");
-        await Actions.fill(this.input_address,"B 1 ammmi road CA");
-        await Actions.fill(this.input_city,"NY");
-        await Actions.fill(this.input_state,"NC");
-        await Actions.fill(this.input_zipcode,"457812");
-        await Actions.fill(this.input_mobnumber,"+555852365896"); 
-        await Actions.selectOption(this.list_country,"Canada");
+        await Actions.fill(this.input_fisrtName,newUserSignupDetails.input_fisrtName);
+        await Actions.fill(this.input_LastName,newUserSignupDetails.input_LastName);
+        await Actions.fill(this.input_password,newUserSignupDetails.input_password);
+        await Actions.fill(this.input_address,newUserSignupDetails.input_address);
+        await Actions.fill(this.input_city,newUserSignupDetails.input_city);
+        await Actions.fill(this.input_state,newUserSignupDetails.input_state);
+        await Actions.fill(this.input_zipcode,newUserSignupDetails.input_zipcode);
+        await Actions.fill(this.input_mobnumber,newUserSignupDetails.input_mobnumber); 
+        await Actions.selectOption(this.list_country,newUserSignupDetails.list_country);
         await Actions.clickElement(this.btn_createAccount);
     }
 }

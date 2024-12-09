@@ -1,4 +1,4 @@
-import {sharedPage,test,expect} from '../Fixtures/CustomFixtures'
+import {page,test,expect} from '../Fixtures/CustomFixtures'
 import {LoginDetails} from '../Testdata/Data.json'
 import { Actions } from '../Util/Actions';
 import { logstep } from '../Util/AllurLogs';
@@ -14,7 +14,7 @@ test("Sign up Verification",{
     logstep("Open url - ''")
     await Actions.navigateToURL(LoginDetails.url);
 
-    logstep("vreify Home Page displayed")
+    logstep("vreify Home page displayed")
     await Assert.expectToBeVisible(pages.objhomepage.NewuserSignUp);
 
     logstep("click on  Signup / Login");

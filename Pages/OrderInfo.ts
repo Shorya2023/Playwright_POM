@@ -1,11 +1,10 @@
-import {sharedPage,Locator,expect} from '../Fixtures/CustomFixtures'
-import { Page } from '@playwright/test';
+import {page,Locator,expect} from '../Fixtures/CustomFixtures'
 import {OrderInfoDetails} from  "../Testdata/Data.json"
 import {Actions} from '../Util/Actions';
 
 export class OrderInfo{
 
-    readonly demo_page: Page;
+    readonly demo_page: page;
     readonly input_Name: Locator;
     readonly input_Country: Locator;
     readonly input_City: Locator;
@@ -18,7 +17,7 @@ export class OrderInfo{
     readonly Text_Ordermessage: Locator;
     readonly Text_OrderInfo_ID: Locator;
 
-    constructor(demo_page:Page)
+    constructor(demo_page:page)
     {    
             this.demo_page= demo_page;    
             this.input_Name= Actions.getCustomLocator("xpath_css","//label[@for='name']//following::input[@id='name']");

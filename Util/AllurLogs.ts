@@ -1,6 +1,6 @@
 import * as allure from "allure-js-commons";
 import { time, timeStamp } from "console";
-import { sharedPage } from "../Fixtures/CustomFixtures";
+import { page } from "../Fixtures/CustomFixtures";
 
 
 
@@ -36,7 +36,7 @@ export async function  SKIP(stepName: string)
 export async function attachmentOnFailure(ScreenShotName:string)
 {
     const screenShotPath="X:/Playwright_POM/Screenshots/"+ScreenShotName+"_"+".png";
-    await sharedPage.screenshot({path:screenShotPath});
+    await page.screenshot({path:screenShotPath});
     await allure.attachmentPath('Screenshot',screenShotPath,{
         contentType: 'image/png',
       });

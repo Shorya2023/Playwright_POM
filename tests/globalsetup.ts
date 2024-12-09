@@ -1,5 +1,5 @@
 import path from 'path';
-import {sharedPage,test,expect} from '../Fixtures/CustomFixtures'
+import {page,test,expect} from '../Fixtures/CustomFixtures'
 import {LoginDetails} from '../Testdata/Data.json'
 import { Actions } from '../Util/Actions';
 import { logstep } from '../Util/AllurLogs';
@@ -21,7 +21,7 @@ test("Login auth", async({pages})=>{
     await Actions.clickElement(Actions.getXPATHCSSLocator("//button[text()='Login']"));
     await Actions.wait(2000);
     await Assert.expectToBeVisible(Actions.getXPATHCSSLocator("//ul[@class='nav navbar-nav']//li[10]"));
-    await sharedPage.context().storageState({path: filepath});
+    await page.context().storageState({path: filepath});
     
 });
 

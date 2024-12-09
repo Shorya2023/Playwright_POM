@@ -1,5 +1,5 @@
 import { assert, log } from 'console';
-import {sharedPage,test,expect} from '../Fixtures/CustomFixtures'
+import {page,test,expect} from '../Fixtures/CustomFixtures'
 import {LoginDetails} from '../Testdata/Data.json'
 import { Actions } from '../Util/Actions';
 import { logstep } from '../Util/AllurLogs';
@@ -24,7 +24,7 @@ test("Remove Item",{
     logstep("Verify that 'Logged in as username' is visible");
     //await Assert.expectToBeVisible(pages.objhomepage.userName,11000);
     await Assert.expectToBeVisible(pages.objhomepage.userName);
-    const pgtitle =await  Actions.getPageTitle();
+    const pgtitle =await  Actions.getpageTitle();
  
     logstep("Verifying page Title")
     Assert.expectToHaveTitle(pgtitle);
@@ -52,8 +52,8 @@ test("Remove Item",{
     logstep("Remove the product from chekout page");
     await Actions.deleteProduct(sproduct);
 
-    await sharedPage.waitForTimeout(6000);
+    await page.waitForTimeout(6000);
 
-    //sharedPage.pause();
+    //page.pause();
 })
 

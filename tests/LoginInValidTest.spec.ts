@@ -1,4 +1,4 @@
-import {test,expect,sharedPage} from '../Fixtures/CustomFixtures'
+import {test,expect,page} from '../Fixtures/CustomFixtures'
 import {LoginDetails} from '../Testdata/Data.json'
 import {Assert} from '../Util/Assert'
 import  dotenv from "dotenv"

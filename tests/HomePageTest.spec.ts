@@ -1,13 +1,13 @@
-import {sharedPage,test,expect} from '../Fixtures/CustomFixtures'
+import {page,test,expect} from '../Fixtures/CustomFixtures'
 import {LoginDetails} from '../Testdata/Data.json'
 import { Actions } from '../Util/Actions';
 import { logstep } from '../Util/AllurLogs';
 import { Assert } from '../Util/Assert';
 
-test("Home Page test",{
+test("Home page test",{
       annotation:{
-         type:"HomePage verification",
-         description:"Login to home Page , verifying Links displayed"
+         type:"Homepage verification",
+         description:"Login to home page , verifying Links displayed"
       },tag:"@smoke"
 }, async ({pages,LoginFixture,LogoutFixture,context}) => {
 
@@ -26,7 +26,7 @@ test("Home Page test",{
    await pages.objhomepage.DisplayLinks()
 
    // logstep("Clicked on TestCase button and verify test cases new window opens up")
-   // const newpageEle = Actions.newPageElement(pages.objhomepage.btnTestCase,pages.objhomepage.labelTestCases);
+   // const newpageEle = Actions.newpageElement(pages.objhomepage.btnTestCase,pages.objhomepage.labelTestCases);
    // Actions.highlightElement(newpageEle);
    //Logout from app
    await LogoutFixture();

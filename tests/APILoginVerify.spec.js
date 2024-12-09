@@ -2,8 +2,9 @@ import {test,request, expect} from '@playwright/test'
 
 let baseURL;
 const requestdata ={
-        email:"mon@ts122l.com",
-        password:"indi2a"
+   // csrfmiddlewaretoken: "TZWI8a1R2QKqBXIcznkQAYWoBdCZBVHrWY9rCGeII6egNSalvhcKFuesqMAZ0Vgb",
+        email:"mon@tsl.com",
+        password:"india"
 }
 test.beforeAll("Before all set up base url", async({})=>{
     baseURL  = await request.newContext({baseURL:"https://automationexercise.com"})
@@ -11,15 +12,12 @@ test.beforeAll("Before all set up base url", async({})=>{
 
 test("API Login Verification", async({})=>{
 
-    const response  = await baseURL.post("api/verifyLogin",{
-                        data:{
-                            email:"mon@tsl.com",
-                            password:"india"
-                    },
-                        headers: { 'Content-Type': 'application/json' }
+    const response  = await baseURL.post("login",{
+                        data:requestdata,
+                        headers: { 'Content-Type': 'text/html; charset=utf-8' }
     })
-    const responseBody = await response.json();
-    console.log(responseBody);
+  //  const responseBody = await response.json();
+    console.log( response);
     
 
 

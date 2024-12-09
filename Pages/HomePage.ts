@@ -1,11 +1,10 @@
-import{Page,Locator, expect}  from '@playwright/test'
 import { Actions } from '../Util/Actions';
-import { sharedPage } from '../Fixtures/CustomFixtures';
+import { page,Locator, expect } from '../Fixtures/CustomFixtures';
  export class Homepage{
-    readonly demo_page: Page;
+    readonly demo_page: page;
   //  readonly Monitor_link: Locator;
     readonly logout_link: Locator;
-    readonly HomePageTitle: Locator;
+    readonly HomepageTitle: Locator;
     readonly userName: Locator;
     readonly btnTestCase: Locator;
     readonly btnApiListForPractice: Locator;
@@ -22,12 +21,12 @@ import { sharedPage } from '../Fixtures/CustomFixtures';
     readonly OrderPlaced:Locator;
     readonly DownoadInvoice:Locator;
 
-    constructor(demo_page:Page)
+    constructor(demo_page:page)
     {     
         this.demo_page= demo_page;
         //this.userName=Actions.getXPATHCSSLocator("")
         this.logout_link=Actions.getCustomLocator('xpath_css','#logout2');
-        this.HomePageTitle = Actions.getCustomLocator("xpath_css","//a[@id='nava']");
+        this.HomepageTitle = Actions.getCustomLocator("xpath_css","//a[@id='nava']");
         this.userName=Actions.getXPATHCSSLocator("//ul[@class='nav navbar-nav']//b")
         this.btnTestCase=Actions.getXPATHCSSLocator("//div[@class='item active']//button[@type='button'][normalize-space()='Test Cases']")
         this.btnApiListForPractice=Actions.getRoleLocator({'role':'button',name:'APIs list for practice'});
@@ -47,7 +46,7 @@ import { sharedPage } from '../Fixtures/CustomFixtures';
 
     async pagetitle() 
     {
-        const homePgTitle = Actions.getPageTitle();
+        const homePgTitle = Actions.getpageTitle();
          return homePgTitle;
     }
 

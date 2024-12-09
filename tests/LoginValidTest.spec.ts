@@ -1,9 +1,9 @@
-import {test,expect,sharedPage} from '../Fixtures/CustomFixtures'
+import {test,expect,page} from '../Fixtures/CustomFixtures'
 import {LoginDetails} from '../Testdata/Data.json'
 import {Assert} from '../Util/Assert'
 import  dotenv from "dotenv"
 import { Actions } from '../Util/Actions'
-import { logstep } from '../Util/AllurLogs';
+import { logstep} from '../Util/AllurLogs';
 
 
 test.use({storageState: {cookies: [], origins:[]}});
@@ -21,7 +21,7 @@ test("Login to Application",{
    logstep("Verify that 'Logged in as username' is visible");
    //await Assert.expectToBeVisible(pages.objhomepage.userName,11000);
    await Assert.expectToBeVisible(pages.objhomepage.userName);
-   const pgtitle =await  Actions.getPageTitle();
+   const pgtitle =await  Actions.getpageTitle();
 
    logstep("Verifying page Title")
    Assert.expectToHaveTitle(pgtitle);

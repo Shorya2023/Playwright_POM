@@ -1,5 +1,5 @@
 
-import {sharedPage,test,expect} from '../Fixtures/CustomFixtures'
+import {page,test,expect} from '../Fixtures/CustomFixtures'
 import {LoginDetails} from '../Testdata/Data.json'
 import { Assert } from '../Util/Assert';
 import { attachmentOnFailure, FAIL ,PASS,logstep} from '../Util/AllurLogs';
@@ -18,7 +18,7 @@ test("Verify  subscription message-",{annotation:
     logstep("Login with valid credentials");
     await LoginFixture(LoginDetails.username,LoginDetails.password);
   
-    logstep("Click on HomePage");
+    logstep("Click on Homepage");
     await Actions.clickOnLink_OnTopHeader("Home");
 
     logstep("Email enter for subscription");
@@ -27,6 +27,6 @@ test("Verify  subscription message-",{annotation:
 
     logstep("Verify subscription message-'You have been successfully subscribed!");
     await Assert.expectToBeVisible(pages.objhomepage.LabelEmail);
-    sharedPage.waitForTimeout(4000);
-})
+    
+  })
 

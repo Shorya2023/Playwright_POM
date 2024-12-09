@@ -1,5 +1,4 @@
-import { Locator } from '@playwright/test';
-import {expect, sharedPage,test} from '../Fixtures/CustomFixtures'
+import {expect, page,test,Locator} from '../Fixtures/CustomFixtures'
 import * as allure from "allure-js-commons";
 import { attachmentOnFailure, FAIL ,PASS,logstep} from './AllurLogs';
 export class Assert {
@@ -131,12 +130,12 @@ export class Assert {
     // Utility for toHaveTitle
     public static async expectToHaveTitle( title: string, timeout = 5000) {
       try {
-            await expect(sharedPage).toHaveTitle(title, { timeout });
-            console.log('Page has the correct title.->',title);
+            await expect(page).toHaveTitle(title, { timeout });
+            console.log('page has the correct title.->',title);
       } 
       catch (error) {
-           console.error( 'Error: Page does not have the correct title.', error);
-           FAIL("Error: Page does not have the correct title.")
+           console.error( 'Error: page does not have the correct title.', error);
+           FAIL("Error: page does not have the correct title.")
            throw error;
       }
     }
@@ -144,8 +143,8 @@ export class Assert {
     // Utility for toHaveURL
     public static async expectToHaveURL( url: string, timeout = 5000) {
       try {
-        await expect(sharedPage).toHaveURL(url, { timeout });
-        console.log('Page has the correct URL.');
+        await expect(page).toHaveURL(url, { timeout });
+        console.log('page has the correct URL.');
       } catch (error) {
         FAIL("Error: Incorrect URL");
         throw error;

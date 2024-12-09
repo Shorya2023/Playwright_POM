@@ -1,14 +1,13 @@
-import { Page } from '@playwright/test'
 import { LoginDetails } from '../Testdata/Data.json'
 import { Actions } from '../Util/Actions'
 import * as allure from "allure-js-commons";
 import { Assert } from '../Util/Assert';
-import { sharedPage, Locator } from '../Fixtures/CustomFixtures';
+import { page, Locator } from '../Fixtures/CustomFixtures';
 import { logstep } from '../Util/AllurLogs';
 
 export class ContactUs {
 
-    readonly demo_page: Page;
+    readonly demo_page: page;
     readonly Successmessage: Locator
     readonly input_Name: Locator;
     readonly input_Email: Locator;
@@ -20,7 +19,7 @@ export class ContactUs {
 
 
 
-    constructor(demo_page: Page) {
+    constructor(demo_page: page) {
         this.demo_page = demo_page;
         //  this.link_Login= Actions.getCustomLocator('xpath_css','#login2');        
         this.input_Name = Actions.getXPATHCSSLocator("//input[@name='name']");

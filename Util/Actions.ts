@@ -1,5 +1,5 @@
-import { expect, Page} from '@playwright/test';
-import { sharedPage, sharedcontext, Locator,sharedbowser} from '../Fixtures/CustomFixtures'
+// import { expect, page} from '@playwright/test';
+import { page, context, Locator,Browser, expect} from '../Fixtures/CustomFixtures'
 import { FAIL, logstep, PASS } from './AllurLogs';
 import { error, log } from 'console';
 import { Assert } from './Assert';
@@ -13,7 +13,7 @@ export class Actions {
 
   public static getXPATHCSSLocator(xpath_css: string): Locator {
     try {
-      const locator = sharedPage.locator(xpath_css);
+      const locator = page.locator(xpath_css);
       console.log(`Locator found with XPath: ${xpath_css}`);
       return locator;
     } catch (error) {
@@ -28,7 +28,7 @@ export class Actions {
         let locator:Locator;
      try{ 
           const regexp = new RegExp(`^${sText}`,'i')
-          const locator =sharedPage.getByText(regexp,{exact:true});
+          const locator =page.getByText(regexp,{exact:true});
           return locator;
         }
         catch(error)
@@ -44,7 +44,7 @@ export class Actions {
         let locator:Locator;
      try{ 
 
-        const locator= await sharedPage.locator(element,{hasText: stext});
+        const locator= await page.locator(element,{hasText: stext});
         return locator;
         }
         catch(error)
@@ -65,7 +65,7 @@ export class Actions {
   }): Locator {
     try {
       //
-      let locatorvalue = sharedPage.getByRole(options.role,
+      let locatorvalue = page.getByRole(options.role,
         {
           name: options.name,
           exact: options.exact,
@@ -91,7 +91,7 @@ export class Actions {
 
 
   public static getCustomLocator(a: string, b: string): Locator {
-    return sharedPage.locator(a);
+    return page.locator(a);
 
   }
 
@@ -150,12 +150,12 @@ export class Actions {
     }
   }
 
-  // public static async newPageElement(locatorCurrentPage: Locator, locatorOnNewPage: Locator):
+  // public static async newpageElement(locatorCurrentpage: Locator, locatorOnNewpage: Locator):
   //   Locator {
-  //   const newPagePromise = sharedcontext.waitForEvent('Page');
-  //   await Actions.clickElement(locatorCurrentPage);
-  //   const newPage = await newPagePromise;
-  //   const Elemenet = newPage.locator()
+  //   const newpagePromise = sharedcontext.waitForEvent('page');
+  //   await Actions.clickElement(locatorCurrentpage);
+  //   const newpage = await newpagePromise;
+  //   const Elemenet = newpage.locator()
   //   return Elemenet;
   // }
 
@@ -185,7 +185,7 @@ export class Actions {
 
   public static async acceptDialogs() {
     try { // Listen for the dialog event and automatically accept it 
-      sharedPage.on('dialog', async dialog => {
+      page.on('dialog', async dialog => {
         await dialog.accept();
       });
       console.log('Dialog event listener set up to accept all dialogs.');
@@ -196,9 +196,9 @@ export class Actions {
     }
   }
 
-  public static async getPageTitle() {
+  public static async getpageTitle() {
     try {
-      return (await sharedPage.title());
+      return (await page.title());
     }
     catch (error) {
       console.log("Error in pagetitle: ", error);
@@ -210,7 +210,7 @@ export class Actions {
 
   public static async wait(ms: number) {
     try {
-      await sharedPage.waitForTimeout(ms);
+      await page.waitForTimeout(ms);
     }
     catch (error) {
       console.log("Error in waitforTimeOut", error);
@@ -279,8 +279,8 @@ export class Actions {
 
   public static async navigateToURL(url: string) {
     try {
-      await sharedPage.goto(url);
-      await sharedPage.setViewportSize({ width: 1400, height: 1100 })
+      await page.goto(url);
+      await page.setViewportSize({ width: 1400, height: 1100 })
       console.log('Navigated to URL successfully.');
     } catch (error) {
       console.error('Error navigating to URL:', error);
@@ -455,14 +455,14 @@ export class Actions {
 
 
   //du to flaky in nature
-  // public static async waitForPageLoad()
+  // public static async waitForpageLoad()
   // {
-  //     await sharedPage.waitForLoadState('networkidle',{timeout:50000});
+  //     await page.waitForLoadState('networkidle',{timeout:50000});
   // }
 
   public static async getArrayOfElement(locatorType: string) {
     try {
-      const arrayElements = await sharedPage.$$(locatorType);
+      const arrayElements = await page.$$(locatorType);
       if (arrayElements.length === 0) {
         throw error("No elements found");
       }
@@ -479,7 +479,7 @@ export class Actions {
 
   public static async countElements(locatorType: string) {
     try {
-      const ele = await sharedPage.locator(locatorType);
+      const ele = await page.locator(locatorType);
       return ele.count();
     }
     catch (error) {
@@ -493,12 +493,12 @@ export class Actions {
   public static async LinkWithTextinHeader(link: string) {
     const totalLinksinHeader = await Actions.getArrayOfElement("//div[@class='shop-menu pull-right']//a");
     for (let ln of totalLinksinHeader) {
-      const linksonPage = await ln.textContent();
-      console.log((linksonPage));
-      if (linksonPage == link) {
-        PASS(linksonPage + "Verified links exists on homepage");
-        logstep(linksonPage + "Verified links exists on homepage")
-        return linksonPage;
+      const linksonpage = await ln.textContent();
+      console.log((linksonpage));
+      if (linksonpage == link) {
+        PASS(linksonpage + "Verified links exists on homepage");
+        logstep(linksonpage + "Verified links exists on homepage")
+        return linksonpage;
         break;
       }
 
@@ -506,10 +506,10 @@ export class Actions {
   }
 
 
-    public static async CLickAndReturnNewPage(slocator:Locator)
+    public static async CLickAndReturnNewpage(slocator:Locator)
     {    
            const context = await sharedbowser.newContext();
-           const page = (await context).newPage();
+           const page = (await context).newpage();
 
         const [newpage] = await Promise.all(
           [  
@@ -581,7 +581,7 @@ public static async clickON_ViewProduct(sProductName: string)
 
   public static async waitForElement(selector:any, timeout = 5000) {
       try {
-            //  sharedPage.waitForSelector(selector,timeout);
+            //  page.waitForSelector(selector,timeout);
             await selector.waitFor();
             console.log(`Element with selector "${selector}" is within ${timeout}ms.`);
           } 
@@ -600,7 +600,7 @@ public static async clickON_ViewProduct(sProductName: string)
 
   public static async downloadfile(locator:Locator, filpath:string)
   {
-          const downlaodPromise =  sharedPage.waitForEvent('download');
+          const downlaodPromise =  page.waitForEvent('download');
           await Actions.clickElement(locator);
           const downloadfile =  downlaodPromise;
 
@@ -612,9 +612,9 @@ public static async clickON_ViewProduct(sProductName: string)
 
 public static async deleteProduct(sProductName:string)
           {
-            await sharedPage.locator("//table//thead//tr[1]").waitFor();
-            // const headers = await sharedPage.locator("//table//thead//tr//td");
-             const rows = await sharedPage.locator('tbody tr');
+            await page.locator("//table//thead//tr[1]").waitFor();
+            // const headers = await page.locator("//table//thead//tr//td");
+             const rows = await page.locator('tbody tr');
              console.log("Total rows are in the cart:"+await rows.count());       
                for (let a=0; a<await rows.count();a++)
                {
@@ -635,13 +635,13 @@ public static async deleteProduct(sProductName:string)
 public static async addedProductInCart(sProductName: string)
     {
 
-        await sharedPage.locator("//table//thead//tr[1]").waitFor();
-       // const headers = await sharedPage.locator("//table//thead//tr//td");
-        const rows = await sharedPage.locator('tbody tr');
+        await page.locator("//table//thead//tr[1]").waitFor();
+       // const headers = await page.locator("//table//thead//tr//td");
+        const rows = await page.locator('tbody tr');
         console.log("Total rows are:"+await rows.count());       
         const totalRows = await rows.count()
         const matchedRows= rows.filter({
-              has:sharedPage.locator('td'),
+              has:page.locator('td'),
               hasText: sProductName
         })
        const  NumberofRowsProducts = await matchedRows.count();
@@ -661,8 +661,8 @@ public static async addedProductInCart(sProductName: string)
 
   public static async productsInCart(sProductInCart :string)
   {
-        const headers =  sharedPage.locator("//table//thead//tr[1]//td");
-        const rows = sharedPage.locator("//table//tbody/tr//td");
+        const headers =  page.locator("//table//thead//tr[1]//td");
+        const rows = page.locator("//table//tbody/tr//td");
 
       //  const allRowsvalue = await rows.allTextContents();
         const  allColsvalue= await headers.allTextContents();
@@ -673,7 +673,7 @@ public static async addedProductInCart(sProductName: string)
         Assert.includesSubstring(allColsvalue,"Total");
 
         const matchedRows=await rows.filter({
-              has:sharedPage.locator('td'),
+              has:page.locator('td'),
               hasText: sProductInCart
         })
 

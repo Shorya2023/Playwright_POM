@@ -1,12 +1,12 @@
-import {Locator, Page} from '@playwright/test'
+import {Locator, page} from '@playwright/test'
 import {LoginDetails} from '../Testdata/Data.json'
 import {Actions} from '../Util/Actions'
 import * as allure from "allure-js-commons";
 import { Assert } from '../Util/Assert';
-import { sharedPage } from '../Fixtures/CustomFixtures';
+import { page } from '../Fixtures/CustomFixtures';
 import { logstep } from '../Util/AllurLogs';
-  export  class SignupPage{
-        readonly demo_page: Page;
+  export  class Signuppage{
+        readonly demo_page: page;
         readonly input_password: Locator
         readonly input_fisrtName : Locator;
         readonly input_LastName : Locator;
@@ -19,7 +19,7 @@ import { logstep } from '../Util/AllurLogs';
         readonly input_mobnumber : Locator;
 
 
-    constructor(demo_page:Page)
+    constructor(demo_page:page)
     {
         this.demo_page= demo_page;
          this.input_fisrtName=Actions.getXPATHCSSLocator("#first_name");

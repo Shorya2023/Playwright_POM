@@ -1,13 +1,12 @@
 
-import{Page} from '@playwright/test'
-import { step,sharedPage,expect,Locator} from '../Fixtures/CustomFixtures';
+import { step,page,expect,Locator} from '../Fixtures/CustomFixtures';
 import { Actions } from '../Util/Actions'
 import {CardDetails} from '../Testdata/newUserSignupDetails.json'
 
 export class Paymentpage{
 
 
-    readonly demo_page: Page;
+    readonly demo_page: page;
     readonly NameOnCard: Locator;
     readonly CardNumber: Locator;
     readonly CVC: Locator;
@@ -16,7 +15,7 @@ export class Paymentpage{
     readonly PayConfirmOrder: Locator;
     readonly successMessage: Locator;
 
-    constructor(demo_page:Page)
+    constructor(demo_page:page)
     {
             this.demo_page=demo_page; 
             this.NameOnCard=Actions.getXPATHCSSLocator("[name='name_on_card']")

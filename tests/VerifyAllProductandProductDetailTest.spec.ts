@@ -1,5 +1,5 @@
 
-import {sharedPage,test,expect} from '../Fixtures/CustomFixtures'
+import {page,test,expect} from '../Fixtures/CustomFixtures'
 import {LoginDetails} from '../Testdata/Data.json'
 import { Assert } from '../Util/Assert';
 import { attachmentOnFailure, FAIL ,PASS,logstep} from '../Util/AllurLogs';
@@ -18,7 +18,7 @@ test("Verify product added successfully Functionality",{annotation:
     await LoginFixture(LoginDetails.username,LoginDetails.password);
   
     logstep("On All products page");
-    const allproductPGTitle=await pages.objAllProducts.getAllproductsPageTiltle();
+    const allproductPGTitle=await pages.objAllProducts.getAllproductspageTiltle();
     await Assert.expectToHaveTitle(allproductPGTitle);
   
     logstep("Click on Products");

@@ -2,28 +2,30 @@
 //shud return pageobject 
 //page as a fixture
 //export it
-import { Browser,Page,test as basetest } from '@playwright/test'
+import { Page,BrowserContext, Browser,test as basetest } from '@playwright/test'
 
-import { LoginPage } from '../Pages/LoginPage';
-import { Homepage } from '../Pages/HomePage'
-import { OrderInfo } from '../Pages/OrderInfo';
-import { PlaceOrder } from '../Pages/PlaceOrder';
-import { ContactUs } from '../Pages/ContactusPage';
-import {AllProducts} from '../Pages/ALLProductPage';
-import { viewProduct } from '../Pages/ViewProductDetailPage';
-import { Context } from 'vm';
-import { searchResults } from '../Pages/SearchProductResultsPage';
-import { SignupPage } from '../Pages/SignUpPage';
-import { CheckoutPage } from '../Pages/CheckoutPage';
-import {Paymentpage} from '../Pages/PaymentPage'
+import { Loginpage } from '../pages/Loginpage';
+import { Homepage } from '../pages/Homepage'
+import { OrderInfo } from '../pages/OrderInfo';
+import { PlaceOrder } from '../pages/PlaceOrder';
+import { ContactUs } from '../pages/Contactuspage';
+import {AllProducts} from '../pages/ALLProductpage';
+import { viewProduct } from '../pages/ViewProductDetailpage';
+import { searchResults } from '../pages/SearchProductResultspage';
+import { Signuppage } from '../pages/SignUppage';
+import { Checkoutpage } from '../pages/Checkoutpage';
+import {Paymentpage} from '../pages/Paymentpage'
 
-let sharedPage: Page;
-let sharedcontext: Context;
-let sharedbowser: Browser;
+// let page: page;
+// let sharedcontext: Context;
+// let sharedbowser: Browser;
+
+let page:Page;
+let context:BrowserContext;
 
 type Fixtures = {
     pages: {
-        objloginpage: LoginPage;
+        objloginpage: Loginpage;
         objhomepage: Homepage;
         objorderinfo: OrderInfo;
         objplaceorder: PlaceOrder;
@@ -31,8 +33,8 @@ type Fixtures = {
         objAllProducts:AllProducts;
         objviewProduct: viewProduct;
         objsearchResulsProduct:searchResults;
-        objSignUp: SignupPage;
-        objCheckout:CheckoutPage;
+        objSignUp: Signuppage;
+        objCheckout:Checkoutpage;
         objPayment: Paymentpage;
     },
     LoginFixture: (username: string, password: string) => Promise<void>;
@@ -41,22 +43,24 @@ type Fixtures = {
 
 export const test = basetest.extend<Fixtures>({
     //Fixtures for POM instances
-    pages: async ({browser}, use) => {    
-            const sharedcontext  = await browser.newContext();
-            sharedPage = await sharedcontext.newPage();
-            
-            //Fixtures for POM instances and passing shred page instances 
-        const objloginpage = new LoginPage(sharedPage);
-        const objhomepage = new Homepage(sharedPage);
-        const objorderinfo = new OrderInfo(sharedPage);
-        const objplaceorder = new PlaceOrder(sharedPage);    
-        const objContactus  = new ContactUs(sharedPage); 
-        const objAllProducts= new AllProducts(sharedPage);  
-        const objviewProduct= new viewProduct(sharedPage);  
-        const objsearchResulsProduct= new searchResults(sharedPage);  
-        const objSignUp= new SignupPage(sharedPage);
-        const objCheckout = new CheckoutPage(sharedPage);
-        const objPayment= new Paymentpage(sharedPage)
+    pages: async ({browser}, use) => { 
+        
+         context = await browser.newContext();
+        // Create a new page inside context.
+         page = await context.newPage();
+         
+            //Fixtures for POM instances and passing  page instances 
+        const objloginpage = new Loginpage(page);
+        const objhomepage = new Homepage(page);
+        const objorderinfo = new OrderInfo(page);
+        const objplaceorder = new PlaceOrder(page);    
+        const objContactus  = new ContactUs(page); 
+        const objAllProducts= new AllProducts(page);  
+        const objviewProduct= new viewProduct(page);  
+        const objsearchResulsProduct= new searchResults(page);  
+        const objSignUp= new Signuppage(page);
+        const objCheckout = new Checkoutpage(page);
+        const objPayment= new Paymentpage(page)
 
         await use({objloginpage,objAllProducts, objviewProduct,objhomepage,
                      objorderinfo, objplaceorder,objContactus,objsearchResulsProduct,objSignUp,objCheckout,objPayment});
@@ -69,9 +73,9 @@ export const test = basetest.extend<Fixtures>({
     },
 
     //logout fixture
-    LogoutFixture: async ({ pages}, use) => {
+    LogoutFixture: async ({ pages,browser}, use) => {
         await use(() => pages.objhomepage.Logout());
-
+        //    await browser.close();
     }
 
 
@@ -79,9 +83,7 @@ export const test = basetest.extend<Fixtures>({
 
 
 export { expect,Locator} from '@playwright/test';
-export {sharedPage} ;
-export {sharedcontext};
-export {sharedbowser};
+export {page,context,Browser} ;
 
 
 

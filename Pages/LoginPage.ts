@@ -1,11 +1,12 @@
-import {Locator, Page} from '@playwright/test'
 import {LoginDetails} from '../Testdata/Data.json'
 import {Actions} from '../Util/Actions'
 import * as allure from "allure-js-commons";
 import { Assert } from '../Util/Assert';
-import { sharedPage } from '../Fixtures/CustomFixtures';
 import { logstep } from '../Util/AllurLogs';
-  export  class LoginPage{
+import path from 'path';
+import {page,context} from '../Fixtures/CustomFixtures'
+import { Page ,Locator} from 'playwright';
+  export  class Loginpage{
         readonly demo_page: Page;
         readonly IncorrectLoginMessage: Locator
         readonly input_username : Locator;
@@ -43,7 +44,7 @@ import { logstep } from '../Util/AllurLogs';
 
          logstep("Click On Login/Signin")
          await Actions.clickElement(this.btn_Login);
-         await Actions.wait(2000);      
+         await context.storageState({ path: "LoginState.json"});
     }
 
 

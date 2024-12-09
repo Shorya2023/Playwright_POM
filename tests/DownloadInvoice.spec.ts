@@ -1,11 +1,11 @@
 import { assert, log } from 'console';
-import {sharedPage,test,expect} from '../Fixtures/CustomFixtures'
+import {page,test,expect} from '../Fixtures/CustomFixtures'
 import {LoginDetails} from '../Testdata/Data.json'
 import { Actions } from '../Util/Actions';
 import { logstep } from '../Util/AllurLogs';
 import { Assert } from '../Util/Assert';
 
-let sProductName = "GRAPHIC DESIGN MEN T SHIRT - BLUE"
+let sProductName = "Beautiful Peacock Blue Cotton Linen Saree"
 test("Test Case 24: Download Invoice after purchase order",{
       annotation:{
          type:"E2E",
@@ -19,7 +19,7 @@ test("Test Case 24: Download Invoice after purchase order",{
     logstep("Open url - ''")
     await Actions.navigateToURL(LoginDetails.url);
 
-    logstep("vreify Home Page displayed")
+    logstep("vreify Home page displayed")
     await Assert.expectToBeVisible(pages.objhomepage.NewuserSignUp);
 
     logstep("click on Home");
@@ -50,7 +50,7 @@ test("Test Case 24: Download Invoice after purchase order",{
     logstep("Click on Register/Login");
     await pages.objsearchResulsProduct.clickOnregister();
 
-    logstep("vreify Home Page displayed")
+    logstep("vreify Home page displayed")
     await Assert.expectToBeVisible(pages.objhomepage.NewuserSignUp);
 
     logstep("click on  Signup / Login");
@@ -103,7 +103,7 @@ test("Test Case 24: Download Invoice after purchase order",{
     // logstep(" Verify SuccesMMessage visibe on page");
     // Assert.expectToBeVisible(pages.objPayment.successMessage);
 
-    logstep(" Verify OrderPlaced visibe on checkput page");
+    logstep(" Verify OrderPlaced visibe on checkout page");
     Assert.expectToBeVisible(pages.objhomepage.OrderPlaced);
 
     logstep("Click on Download Invoice");

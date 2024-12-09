@@ -1,9 +1,8 @@
 
-import {sharedPage,test,expect} from '../Fixtures/CustomFixtures'
+import {page,test,expect} from '../Fixtures/CustomFixtures'
 import {LoginDetails} from '../Testdata/Data.json'
 import { Assert } from '../Util/Assert';
 import { attachmentOnFailure, FAIL ,PASS,logstep} from '../Util/AllurLogs';
-import { PlaceOrder } from '../Pages/PlaceOrder';
 import { Actions } from '../Util/Actions';
 
 

@@ -3,7 +3,6 @@ import {LoginDetails} from '../Testdata/Data.json'
 import {Actions} from '../Util/Actions'
 import * as allure from "allure-js-commons";
 import { Assert } from '../Util/Assert';
-import { sharedPage } from '../Fixtures/CustomFixtures';
 import { logstep } from '../Util/AllurLogs';
  export class AllProducts{
 
@@ -25,9 +24,9 @@ import { logstep } from '../Util/AllurLogs';
         }
 
 
-    async getAllproductsPageTiltle()
+    async getAllproductspageTiltle()
         {
-           const allPGtitle =  await Actions.getPageTitle();
+           const allPGtitle =  await Actions.getpageTitle();
            console.log("Title-------"+allPGtitle);
            return allPGtitle;           
         }
@@ -47,9 +46,9 @@ import { logstep } from '../Util/AllurLogs';
     async displayAllProducts()
         {
                  const arrProductList=await Actions.getArrayOfElement(this.productImage)
-                 for (let pr of arrProductList)
+                 for (let products of arrProductList)
                  {
-                        const productdisplay = await pr.textContent();
+                        const productdisplay = await products.textContent();
                         console.log(productdisplay);
                     
                  }

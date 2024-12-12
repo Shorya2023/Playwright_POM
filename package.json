@@ -10,6 +10,10 @@
     "Chrome": "npx playwright test --project=chromium",
     "Firefox": "npx playwright test --project=Firefox",
     "Safari": "npx playwright test --project=Webkit",
+    "SmokeOnChrome": "npx playwright test --grep @Smoke --project=chromium",
+    "RegressionOnChrome": "npx playwright test --grep @Regression --project=chromium",
+    "SmokeOnFirefox": "npx playwright test --grep @Smoke --project=Firefox",
+    "RegressionOnFirefox": "npx playwright test --grep @Regression --project=Firefox",
     "Failed": "npx playwright test --last-failed --project=chromium"
   },
   "keywords": [],

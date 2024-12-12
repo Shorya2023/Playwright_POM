@@ -20,7 +20,7 @@ test("API test to retrie all brands", async({})=>{
      
 })
 
-test("Poduct lists", async({})=>{
+test("Product lists", async({})=>{
     const brandlists = await baseURL.get("api/productsList");
     console.log(await brandlists.json());
     expect(brandlists.status()).toBe(200);

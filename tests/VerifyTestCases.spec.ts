@@ -8,7 +8,7 @@ test.skip("Login to Application",{
    annotation:{
        type: "Login in",
        description: "Test Case 2: verify TesT case page displayed"},
-       tag:"@smoke"
+       tag:"@Smoke"
 }, async ({pages,LoginFixture,LogoutFixture,browser}) => {
      
     await LoginFixture(LoginDetails.username,LoginDetails.password);

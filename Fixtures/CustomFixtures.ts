@@ -75,7 +75,7 @@ export const test = basetest.extend<Fixtures>({
     //logout fixture
     LogoutFixture: async ({ pages,browser}, use) => {
         await use(() => pages.objhomepage.Logout());
-        //    await browser.close();
+         await page.close();
     }
 
 

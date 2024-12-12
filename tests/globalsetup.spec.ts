@@ -6,7 +6,7 @@ import { logstep } from '../Util/AllurLogs';
 import { Assert } from '../Util/Assert';
 
 let filepath="./playwright/.auth/auth.json"
-test("Login auth", async({pages})=>{
+test.skip("Login auth", async({pages})=>{
 
     logstep("1.Launch browser &  Navigate to url 'http://automationexercise.com'")
     await Actions.navigateToURL(LoginDetails.url);

@@ -10,7 +10,11 @@ test.beforeAll("Before all set up base url", async({})=>{
     baseURL  = await request.newContext({baseURL:"https://automationexercise.com"})
 })
 
-test("API Login Verification", async({})=>{
+test("API Login Verification",{
+                                annotation:{
+                                  type: "Api Login verification",
+                                } ,tag:"@API"
+                  },async({})=>{
 
     const response  = await baseURL.post("login",{
                         data:requestdata,

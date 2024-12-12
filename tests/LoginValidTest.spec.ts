@@ -8,11 +8,11 @@ import { logstep} from '../Util/AllurLogs';
 
 test.use({storageState: {cookies: [], origins:[]}});
  
-test("Login to Application",{
+test("@Smoke Login to Application",{
    annotation:{
        type: "Login in",
        description: "Test Case 2: Login User with correct email and password"},
-       tag:"@smoke"
+       tag:"@Smoke"
 }, async ({pages,LoginFixture,LogoutFixture}) => {
 
     

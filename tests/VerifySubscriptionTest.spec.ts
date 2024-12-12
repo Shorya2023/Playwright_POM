@@ -9,7 +9,7 @@ import { Actions } from '../Util/Actions';
 test("Verify  subscription message-",{annotation:
     {type:"UI Test case",
       description: "Verify subscription message-'You have been successfully subscribed!"  
-    }
+    },tag:"@Regression"
    
 }, async ({  pages, LoginFixture, LogoutFixture,context }) => {
 

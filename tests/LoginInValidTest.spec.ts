@@ -10,7 +10,7 @@ test("Login to Application with Invalid Credentials",{
    annotation:{
        type: "Login in",
        description: "Test Case 2: Login User with INcorrect email and password"},
-       tag:"@smoke"
+       tag:"@Smoke"
 }, async ({pages,LoginFixture,LogoutFixture,context}) => {
 
     

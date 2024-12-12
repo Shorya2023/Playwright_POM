@@ -9,7 +9,7 @@ test("PLace Order while register account",{
       annotation:{
          type:"Place order verification",
          description:"Place order while register for account"
-      },tag:"@smoke"
+      },tag:"@Regression"
 }, async ({pages,LoginFixture,LogoutFixture,context}) => {
     
     //Login to app

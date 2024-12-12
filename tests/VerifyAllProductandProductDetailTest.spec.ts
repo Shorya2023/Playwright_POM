@@ -9,7 +9,7 @@ import { Actions } from '../Util/Actions';
 test("Verify product added successfully Functionality",{annotation:
     {type:"UI Test case",
       description: "Verifying product added succeefully by clicking on add to cart link functionality"  
-    }
+    },tag : "@Regression"
    
 }, async ({  pages, LoginFixture, LogoutFixture,context }) => {
 

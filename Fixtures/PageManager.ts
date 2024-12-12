@@ -1,8 +1,8 @@
-import {test,expect, chromium, Page, Browser} from '@playwright/test'
+import {test,expect, chromium, page, Browser} from '@playwright/test'
 import {LoginDetails} from '../Testdata/Data.json'
 import { Context } from 'vm';
 
-let page:Page
+let page:page
 let context:Context
 let browser:Browser
 
@@ -10,7 +10,7 @@ test.beforeAll(async()=>{
 
         browser= await chromium.launch();
         context= await browser.newContext();
-        page= await context.newPage();
+        page= await context.newpage();
 
         await page.goto(LoginDetails.url);
 })

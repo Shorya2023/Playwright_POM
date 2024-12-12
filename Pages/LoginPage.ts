@@ -6,6 +6,8 @@ import { logstep } from '../Util/AllurLogs';
 import path from 'path';
 import {page,context} from '../Fixtures/CustomFixtures'
 import { Page ,Locator} from 'playwright';
+
+
   export  class Loginpage{
         readonly demo_page: Page;
         readonly IncorrectLoginMessage: Locator
@@ -31,8 +33,12 @@ import { Page ,Locator} from 'playwright';
         this.accountCreated=Actions.getCustomLocatorByText("Account Created!");
       }
 
+
+
     async loginToApp(username:string, password:string)
     {
+      page.on('request---',request=>console.log("******",request.url()));
+      page.on('request---',response=>console.log("*******",response.url(),response.status()));
          logstep("1.Launch browser &  Navigate to url 'http://automationexercise.com'")
          await Actions.navigateToURL(LoginDetails.url);
 
@@ -48,10 +54,10 @@ import { Page ,Locator} from 'playwright';
     }
 
 
-    async newUserSignup()
+    async newUserSignup(Newusername:string, NewEmail:string)
     {
-        await Actions.fill(this.input_newUsername,"newUserName");
-        await Actions.fill(this.input_NewEmail,"newemial_"+Date.now()+"@gmail.com");
+        await Actions.fill(this.input_newUsername,Newusername);
+        await Actions.fill(this.input_NewEmail,NewEmail);
         await Actions.clickElement(this.btn_Signup);
     }
 }

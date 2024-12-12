@@ -8,7 +8,7 @@ test("Home page test",{
       annotation:{
          type:"Homepage verification",
          description:"Login to home page , verifying Links displayed"
-      },tag:"@smoke"
+      },tag:"@Smoke"
 }, async ({pages,LoginFixture,LogoutFixture,context}) => {
 
    //Login to app

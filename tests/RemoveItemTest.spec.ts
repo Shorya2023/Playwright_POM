@@ -11,7 +11,7 @@ test("Remove Item",{
       annotation:{
          type:"Remove Item ",
          description:"Add o cart and remove the same"
-      },tag:"@smoke"
+      },tag:"@Regression"
 }, async ({pages,LoginFixture,LogoutFixture,context}) => {
     
     //Login to app

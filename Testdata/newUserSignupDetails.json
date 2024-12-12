@@ -4,6 +4,7 @@
 
         "input_fisrtName":"john",
         "input_LastName":"davis",
+        "input_Email":"John",
         "input_password":"231davis",
         "input_address":"new street 29 NA CANADA 112233",
         "input_city":"NY",

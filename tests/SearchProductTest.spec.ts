@@ -9,7 +9,7 @@ import { Actions } from '../Util/Actions';
 test("Search product and Verify product the details",{annotation:
     {type:"UI Test case",
       description: "Search product and verify all the details displayed correctly"  
-    }
+    },tag:"@Regression"
    
 }, async ({  pages, LoginFixture, LogoutFixture,context }) => {
 

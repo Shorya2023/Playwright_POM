@@ -4,7 +4,7 @@ import {Actions} from '../Util/Actions';
 
 export class OrderInfo{
 
-    readonly demo_page: page;
+    readonly demo_page: Page;
     readonly input_Name: Locator;
     readonly input_Country: Locator;
     readonly input_City: Locator;

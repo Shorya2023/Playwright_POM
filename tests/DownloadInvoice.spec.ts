@@ -1,5 +1,6 @@
 import { assert, log } from 'console';
 import {page,test,expect} from '../Fixtures/CustomFixtures'
+// import { request } from 'playwright';
 import {LoginDetails} from '../Testdata/Data.json'
 import { Actions } from '../Util/Actions';
 import { logstep } from '../Util/AllurLogs';
@@ -10,12 +11,13 @@ test("Test Case 24: Download Invoice after purchase order",{
       annotation:{
          type:"E2E",
          description:"Download Invoice after purchase order"
-      },tag:"@smoke"
-}, async ({pages,LoginFixture,LogoutFixture,context}) => {
+      },tag:"@Smoke"
+}, async ({pages,LoginFixture,LogoutFixture,context,request}) => {
     
     //Login to app
     // await context.clearCookies();
-  
+   
+
     logstep("Open url - ''")
     await Actions.navigateToURL(LoginDetails.url);
 

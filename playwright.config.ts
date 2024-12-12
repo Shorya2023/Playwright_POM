@@ -3,18 +3,19 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   retries: process.env.CI ? 1 : 1,
+
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 3 : 3,
     reporter:[['html'], ['allure-playwright', { resultsDir: 'allure-results' }]],
   use: {
     viewport: { width: 1920, height: 1080 },
     
-    headless:false,
+    headless:true,
     screenshot:'on',
     trace: 'on',  
     video: {

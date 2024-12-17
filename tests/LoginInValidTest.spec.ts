@@ -13,7 +13,8 @@ test("Login to Application with Invalid Credentials",{
        tag:"@Smoke"
 }, async ({pages,LoginFixture,LogoutFixture,context}) => {
 
-    
+   Actions.log("****************test strated.."+(test.info().title).toUpperCase()+"*****************")
+
    // await context.clearCookies();
     await LoginFixture(LoginDetails.invalid_username,LoginDetails.invalid_password);
 
@@ -22,4 +23,7 @@ test("Login to Application with Invalid Credentials",{
 
    //logout from application
    await LogoutFixture();   
+
+   Actions.log("test finished.."+test.info().title)
+
 })

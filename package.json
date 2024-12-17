@@ -7,6 +7,8 @@
     "test": "npx playwright test",
     "Smoke": "npx playwright test --grep @Smoke",
     "Regression": "npx playwright test --grep @Regression",
+    "Smoke_UIMode": "npx playwright test --grep @Smoke --ui",
+    "Regression_UIMode": "npx playwright test --grep @Regression --ui",
     "Chrome": "npx playwright test --project=chromium",
     "Firefox": "npx playwright test --project=Firefox",
     "Safari": "npx playwright test --project=Webkit",
@@ -29,8 +31,9 @@
   },
   "dependencies": {
     "allure-playwright": "^3.0.6",
+    "browserstack-automate": "^1.0.2",
     "dotenv": "^16.4.5",
-    "playwright": "^1.49.0"
+    "playwright": "^1.49.0",
+    "winston": "^3.17.0"
   }
 }
-

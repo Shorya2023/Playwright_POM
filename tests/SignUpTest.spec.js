@@ -14,6 +14,7 @@ test("Sign up Verification",{
          description:"Sign up Verification for new user"
       },tag:"@Smoke"
 }, async ({pages,LoginFixture,LogoutFixture,context}) => {
+    Actions.log("****************test strated.."+(test.info().title).toUpperCase()+"*****************")
 
     logstep("Open url - ''")
     await Actions.navigateToURL(LoginDetails.url);
@@ -41,7 +42,8 @@ test("Login with Newly Created account",{annotation:{
         type:"Login with newly username",
         description:"Login and verify newly account"
 }, tag: "@Smoke"},async ({pages,LoginFixture,LogoutFixture}) => {
-    
+    Actions.log("****************test strated.."+(test.info().title).toUpperCase()+"*****************")
+
     logstep("Open url - ''")
     await Actions.navigateToURL(LoginDetails.url);
 

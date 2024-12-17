@@ -1,6 +1,7 @@
 import {expect, page,test,Locator} from '../Fixtures/CustomFixtures'
 import * as allure from "allure-js-commons";
 import { attachmentOnFailure, FAIL ,PASS,logstep} from './AllurLogs';
+import logger from '../Util/Logger';
 export class Assert {
 
 
@@ -8,7 +9,7 @@ export class Assert {
     public static async expectToBeChecked(locator: Locator, timeout = 5000) {
       try {
         await expect(locator).toBeChecked({ timeout });
-        console.log(locator,'Element is checked.');
+         logger.info(locator,'Element is checked.');
       } catch (error) {
         FAIL("Error: Element is not checked");
         throw error;
@@ -19,9 +20,9 @@ export class Assert {
     public static async expectToBeDisabled(locator: Locator, timeout = 5000) {
       try {
         await expect(locator).toBeDisabled({ timeout });
-        console.log(locator ,'Element is disabled.');
+         logger.info(locator ,'Element is disabled.');
       } catch (error) {
-        console.error(locator , 'Error: Element is not disabled.', error);
+        logger.error(locator , 'Error: Element is not disabled.', error);
         FAIL("Error: Element is not Disabled");
         throw error;
       }
@@ -31,9 +32,9 @@ export class Assert {
     public static async expectToBeEditable(locator: Locator, timeout = 5000) {
       try {
         await expect(locator).toBeEditable({ timeout });
-        console.log(locator ,'Element is editable.');
+         logger.info(locator ,'Element is editable.');
       } catch (error) {
-        console.error(locator , 'Error: Element is not editable.', error);
+        logger.error(locator , 'Error: Element is not editable.', error);
       }
     }
   
@@ -41,9 +42,9 @@ export class Assert {
     public static async expectToBeFocused(locator: Locator, timeout = 5000) {
       try {
         await expect(locator).toBeFocused({ timeout });
-        console.log(locator ,'Element is focused.');
+         logger.info(locator ,'Element is focused.');
       } catch (error) {
-        console.error(locator , 'Error: Element is not focused.', error);
+        logger.error(locator , 'Error: Element is not focused.', error);
       }
     }
   
@@ -51,9 +52,9 @@ export class Assert {
     public static async expectToBeHidden(locator: Locator, timeout = 5000) {
       try {
         await expect(locator).toBeHidden({ timeout });
-        console.log(locator ,'Element is hidden.');
+         logger.info(locator ,'Element is hidden.');
       } catch (error) {
-        console.error(locator , 'Error: Element is not hidden.', error);
+        logger.error(locator , 'Error: Element is not hidden.', error);
       }
     }
   
@@ -61,9 +62,9 @@ export class Assert {
     public static async expectToBeInViewport(locator: Locator, timeout = 5000) {
       try {
         await expect(locator).toBeInViewport({ timeout });
-        console.log(locator ,'Element is in the viewport.');
+         logger.info(locator ,'Element is in the viewport.');
       } catch (error) {
-        console.error(locator , 'Error: Element is not in the viewport.', error);
+        logger.error(locator , 'Error: Element is not in the viewport.', error);
       }
     }
   
@@ -71,11 +72,11 @@ export class Assert {
     public static async expectToBeVisible(locator: Locator, timeout = 5000) {
       try {
             await expect(locator).toBeVisible({ timeout });
-            console.log(locator ,'Element is visible.');
+             logger.info(locator ,'Element is visible.');
             PASS("Element is visible.'");
           } 
           catch (error) {
-            console.error(locator , 'Error: Element is not visible.', error);
+            logger.error(locator , 'Error: Element is not visible.', error);
             FAIL("'Error: Element is not visible.'");
             throw error;
       }
@@ -85,10 +86,10 @@ export class Assert {
     public static async expectToContainText(locator: Locator, text: any, timeout = 5000) {
       try {
         await expect(locator).toContainText(text, { timeout });
-        console.log(locator ,'Element contains the text.');
+         logger.info(locator ,'Element contains the text.');
         PASS("Element is visisble ")
       } catch (error) {
-        console.error(locator , 'Error: Element does not contain the text.', error);
+        logger.error(locator , 'Error: Element does not contain the text.', error);
         FAIL("Error: Element does not contain the text");
         throw error;
       }
@@ -98,9 +99,9 @@ export class Assert {
     public static async expectToHaveCount(locator: Locator, count: number, timeout = 5000) {
       try {
         await expect(locator).toHaveCount(count, { timeout });
-        console.log(locator ,'Element has the correct count.');
+         logger.info(locator ,'Element has the correct count.');
       } catch (error) {
-        console.error(locator , 'Error: Element does not have the correct count.', error);
+        logger.error(locator , 'Error: Element does not have the correct count.', error);
       }
     }
   
@@ -108,9 +109,9 @@ export class Assert {
     public static async expectToHaveText(locator: Locator, text: any, timeout = 5000) {
       try {
         await expect(locator).toHaveText(text, { timeout });
-        console.log(locator ,'Element has the correct text.');
+         logger.info(locator ,'Element has the correct text.');
       } catch (error) {
-        console.error(locator , 'Error: Element does not have the correct text.', error);
+        logger.error(locator , 'Error: Element does not have the correct text.', error);
         FAIL("Error: Element does not have the correct text ");
         throw error;
 
@@ -121,9 +122,9 @@ export class Assert {
     public static async expectToHaveValue(locator: Locator, value: any, timeout = 5000) {
       try {
         await expect(locator).toHaveValue(value, { timeout });
-        console.log(locator ,'Element has the correct value.');
+         logger.info(locator ,'Element has the correct value.');
       } catch (error) {
-        console.error(locator , 'Error: Element does not have the correct value.', error);
+        logger.error(locator , 'Error: Element does not have the correct value.', error);
       }
     }
   
@@ -131,10 +132,10 @@ export class Assert {
     public static async expectToHaveTitle( title: string, timeout = 5000) {
       try {
             await expect(page).toHaveTitle(title, { timeout });
-            console.log('page has the correct title.->',title);
+             logger.info('page has the correct title.->',title);
       } 
       catch (error) {
-           console.error( 'Error: page does not have the correct title.', error);
+           logger.error( 'Error: page does not have the correct title.', error);
            FAIL("Error: page does not have the correct title.")
            throw error;
       }
@@ -144,7 +145,7 @@ export class Assert {
     public static async expectToHaveURL( url: string, timeout = 5000) {
       try {
         await expect(page).toHaveURL(url, { timeout });
-        console.log('page has the correct URL.');
+         logger.info('page has the correct URL.');
       } catch (error) {
         FAIL("Error: Incorrect URL");
         throw error;
@@ -155,10 +156,10 @@ export class Assert {
     public static expectStringToContain(value: any, substring: string) {
       try {
         expect(value).toContain(substring);
-        console.log('String' ,value,'contains the substring.',substring);
+         logger.info('String' ,value,'contains the substring.',substring);
         PASS('String exist');
       } catch (error) {
-        console.error('Error: String does not contain the substring.', error);
+        logger.error('Error: String does not contain the substring.', error);
         FAIL('Error: String does not contain the substring.');
         throw error;
       }
@@ -168,9 +169,9 @@ export class Assert {
     public static expectArrayToContain(array: object, element: any) {
       try {
         expect(array).toContain(element);
-        console.log('Array contains the element.');
+         logger.info('Array contains the element.');
       } catch (error) {
-        console.error('Error: Array does not contain the element.', error);
+        logger.error('Error: Array does not contain the element.', error);
       }
     }
   
@@ -178,9 +179,9 @@ export class Assert {
     public static includesSubstring(text1: any, text2: string) {
       try {
           expect(text1.includes(text2)).toBeTruthy();
-          console.log('Text1 -'+ text1+' contains substring'+ text2);
+           logger.info('Text1 -'+ text1+' contains substring'+ text2);
       } catch (error) {
-        console.error('Text1 -'+ text1+' NOT CONTAINS a substring'+ text2);
+        logger.error('Text1 -'+ text1+' NOT CONTAINS a substring'+ text2);
       }
     }
 
@@ -190,9 +191,9 @@ export class Assert {
     public static expectArrayToContainEqual(array: object, element: any) {
       try {
         expect(array).toContainEqual(element);
-        console.log('Array contains an equal element.');
+         logger.info('Array contains an equal element.');
       } catch (error) {
-        console.error( 'Error: Array does not contain an equal element.', error);
+        logger.error( 'Error: Array does not contain an equal element.', error);
       }
     }
   
@@ -200,10 +201,10 @@ export class Assert {
     public static expectToEqual(value1: any, value2: any) {
       try {
           expect(value1).toEqual(value2);
-          console.log(value1, " and ",value2,'are equal.');
+           logger.info(value1, " and ",value2,'are equal.');
       } catch (error) {
           attachmentOnFailure("testInfo");
-          console.error(value1, "and",value2,'Error: Values are not equal.', error);
+          logger.error(value1, "and",value2,'Error: Values are not equal.', error);
           FAIL("verification of two values are deeply equal.-FAILED"+value1+ "-Not Matching to-"+ value2);
           attachmentOnFailure("testInfo");
           throw error;
@@ -214,10 +215,10 @@ export class Assert {
     public static GreaterThanorEqual(value1: any, value2: any) {
       try {
           expect(value1).toBeGreaterThanOrEqual(value2);
-          console.log(value1, " GreaterThan ",value2);
+           logger.info(value1, " GreaterThan ",value2);
       } catch (error) {
           attachmentOnFailure("testInfo");
-          console.error(value1, " GreaterThan ",value2, error);
+          logger.error(value1, " GreaterThan ",value2, error);
           FAIL("verification of two values are deeply equal.-FAILED"+value1+ "-Not Matching to-"+ value2);
           attachmentOnFailure("testInfo");
           throw error;

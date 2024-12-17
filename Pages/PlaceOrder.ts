@@ -1,16 +1,17 @@
 import { step,page,expect,Locator} from '../Fixtures/CustomFixtures';
 import { Actions } from '../Util/Actions';
+import{Page} from '@playwright/test'
 
 export class PlaceOrder{
 
-    readonly demo_page: page;
+    readonly demo_page: Page;
     readonly Product_link: Locator;
     readonly Addtocart_link: Locator;
     readonly Cart_link: Locator;
    // readonly PlaceOrder_btn: Locator;
     readonly ProductOrdered: Locator;
 
-    constructor(demo_page:page)
+    constructor(demo_page:Page)
     {
             this.demo_page=demo_page;
             this.Product_link=Actions.getCustomLocator("text","ASUS Full HD");

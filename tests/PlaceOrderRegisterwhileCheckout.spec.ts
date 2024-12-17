@@ -15,6 +15,8 @@ test("PLace Order while register account",{
     //Login to app
     // await context.clearCookies();
   
+    Actions.log("****************test strated.."+(test.info().title).toUpperCase()+"*****************")
+
     logstep("Open url - ''")
     await Actions.navigateToURL(LoginDetails.url);
 
@@ -48,6 +50,8 @@ test("PLace Order while register account",{
     
     logstep("Click on Register/Login");
     await pages.objsearchResulsProduct.clickOnregister();
+
+    Actions.log("test fisnished.."+test.info().title)
 
 })
 

@@ -16,7 +16,8 @@ test("Remove Item",{
     
     //Login to app
     // await context.clearCookies();
-  
+    Actions.log("****************test strated.."+(test.info().title).toUpperCase()+"*****************")
+
     logstep("Login with valid credentials");
   //  await context.clearCookies();
     await LoginFixture(LoginDetails.username,LoginDetails.password);

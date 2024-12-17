@@ -1,7 +1,9 @@
 import { Actions } from '../Util/Actions';
 import { page,Locator, expect } from '../Fixtures/CustomFixtures';
+import{Page} from '@playwright/test'
+
  export class Homepage{
-    readonly demo_page: page;
+    readonly demo_page: Page;
   //  readonly Monitor_link: Locator;
     readonly logout_link: Locator;
     readonly HomepageTitle: Locator;
@@ -21,7 +23,7 @@ import { page,Locator, expect } from '../Fixtures/CustomFixtures';
     readonly OrderPlaced:Locator;
     readonly DownoadInvoice:Locator;
 
-    constructor(demo_page:page)
+    constructor(demo_page:Page)
     {     
         this.demo_page= demo_page;
         //this.userName=Actions.getXPATHCSSLocator("")

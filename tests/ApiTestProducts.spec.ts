@@ -8,6 +8,7 @@ import {test,request, expect} from '@playwright/test'
     })
 
 test("API testing to retrive all products",async({request})=>{
+    
            const Productdata = await request.get(url);
             console.log(await Productdata.json());
 })

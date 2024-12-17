@@ -4,10 +4,11 @@ import * as allure from "allure-js-commons";
 import { Assert } from '../Util/Assert';
 import { page, Locator } from '../Fixtures/CustomFixtures';
 import { logstep } from '../Util/AllurLogs';
+import{Page} from '@playwright/test'
 
 export class ContactUs {
 
-    readonly demo_page: page;
+    readonly demo_page: Page;
     readonly Successmessage: Locator
     readonly input_Name: Locator;
     readonly input_Email: Locator;
@@ -19,7 +20,7 @@ export class ContactUs {
 
 
 
-    constructor(demo_page: page) {
+    constructor(demo_page: Page) {
         this.demo_page = demo_page;
         //  this.link_Login= Actions.getCustomLocator('xpath_css','#login2');        
         this.input_Name = Actions.getXPATHCSSLocator("//input[@name='name']");

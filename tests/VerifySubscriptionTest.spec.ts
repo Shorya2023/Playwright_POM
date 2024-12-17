@@ -13,7 +13,7 @@ test("Verify  subscription message-",{annotation:
    
 }, async ({  pages, LoginFixture, LogoutFixture,context }) => {
 
-  await context.clearCookies();
+  Actions.log("****************test strated.."+(test.info().title).toUpperCase()+"*****************")
 
     logstep("Login with valid credentials");
     await LoginFixture(LoginDetails.username,LoginDetails.password);

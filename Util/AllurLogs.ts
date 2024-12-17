@@ -13,7 +13,7 @@ import { page } from "../Fixtures/CustomFixtures";
  */
 export async function logstep(stepName: string)
 {
-   await allure.step("****************"+stepName+"****************", ()=>{});
+   await allure.step("****************"+stepName.toUpperCase()+"****************", ()=>{});
 }
 
 export async function  PASS(stepName: string)

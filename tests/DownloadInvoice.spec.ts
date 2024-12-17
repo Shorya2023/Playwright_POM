@@ -16,6 +16,8 @@ test("Test Case 24: Download Invoice after purchase order",{
     
     //Login to app
     // await context.clearCookies();
+
+    Actions.log("****************test strated.."+(test.info().title).toUpperCase()+"*****************")
    
 
     logstep("Open url - ''")
@@ -110,6 +112,8 @@ test("Test Case 24: Download Invoice after purchase order",{
 
     logstep("Click on Download Invoice");
     await Actions.downloadfile(pages.objhomepage.DownoadInvoice,"../DownloadFile");
+
+    Actions.log("test Finished.."+test.info().title)
 
 
 

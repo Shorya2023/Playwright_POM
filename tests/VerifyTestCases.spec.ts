@@ -2,6 +2,7 @@ import {test,expect,page} from '../Fixtures/CustomFixtures'
 import {LoginDetails} from '../Testdata/Data.json'
 import  dotenv from "dotenv"
 import { Actions } from '../Util/Actions'
+import { logstep } from '../Util/AllurLogs'
 
 
 test.skip("Login to Application",{
@@ -15,7 +16,7 @@ test.skip("Login to Application",{
     
     logstep("Verify Test cases new page opened");
         const context = await browser.newContext()
-        const page =  await context.newpage();
+        const page =  await context.newPage();
         const contextPromise  = context.waitForEvent('page');
         await Actions.clickElement(pages.objhomepage.btnTestCase);
         const newpage = await contextPromise;

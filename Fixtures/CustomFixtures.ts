@@ -3,7 +3,6 @@
 //page as a fixture
 //export it
 import { Page,BrowserContext, Browser,test as basetest } from '@playwright/test'
-
 import { Loginpage } from '../pages/Loginpage';
 import { Homepage } from '../pages/Homepage'
 import { OrderInfo } from '../pages/OrderInfo';
@@ -14,11 +13,14 @@ import { viewProduct } from '../pages/ViewProductDetailpage';
 import { searchResults } from '../pages/SearchProductResultspage';
 import { Signuppage } from '../pages/SignUppage';
 import { Checkoutpage } from '../pages/Checkoutpage';
-import {Paymentpage} from '../pages/Paymentpage'
+import {Paymentpage} from '../pages/Paymentpage';
+import fs  from 'fs';
 
 // let page: page;
 // let sharedcontext: Context;
 // let sharedbowser: Browser;
+
+
 
 let page:Page;
 let context:BrowserContext;
@@ -39,18 +41,18 @@ type Fixtures = {
     },
     LoginFixture: (username: string, password: string) => Promise<void>;
     LogoutFixture: () => Promise<void>;
+
 }
 
 export const test = basetest.extend<Fixtures>({
-    //Fixtures for POM instances
-    pages: async ({browser}, use) => { 
-        
-         context = await browser.newContext();
-        // Create a new page inside context.
-         page = await context.newPage();
-         
-            //Fixtures for POM instances and passing  page instances 
-        const objloginpage = new Loginpage(page);
+                //Fixtures for POM instances
+                pages: async ({browser}, use) => {                   
+                context = await browser.newContext();
+                // Create a new page inside context.
+                page = await context.newPage();
+                    
+         //Fixtures for POM instances and passing  page instances 
+        const objloginpage = new Loginpage(page);        
         const objhomepage = new Homepage(page);
         const objorderinfo = new OrderInfo(page);
         const objplaceorder = new PlaceOrder(page);    
@@ -76,8 +78,7 @@ export const test = basetest.extend<Fixtures>({
     LogoutFixture: async ({ pages,browser}, use) => {
         await use(() => pages.objhomepage.Logout());
          await page.close();
-    }
-
+    },
 
 })
 
@@ -86,6 +87,13 @@ export { expect,Locator} from '@playwright/test';
 export {page,context,Browser} ;
 
 
+// // Function to log messages
+// export function log(Message:any)
+// {
+//     logMessage.push(Message);
+//     console.log(Message);   
+//     fs.writeFileSync('..Logs/log.txt', logMessage.join('\n'), 'utf8');
+// }
 
 
 //Decorators used for every step descriptions 

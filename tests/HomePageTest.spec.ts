@@ -3,6 +3,8 @@ import {LoginDetails} from '../Testdata/Data.json'
 import { Actions } from '../Util/Actions';
 import { logstep } from '../Util/AllurLogs';
 import { Assert } from '../Util/Assert';
+import logger from '../Util/Logger'
+
 
 test("Home page test",{
       annotation:{
@@ -11,24 +13,28 @@ test("Home page test",{
       },tag:"@Smoke"
 }, async ({pages,LoginFixture,LogoutFixture,context}) => {
 
-   //Login to app
-      //  await context.clearCookies();
-       await LoginFixture(LoginDetails.username,LoginDetails.password);
+   Actions.log("****************test strated.."+(test.info().title).toUpperCase()+"*****************")
+
+   await LoginFixture(LoginDetails.username,LoginDetails.password);
 
    logstep("Total Links on the page")
    const totallinks =  await pages.objhomepage.totalLink();
-   console.log(totallinks);
 
    logstep("Verifying Total Links on the page")
    Assert.GreaterThanorEqual(totallinks,149);
 
+
    logstep("Display Total Links on the page")
    await pages.objhomepage.DisplayLinks()
+
 
    // logstep("Clicked on TestCase button and verify test cases new window opens up")
    // const newpageEle = Actions.newpageElement(pages.objhomepage.btnTestCase,pages.objhomepage.labelTestCases);
    // Actions.highlightElement(newpageEle);
    //Logout from app
    await LogoutFixture();
+   logger.info("Logged out from app");
+   Actions.log("test strated.."+test.info().title)
+
     
 });

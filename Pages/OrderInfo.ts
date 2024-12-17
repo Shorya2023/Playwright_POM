@@ -1,6 +1,7 @@
 import {page,Locator,expect} from '../Fixtures/CustomFixtures'
 import {OrderInfoDetails} from  "../Testdata/Data.json"
 import {Actions} from '../Util/Actions';
+import {Page} from '@playwright/test'
 
 export class OrderInfo{
 
@@ -17,7 +18,7 @@ export class OrderInfo{
     readonly Text_Ordermessage: Locator;
     readonly Text_OrderInfo_ID: Locator;
 
-    constructor(demo_page:page)
+    constructor(demo_page:Page)
     {    
             this.demo_page= demo_page;    
             this.input_Name= Actions.getCustomLocator("xpath_css","//label[@for='name']//following::input[@id='name']");

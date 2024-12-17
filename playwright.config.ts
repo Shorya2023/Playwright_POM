@@ -10,13 +10,15 @@ export default defineConfig({
   retries: process.env.CI ? 1 : 1,
 
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 3 : 3,
-    reporter:[['html'], ['allure-playwright', { resultsDir: 'allure-results' }]],
+  workers: process.env.CI ? 1 : 3,
+  reporter:[['html'], ['allure-playwright', { resultsDir: 'allure-results' }]],
+ 
+  // reporter:[['html'], ['allure-playwright', { resultsDir: 'allure-results' }],['./Util/custom-reporter.ts']],
   use: {
     viewport: { width: 1920, height: 1080 },
     
-    headless:true,
-    screenshot:'on',
+    headless:false,
+    screenshot:'only-on-failure',
     trace: 'on',  
     video: {
               mode:'retain-on-failure',

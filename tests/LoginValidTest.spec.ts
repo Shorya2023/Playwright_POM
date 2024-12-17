@@ -15,7 +15,7 @@ test("@Smoke Login to Application",{
        tag:"@Smoke"
 }, async ({pages,LoginFixture,LogoutFixture}) => {
 
-    
+   Actions.log("****************test strated.."+(test.info().title).toUpperCase()+"*****************")
    await LoginFixture(LoginDetails.username,LoginDetails.password);
 
    logstep("Verify that 'Logged in as username' is visible");
@@ -27,4 +27,6 @@ test("@Smoke Login to Application",{
    Assert.expectToHaveTitle(pgtitle);
 
    await LogoutFixture();   
+   Actions.log("test finished.."+test.info().title)
+
 })

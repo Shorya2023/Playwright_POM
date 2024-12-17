@@ -12,6 +12,7 @@ test("Verify product added successfully Functionality",{annotation:
     },tag : "@Regression"
    
 }, async ({  pages, LoginFixture, LogoutFixture,context }) => {
+  Actions.log("****************test strated.."+(test.info().title).toUpperCase()+"*****************")
 
     logstep("Login with valid credentials");
   //  await context.clearCookies();

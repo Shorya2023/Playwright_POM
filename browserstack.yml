@@ -1,0 +1,6 @@
+browserstack:
+  username: "shoryabeohar_xPozbC"
+  access_key: "mrsahaH6sJoySYHYH1ya"
+  project: "Playwright_POM_Ecom"
+  build: "P2"
+  name: "E2E_UI"

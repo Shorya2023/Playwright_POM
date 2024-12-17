@@ -1,9 +1,10 @@
 import { step,page,expect,Locator} from '../Fixtures/CustomFixtures';
 import { Actions } from '../Util/Actions';
+import {Page} from '@playwright/test'
 
 export class Checkoutpage{
 
-    readonly demo_page: page;
+    readonly demo_page: Page;
     readonly Proceed_Tocheckout: Locator;
     readonly productTable: Locator;
     readonly DeliveryAddress:Locator
@@ -13,7 +14,7 @@ export class Checkoutpage{
     readonly addressVerify: Locator;
     readonly bilingaddressVerify:Locator;
 
-    constructor(demo_page:page)
+    constructor(demo_page:Page)
     {
             this.demo_page=demo_page;
             this.Proceed_Tocheckout=Actions.getCustomLocatorByText("Proceed To Checkout");

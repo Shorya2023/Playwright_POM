@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "pretest": "tsc --noEmit",
     "test": "npx playwright test",
     "Smoke": "npx playwright test --grep @Smoke",
     "Regression": "npx playwright test --grep @Regression",

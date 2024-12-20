@@ -17,7 +17,7 @@ export default defineConfig({
   use: {
     viewport: { width: 1920, height: 1080 },
     
-    headless:false,
+    headless:true,
     screenshot:'only-on-failure',
     trace: 'on',  
     video: {

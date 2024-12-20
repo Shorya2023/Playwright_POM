@@ -16,6 +16,7 @@ export class ContactUs {
     readonly input_Subject: Locator;
     readonly file_Upload: Locator;
     readonly btn_Submit: Locator;
+    readonly  textFeedback: Locator
 
 
 
@@ -27,24 +28,26 @@ export class ContactUs {
         this.input_Email = Actions.getXPATHCSSLocator("//input[@name='email']");
         this.input_Subject = Actions.getXPATHCSSLocator("//input[@name='subject']")
         this.file_Upload = Actions.getXPATHCSSLocator("//input[@name='upload_file']")
-        this.btn_Submit = Actions.getXPATHCSSLocator("//input[@name='submit']");
+        this.btn_Submit = Actions.getXPATHCSSLocator("[name='submit']");
         this.input_Message = Actions.getXPATHCSSLocator("#message");
         this.Successmessage = Actions.getCustomLocatorByText("Success! Your details have been submitted successfully.");
-
+        this.textFeedback = Actions.getXPATHCSSLocator(".contact-info h2")
     }
 
 
 
     async enterContactForm() {
-        await Actions.uploadFile(this.file_Upload, "C:/Users/lenovo/Documents/Upload.txt");
         // await Actions.fill(this.input_Name, "roni");
+         await Actions.waitForVisibLeClickable(this.input_Email)
          await Actions.fill(this.input_Email, "JOH2roniN@yahoo.com");
-        // await Actions.fill(this.input_Message, "poduct is damage and need return and reund which required additiona documents to supports the investigation");
-        // await Actions.fill(this.input_Subject,"required investigation"); 
-        // await Actions.uploadFile(this.file_Upload, "C:/Users/lenovo/Documents/Upload.txt");
-        await Actions.scrollTOTheElement(this.btn_Submit);
-        await Actions.clickElement(this.btn_Submit);
-        await Actions.acceptDialogs();
+         await Actions.wait(2000);
+         await Actions.uploadFile(this.file_Upload, "D:/Automation/Playwright_POM/DownloadFile/Upload1.txt");
+         await Actions.KeysOnElement(this.file_Upload,'Tab');
+         await Actions.wait(1000);
+         await Actions.scrollTOTheElement(this.textFeedback);
+         await page.focus("[name='submit']");
+         await Actions.clickElement(this.btn_Submit)
+         await Actions.acceptDialogs();
     }
 
 

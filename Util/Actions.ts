@@ -219,15 +219,30 @@ export class Actions {
     }
   }
 
-  public static async uploadFile(locator: Locator, path: any) {
+  public static async uploadFile(locator: Locator, filepath: string) {
     try {
-      await locator.setInputFiles(path);
-       logger.info('File Uploaded successfully:');
+        await locator.setInputFiles(filepath);
+        await Actions.wait(2000);
+        logger.info('File Uploaded successfully:');
     } catch (error) {
-    logger.error(`Test failed: ${error.message}`);      throw error;
+    logger.error(`Test failed: ${error.message}`); 
+         throw error;
 
     }
   }
+
+
+  public static async KeysOnElement(locator: Locator, skeys:string){
+    try {
+        await locator.press(skeys);
+        logger.info(`keybod action ${skeys} performed`);
+    } catch (error) {
+    logger.error(`keybod action ${skeys} failed: ${error.message}`); 
+         throw error;
+
+    }
+  }
+
 
   public static async clearText(locator: Locator) {
     try {
@@ -370,6 +385,17 @@ export class Actions {
       await locator.scrollIntoViewIfNeeded();
     } catch (error) {
     logger.error(`Test failed: ${error.message}`);      throw error;
+    }
+  }
+
+  
+  public static async scrollToTheElementAndClick(locator: Locator) {
+    try {
+      await locator.scrollIntoViewIfNeeded();
+      await locator.click();
+    } catch (error) {
+    logger.error(`Test failed: ${error.message}`);   
+       throw error;
     }
   }
 
@@ -559,6 +585,18 @@ public static async clickON_ViewProduct(sProductName: string)
             throw error;
       }
   }
+
+  public static async waitForVisibLeClickable(selector:any, timeout = 5000) {
+    try {
+          //  page.waitForSelector(selector,timeout);
+        if ((await page.locator(selector).isEnabled) && await page.locator(selector).isVisible)
+            logger.info(`Element with selector "${selector}" is within ${timeout}ms.`);
+        } 
+          catch (error) {
+          logger.error(`Test failed: ${error.message}`);  
+          throw error;
+    }
+}
 
   public static getRandomInt(min: number, max:number)
   {

@@ -5,7 +5,9 @@ import {LoginDetails} from '../Testdata/Data.json'
 import { Actions } from '../Util/Actions';
 import { logstep } from '../Util/AllurLogs';
 import { Assert } from '../Util/Assert';
+import {newUserSignupDetails} from '../Testdata/newUserSignupDetails.json'
 
+let NewUserEmail =  newUserSignupDetails.input_Email+"_"+Date.now()+"@gmail.com";
 let sProductName = "Beautiful Peacock Blue Cotton Linen Saree"
 test("Test Case 24: Download Invoice after purchase order",{
       annotation:{
@@ -61,7 +63,8 @@ test("Test Case 24: Download Invoice after purchase order",{
     await Actions.clickOnLink_OnTopHeader('Signup / Login');
     
     logstep("enter username and email click on signup")
-    await pages.objloginpage.newUserSignup();
+    await pages.objloginpage.newUserSignup(newUserSignupDetails.input_fisrtName,NewUserEmail)
+
 
     logstep("enter all the details for new USer click on create account")
     await pages.objSignUp.newUserSignupDetails()
@@ -74,7 +77,7 @@ test("Test Case 24: Download Invoice after purchase order",{
 
     logstep("Verify logged in with new user")
     const UserName = await Actions.getTextContent(pages.objhomepage.userName)
-    Assert.expectToEqual(UserName,"newUserName");
+    Assert.expectToEqual(UserName,newUserSignupDetails.input_fisrtName);
 
     logstep("click on Cart");
     await Actions.clickOnLink_OnTopHeader('Cart');

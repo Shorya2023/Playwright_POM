@@ -4,7 +4,7 @@ import * as allure from "allure-js-commons";
 import { Assert } from '../Util/Assert';
 import { logstep } from '../Util/AllurLogs';
 import path from 'path';
-import {page,context} from '../Fixtures/CustomFixtures'
+import {page,context,pages} from '../Fixtures/CustomFixtures'
 import { Page ,Locator} from 'playwright';
 
 

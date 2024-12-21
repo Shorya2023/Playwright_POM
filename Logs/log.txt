@@ -18774,3 +18774,1019 @@ Call log:
 2024-12-21 12:55:46  locator('//div[@class=\'item active\']//button[@type=\'button\'][normalize-space()=\'Test Cases\']') hover and Element clicked successfully.
 2024-12-21 12:55:48  locator('.title b')
 2024-12-21 12:55:48  locator('.panel-group')
+2024-12-21 13:04:42  Locator found with XPath: //form[@action='/login']//input[@name='email']
+2024-12-21 13:04:42  Locator found with XPath: //form[@action='/login']//input[@name='password']
+2024-12-21 13:04:42  Locator found with XPath: //button[text()='Login']
+2024-12-21 13:04:42  Locator found with XPath: //form[@action='/signup']//input[@name='name']
+2024-12-21 13:04:42  Locator found with XPath: //form[@action='/signup']//input[@name='email']
+2024-12-21 13:04:42  Locator found with XPath: //button[text()='Signup']
+2024-12-21 13:04:42  Locator found with XPath: //ul[@class='nav navbar-nav']//b
+2024-12-21 13:04:42  Locator found with XPath: //div[@class='item active']//button[@type='button'][normalize-space()='Test Cases']
+2024-12-21 13:04:42  Locator found with XPath: #search_product
+2024-12-21 13:04:42  Locator found with XPath: #submit_search
+2024-12-21 13:04:42  Locator found with XPath: #susbscribe_email
+2024-12-21 13:04:42  Locator found with XPath: #subscribe
+2024-12-21 13:04:42  Locator found with XPath: .features_items
+2024-12-21 13:04:42  Locator found with XPath: //a
+2024-12-21 13:04:42  Locator found with XPath: .pull-right .btn
+2024-12-21 13:04:42  Locator found with XPath: .title b
+2024-12-21 13:04:42  Locator found with XPath: //input[@name='name']
+2024-12-21 13:04:42  Locator found with XPath: //input[@name='email']
+2024-12-21 13:04:42  Locator found with XPath: //input[@name='subject']
+2024-12-21 13:04:42  Locator found with XPath: //input[@name='upload_file']
+2024-12-21 13:04:42  Locator found with XPath: [name='submit']
+2024-12-21 13:04:42  Locator found with XPath: #message
+2024-12-21 13:04:42  Locator found with XPath: .contact-info h2
+2024-12-21 13:04:42  Locator found with XPath: //div[@class='features_items']//img
+2024-12-21 13:04:42  Locator found with XPath: //div[@class='product-information']//h2
+2024-12-21 13:04:42  Locator found with XPath: //div[@class='product-information']//p[1]
+2024-12-21 13:04:42  Locator found with XPath: //div[@class='product-information']//span//span
+2024-12-21 13:04:42  Locator found with XPath: //div[@class='product-information']//span//label
+2024-12-21 13:04:42  Locator found with XPath: //div[@class='product-information']//p[2]
+2024-12-21 13:04:42  Locator found with XPath: //div[@class='product-information']//p[3]
+2024-12-21 13:04:42  Locator found with XPath: //div[@class='product-information']//p[4]
+2024-12-21 13:04:42  Locator found with XPath: .product-information button
+2024-12-21 13:04:42  Locator found with XPath: //div[@class='productinfo text-center']//p
+2024-12-21 13:04:42  Locator found with XPath: //div[@class='productinfo text-center']//img
+2024-12-21 13:04:42  Locator found with XPath: //div[@class='productinfo text-center']//h2
+2024-12-21 13:04:42  Locator found with XPath: //div[@class='product-information']//span//button
+2024-12-21 13:04:42  Locator found with XPath: .modal-body a
+2024-12-21 13:04:42  Locator found with XPath: #first_name
+2024-12-21 13:04:42  Locator found with XPath: #last_name
+2024-12-21 13:04:42  Locator found with XPath: #address1
+2024-12-21 13:04:42  Locator found with XPath: #city
+2024-12-21 13:04:42  Locator found with XPath: #mobile_number
+2024-12-21 13:04:42  Locator found with XPath: #password
+2024-12-21 13:04:42  Locator found with XPath: #state
+2024-12-21 13:04:42  Locator found with XPath: #zipcode
+2024-12-21 13:04:42  Locator found with XPath: #country
+2024-12-21 13:04:42  Locator found with XPath: .btn[data-qa='create-account']
+2024-12-21 13:04:42  Locator found with XPath: #cart_info_table
+2024-12-21 13:04:42  Locator found with XPath: #address_delivery h3
+2024-12-21 13:04:42  Locator found with XPath: #address_invoice h3
+2024-12-21 13:04:42  Locator found with XPath: textArea
+2024-12-21 13:04:42  Locator found with XPath: #address_delivery li:nth-child(4)
+2024-12-21 13:04:42  Locator found with XPath: #address_invoice li:nth-child(4)
+2024-12-21 13:04:42  Locator found with XPath: [name='name_on_card']
+2024-12-21 13:04:42  Locator found with XPath: [name='card_number']
+2024-12-21 13:04:42  Locator found with XPath: [name='cvc']
+2024-12-21 13:04:42  Locator found with XPath: [name='expiry_year']
+2024-12-21 13:04:42  Locator found with XPath: [name='expiry_month']
+2024-12-21 13:04:42  Locator found with XPath: #submit
+2024-12-21 13:04:42  Locator found with XPath: #success_message div
+2024-12-21 13:04:42  ****************test strated..TEST CASE 24: DOWNLOAD INVOICE AFTER PURCHASE ORDER*****************
+2024-12-21 13:04:44  Locator found with XPath: //form[@action='/login']//input[@name='email']
+2024-12-21 13:04:44  Locator found with XPath: //form[@action='/login']//input[@name='password']
+2024-12-21 13:04:44  Locator found with XPath: //button[text()='Login']
+2024-12-21 13:04:44  Locator found with XPath: //form[@action='/signup']//input[@name='name']
+2024-12-21 13:04:44  Locator found with XPath: //form[@action='/signup']//input[@name='email']
+2024-12-21 13:04:44  Locator found with XPath: //button[text()='Signup']
+2024-12-21 13:04:44  Locator found with XPath: //ul[@class='nav navbar-nav']//b
+2024-12-21 13:04:44  Locator found with XPath: //div[@class='item active']//button[@type='button'][normalize-space()='Test Cases']
+2024-12-21 13:04:44  Locator found with XPath: #search_product
+2024-12-21 13:04:44  Locator found with XPath: #submit_search
+2024-12-21 13:04:44  Locator found with XPath: #susbscribe_email
+2024-12-21 13:04:44  Locator found with XPath: #subscribe
+2024-12-21 13:04:44  Locator found with XPath: .features_items
+2024-12-21 13:04:44  Locator found with XPath: //a
+2024-12-21 13:04:44  Locator found with XPath: .pull-right .btn
+2024-12-21 13:04:44  Locator found with XPath: .title b
+2024-12-21 13:04:44  Locator found with XPath: //input[@name='name']
+2024-12-21 13:04:44  Locator found with XPath: //input[@name='email']
+2024-12-21 13:04:44  Locator found with XPath: //input[@name='subject']
+2024-12-21 13:04:44  Locator found with XPath: //input[@name='upload_file']
+2024-12-21 13:04:44  Locator found with XPath: [name='submit']
+2024-12-21 13:04:44  Locator found with XPath: #message
+2024-12-21 13:04:44  Locator found with XPath: .contact-info h2
+2024-12-21 13:04:44  Locator found with XPath: //div[@class='features_items']//img
+2024-12-21 13:04:44  Locator found with XPath: //div[@class='product-information']//h2
+2024-12-21 13:04:44  Locator found with XPath: //div[@class='product-information']//p[1]
+2024-12-21 13:04:44  Locator found with XPath: //div[@class='product-information']//span//span
+2024-12-21 13:04:44  Locator found with XPath: //div[@class='product-information']//span//label
+2024-12-21 13:04:44  Locator found with XPath: //div[@class='product-information']//p[2]
+2024-12-21 13:04:44  Locator found with XPath: //div[@class='product-information']//p[3]
+2024-12-21 13:04:44  Locator found with XPath: //div[@class='product-information']//p[4]
+2024-12-21 13:04:44  Locator found with XPath: .product-information button
+2024-12-21 13:04:44  Locator found with XPath: //div[@class='productinfo text-center']//p
+2024-12-21 13:04:44  Locator found with XPath: //div[@class='productinfo text-center']//img
+2024-12-21 13:04:44  Locator found with XPath: //div[@class='productinfo text-center']//h2
+2024-12-21 13:04:44  Locator found with XPath: //div[@class='product-information']//span//button
+2024-12-21 13:04:44  Locator found with XPath: .modal-body a
+2024-12-21 13:04:44  Locator found with XPath: #first_name
+2024-12-21 13:04:44  Locator found with XPath: #last_name
+2024-12-21 13:04:44  Locator found with XPath: #address1
+2024-12-21 13:04:44  Locator found with XPath: #city
+2024-12-21 13:04:44  Locator found with XPath: #mobile_number
+2024-12-21 13:04:44  Locator found with XPath: #password
+2024-12-21 13:04:44  Locator found with XPath: #state
+2024-12-21 13:04:44  Locator found with XPath: #zipcode
+2024-12-21 13:04:44  Locator found with XPath: #country
+2024-12-21 13:04:44  Locator found with XPath: .btn[data-qa='create-account']
+2024-12-21 13:04:44  Locator found with XPath: #cart_info_table
+2024-12-21 13:04:44  Locator found with XPath: #address_delivery h3
+2024-12-21 13:04:44  Locator found with XPath: #address_invoice h3
+2024-12-21 13:04:44  Locator found with XPath: textArea
+2024-12-21 13:04:44  Locator found with XPath: #address_delivery li:nth-child(4)
+2024-12-21 13:04:44  Locator found with XPath: #address_invoice li:nth-child(4)
+2024-12-21 13:04:44  Locator found with XPath: [name='name_on_card']
+2024-12-21 13:04:44  Locator found with XPath: [name='card_number']
+2024-12-21 13:04:44  Locator found with XPath: [name='cvc']
+2024-12-21 13:04:44  Locator found with XPath: [name='expiry_year']
+2024-12-21 13:04:44  Locator found with XPath: [name='expiry_month']
+2024-12-21 13:04:44  Locator found with XPath: #submit
+2024-12-21 13:04:44  Locator found with XPath: #success_message div
+2024-12-21 13:04:44  ****************test strated..HOME PAGE TEST*****************
+2024-12-21 13:04:45  Locator found with XPath: //form[@action='/login']//input[@name='email']
+2024-12-21 13:04:45  Locator found with XPath: //form[@action='/login']//input[@name='password']
+2024-12-21 13:04:45  Locator found with XPath: //button[text()='Login']
+2024-12-21 13:04:45  Locator found with XPath: //form[@action='/signup']//input[@name='name']
+2024-12-21 13:04:45  Locator found with XPath: //form[@action='/signup']//input[@name='email']
+2024-12-21 13:04:45  Locator found with XPath: //button[text()='Signup']
+2024-12-21 13:04:45  Locator found with XPath: //ul[@class='nav navbar-nav']//b
+2024-12-21 13:04:45  Locator found with XPath: //div[@class='item active']//button[@type='button'][normalize-space()='Test Cases']
+2024-12-21 13:04:45  Locator found with XPath: #search_product
+2024-12-21 13:04:45  Locator found with XPath: #submit_search
+2024-12-21 13:04:45  Locator found with XPath: #susbscribe_email
+2024-12-21 13:04:45  Locator found with XPath: #subscribe
+2024-12-21 13:04:45  Locator found with XPath: .features_items
+2024-12-21 13:04:45  Locator found with XPath: //a
+2024-12-21 13:04:45  Locator found with XPath: .pull-right .btn
+2024-12-21 13:04:45  Locator found with XPath: .title b
+2024-12-21 13:04:45  Locator found with XPath: //input[@name='name']
+2024-12-21 13:04:45  Locator found with XPath: //input[@name='email']
+2024-12-21 13:04:45  Locator found with XPath: //input[@name='subject']
+2024-12-21 13:04:45  Locator found with XPath: //input[@name='upload_file']
+2024-12-21 13:04:45  Locator found with XPath: [name='submit']
+2024-12-21 13:04:45  Locator found with XPath: #message
+2024-12-21 13:04:45  Locator found with XPath: .contact-info h2
+2024-12-21 13:04:45  Locator found with XPath: //div[@class='features_items']//img
+2024-12-21 13:04:45  Locator found with XPath: //div[@class='product-information']//h2
+2024-12-21 13:04:45  Locator found with XPath: //div[@class='product-information']//p[1]
+2024-12-21 13:04:45  Locator found with XPath: //div[@class='product-information']//span//span
+2024-12-21 13:04:45  Locator found with XPath: //div[@class='product-information']//span//label
+2024-12-21 13:04:45  Locator found with XPath: //div[@class='product-information']//p[2]
+2024-12-21 13:04:45  Locator found with XPath: //div[@class='product-information']//p[3]
+2024-12-21 13:04:45  Locator found with XPath: //div[@class='product-information']//p[4]
+2024-12-21 13:04:45  Locator found with XPath: .product-information button
+2024-12-21 13:04:45  Locator found with XPath: //div[@class='productinfo text-center']//p
+2024-12-21 13:04:45  Locator found with XPath: //div[@class='productinfo text-center']//img
+2024-12-21 13:04:45  Locator found with XPath: //div[@class='productinfo text-center']//h2
+2024-12-21 13:04:45  Locator found with XPath: //div[@class='product-information']//span//button
+2024-12-21 13:04:45  Locator found with XPath: .modal-body a
+2024-12-21 13:04:45  Locator found with XPath: #first_name
+2024-12-21 13:04:45  Locator found with XPath: #last_name
+2024-12-21 13:04:45  Locator found with XPath: #address1
+2024-12-21 13:04:45  Locator found with XPath: #city
+2024-12-21 13:04:45  Locator found with XPath: #mobile_number
+2024-12-21 13:04:45  Locator found with XPath: #password
+2024-12-21 13:04:45  Locator found with XPath: #state
+2024-12-21 13:04:45  Locator found with XPath: #zipcode
+2024-12-21 13:04:45  Locator found with XPath: #country
+2024-12-21 13:04:45  Locator found with XPath: .btn[data-qa='create-account']
+2024-12-21 13:04:45  Locator found with XPath: #cart_info_table
+2024-12-21 13:04:45  Locator found with XPath: #address_delivery h3
+2024-12-21 13:04:45  Locator found with XPath: #address_invoice h3
+2024-12-21 13:04:45  Locator found with XPath: textArea
+2024-12-21 13:04:45  Locator found with XPath: #address_delivery li:nth-child(4)
+2024-12-21 13:04:45  Locator found with XPath: #address_invoice li:nth-child(4)
+2024-12-21 13:04:45  Locator found with XPath: [name='name_on_card']
+2024-12-21 13:04:45  Locator found with XPath: [name='card_number']
+2024-12-21 13:04:45  Locator found with XPath: [name='cvc']
+2024-12-21 13:04:45  Locator found with XPath: [name='expiry_year']
+2024-12-21 13:04:45  Locator found with XPath: [name='expiry_month']
+2024-12-21 13:04:45  Locator found with XPath: #submit
+2024-12-21 13:04:45  Locator found with XPath: #success_message div
+2024-12-21 13:04:45  ****************test strated..LOGIN TO APPLICATION WITH INVALID CREDENTIALS*****************
+2024-12-21 13:04:47  Navigated to URL successfully.
+2024-12-21 13:04:47  getByText(/^New User Signup!/i)
+2024-12-21 13:04:48  Home
+2024-12-21 13:04:49  click on header-- Home
+2024-12-21 13:04:49  Locator found with XPath: //div[@class='features_items']//div[@class='productinfo text-center']//p[text()='Beautiful Peacock Blue Cotton Linen Saree']//following::ul[1]//li[1]//a
+2024-12-21 13:04:49  Navigated to URL successfully.
+2024-12-21 13:04:49  Text Entered successfully.
+2024-12-21 13:04:49  Element with selector "locator('//div[@class=\'features_items\']//div[@class=\'productinfo text-center\']//p[text()=\'Beautiful Peacock Blue Cotton Linen Saree\']//following::ul[1]//li[1]//a')" is within 20000ms.
+2024-12-21 13:04:50  Text Entered successfully.
+2024-12-21 13:04:50  Navigated to URL successfully.
+2024-12-21 13:04:50  Text Entered successfully.
+2024-12-21 13:04:50  Text Entered successfully.
+2024-12-21 13:04:50  Element highlight successfully.
+2024-12-21 13:04:51  locator('//div[@class=\'product-information\']//span//button') hover and Element clicked successfully.
+2024-12-21 13:04:51  locator('//button[text()=\'Login\']') hover and Element clicked successfully.
+2024-12-21 13:04:51  Element with selector "getByText(/^Your product has been added to cart./i)" is within 5000ms.
+2024-12-21 13:04:51  getByText(/^Your product has been added to cart./i)
+2024-12-21 13:04:51  locator('//button[text()=\'Login\']') hover and Element clicked successfully.
+2024-12-21 13:04:52  getByText(/^View Cart/i) hover and Element clicked successfully.
+2024-12-21 13:04:52  Text1 -Item,Description,Price,Quantity,Total, contains substringItem
+2024-12-21 13:04:52  Text1 -Item,Description,Price,Quantity,Total, contains substringDescription
+2024-12-21 13:04:52  Text1 -Item,Description,Price,Quantity,Total, contains substringPrice
+2024-12-21 13:04:52  Text1 -Item,Description,Price,Quantity,Total, contains substringQuantity
+2024-12-21 13:04:52  Text1 -Item,Description,Price,Quantity,Total, contains substringTotal
+2024-12-21 13:04:53  getByText(/^Proceed To Checkout/i) hover and Element clicked successfully.
+2024-12-21 13:04:53  getByText(/^Register \/ Login account to proceed on checkout./i)
+2024-12-21 13:04:54  locator('.modal-body a') hover and Element clicked successfully.
+2024-12-21 13:04:54  getByText(/^New User Signup!/i)
+2024-12-21 13:04:54  Signup / Login
+2024-12-21 13:04:56  click on header-- Signup / Login
+2024-12-21 13:04:56  149
+2024-12-21 13:04:56  Text Entered successfully.
+2024-12-21 13:04:56  getByText(/^Your email or password is incorrect!/i)
+2024-12-21 13:04:57  Text Entered successfully.
+2024-12-21 13:04:57  test finished..Login to Application with Invalid Credentials
+2024-12-21 13:04:57  locator('//button[text()=\'Signup\']') hover and Element clicked successfully.
+2024-12-21 13:04:58  Text Entered successfully.
+2024-12-21 13:04:58  Text Entered successfully.
+2024-12-21 13:04:58  Text Entered successfully.
+2024-12-21 13:04:58  Text Entered successfully.
+2024-12-21 13:04:58  Text Entered successfully.
+2024-12-21 13:04:58  Text Entered successfully.
+2024-12-21 13:04:58  Text Entered successfully.
+2024-12-21 13:04:58  Text Entered successfully.
+2024-12-21 13:04:58  Option selected successfully.
+2024-12-21 13:05:00  Locator found with XPath: //form[@action='/login']//input[@name='email']
+2024-12-21 13:05:00  locator('.btn[data-qa=\'create-account\']') hover and Element clicked successfully.
+2024-12-21 13:05:00  Locator found with XPath: //form[@action='/login']//input[@name='password']
+2024-12-21 13:05:00  Locator found with XPath: //button[text()='Login']
+2024-12-21 13:05:00  Locator found with XPath: //form[@action='/signup']//input[@name='name']
+2024-12-21 13:05:00  Locator found with XPath: //form[@action='/signup']//input[@name='email']
+2024-12-21 13:05:00  Locator found with XPath: //button[text()='Signup']
+2024-12-21 13:05:00  Locator found with XPath: //ul[@class='nav navbar-nav']//b
+2024-12-21 13:05:00  Locator found with XPath: //div[@class='item active']//button[@type='button'][normalize-space()='Test Cases']
+2024-12-21 13:05:00  Locator found with XPath: #search_product
+2024-12-21 13:05:00  Locator found with XPath: #submit_search
+2024-12-21 13:05:00  Locator found with XPath: #susbscribe_email
+2024-12-21 13:05:00  Locator found with XPath: #subscribe
+2024-12-21 13:05:00  Locator found with XPath: .features_items
+2024-12-21 13:05:00  Locator found with XPath: //a
+2024-12-21 13:05:00  Locator found with XPath: .pull-right .btn
+2024-12-21 13:05:00  Locator found with XPath: .title b
+2024-12-21 13:05:00  Locator found with XPath: //input[@name='name']
+2024-12-21 13:05:00  Locator found with XPath: //input[@name='email']
+2024-12-21 13:05:00  Locator found with XPath: //input[@name='subject']
+2024-12-21 13:05:00  Locator found with XPath: //input[@name='upload_file']
+2024-12-21 13:05:00  Locator found with XPath: [name='submit']
+2024-12-21 13:05:00  Locator found with XPath: #message
+2024-12-21 13:05:00  Locator found with XPath: .contact-info h2
+2024-12-21 13:05:00  Locator found with XPath: //div[@class='features_items']//img
+2024-12-21 13:05:00  Locator found with XPath: //div[@class='product-information']//h2
+2024-12-21 13:05:00  Locator found with XPath: //div[@class='product-information']//p[1]
+2024-12-21 13:05:00  Locator found with XPath: //div[@class='product-information']//span//span
+2024-12-21 13:05:00  Locator found with XPath: //div[@class='product-information']//span//label
+2024-12-21 13:05:00  Locator found with XPath: //div[@class='product-information']//p[2]
+2024-12-21 13:05:00  Locator found with XPath: //div[@class='product-information']//p[3]
+2024-12-21 13:05:00  Locator found with XPath: //div[@class='product-information']//p[4]
+2024-12-21 13:05:00  Locator found with XPath: .product-information button
+2024-12-21 13:05:00  Locator found with XPath: //div[@class='productinfo text-center']//p
+2024-12-21 13:05:00  Locator found with XPath: //div[@class='productinfo text-center']//img
+2024-12-21 13:05:00  Locator found with XPath: //div[@class='productinfo text-center']//h2
+2024-12-21 13:05:00  Locator found with XPath: //div[@class='product-information']//span//button
+2024-12-21 13:05:00  Locator found with XPath: .modal-body a
+2024-12-21 13:05:00  Locator found with XPath: #first_name
+2024-12-21 13:05:00  Locator found with XPath: #last_name
+2024-12-21 13:05:00  Locator found with XPath: #address1
+2024-12-21 13:05:00  Locator found with XPath: #city
+2024-12-21 13:05:00  Locator found with XPath: #mobile_number
+2024-12-21 13:05:00  Locator found with XPath: #password
+2024-12-21 13:05:00  Locator found with XPath: #state
+2024-12-21 13:05:00  Locator found with XPath: #zipcode
+2024-12-21 13:05:00  Locator found with XPath: #country
+2024-12-21 13:05:00  Locator found with XPath: .btn[data-qa='create-account']
+2024-12-21 13:05:00  Locator found with XPath: #cart_info_table
+2024-12-21 13:05:00  Locator found with XPath: #address_delivery h3
+2024-12-21 13:05:00  Locator found with XPath: #address_invoice h3
+2024-12-21 13:05:00  Locator found with XPath: textArea
+2024-12-21 13:05:00  Locator found with XPath: #address_delivery li:nth-child(4)
+2024-12-21 13:05:00  Locator found with XPath: #address_invoice li:nth-child(4)
+2024-12-21 13:05:00  Locator found with XPath: [name='name_on_card']
+2024-12-21 13:05:00  Locator found with XPath: [name='card_number']
+2024-12-21 13:05:00  Locator found with XPath: [name='cvc']
+2024-12-21 13:05:00  Locator found with XPath: [name='expiry_year']
+2024-12-21 13:05:00  Locator found with XPath: [name='expiry_month']
+2024-12-21 13:05:00  Locator found with XPath: #submit
+2024-12-21 13:05:00  Locator found with XPath: #success_message div
+2024-12-21 13:05:00  ****************test strated..@SMOKE LOGIN TO APPLICATION*****************
+2024-12-21 13:05:00  getByText(/^Account Created!/i)
+2024-12-21 13:05:01  locator('.pull-right .btn') hover and Element clicked successfully.
+2024-12-21 13:05:01  Text content retrieved:
+2024-12-21 13:05:01  john
+2024-12-21 13:05:02  Cart
+2024-12-21 13:05:03  click on header-- Cart
+2024-12-21 13:05:03  getByText(/^Proceed To Checkout/i) hover and Element clicked successfully.
+2024-12-21 13:05:04  locator('#address_delivery h3')
+2024-12-21 13:05:04  locator('#address_invoice h3')
+2024-12-21 13:05:04  Text1 -Item,Description,Price,Quantity,Total, contains substringItem
+2024-12-21 13:05:04  Text1 -Item,Description,Price,Quantity,Total, contains substringDescription
+2024-12-21 13:05:04  Text1 -Item,Description,Price,Quantity,Total, contains substringPrice
+2024-12-21 13:05:04  Text1 -Item,Description,Price,Quantity,Total, contains substringQuantity
+2024-12-21 13:05:04  Text1 -Item,Description,Price,Quantity,Total, contains substringTotal
+2024-12-21 13:05:04  locator('#address_delivery li:nth-child(4)')
+2024-12-21 13:05:04  locator('#address_invoice li:nth-child(4)')
+2024-12-21 13:05:05  Text Entered successfully.
+2024-12-21 13:05:05  Navigated to URL successfully.
+2024-12-21 13:05:06  Text Entered successfully.
+2024-12-21 13:05:06  getByText(/^Place Order/i) hover and Element clicked successfully.
+2024-12-21 13:05:06  Text Entered successfully.
+2024-12-21 13:05:06  Text Entered successfully.
+2024-12-21 13:05:06  Text Entered successfully.
+2024-12-21 13:05:06  Text Entered successfully.
+2024-12-21 13:05:06  Text Entered successfully.
+2024-12-21 13:05:06  Text Entered successfully.
+2024-12-21 13:05:07  locator('//button[text()=\'Login\']') hover and Element clicked successfully.
+2024-12-21 13:05:08  locator('#submit') hover and Element clicked successfully.
+2024-12-21 13:05:08  locator('.title b')
+2024-12-21 13:05:09  getByText(/^Download Invoice/i) hover and Element clicked successfully.
+2024-12-21 13:05:09  test Finished..Test Case 24: Download Invoice after purchase order
+2024-12-21 13:05:10  Logout
+2024-12-21 13:05:12  click on header-- Logout
+2024-12-21 13:05:12  Logged out from app
+2024-12-21 13:05:12  test strated..Home page test
+2024-12-21 13:05:21  Locator found with XPath: //form[@action='/login']//input[@name='email']
+2024-12-21 13:05:21  Locator found with XPath: //form[@action='/login']//input[@name='password']
+2024-12-21 13:05:21  Locator found with XPath: //button[text()='Login']
+2024-12-21 13:05:21  Locator found with XPath: //form[@action='/signup']//input[@name='name']
+2024-12-21 13:05:21  Locator found with XPath: //form[@action='/signup']//input[@name='email']
+2024-12-21 13:05:21  Locator found with XPath: //button[text()='Signup']
+2024-12-21 13:05:21  Locator found with XPath: //ul[@class='nav navbar-nav']//b
+2024-12-21 13:05:21  Locator found with XPath: //div[@class='item active']//button[@type='button'][normalize-space()='Test Cases']
+2024-12-21 13:05:21  Locator found with XPath: #search_product
+2024-12-21 13:05:21  Locator found with XPath: #submit_search
+2024-12-21 13:05:21  Locator found with XPath: #susbscribe_email
+2024-12-21 13:05:21  Locator found with XPath: #subscribe
+2024-12-21 13:05:21  Locator found with XPath: .features_items
+2024-12-21 13:05:21  Locator found with XPath: //a
+2024-12-21 13:05:21  Locator found with XPath: .pull-right .btn
+2024-12-21 13:05:21  Locator found with XPath: .title b
+2024-12-21 13:05:21  Locator found with XPath: //input[@name='name']
+2024-12-21 13:05:21  Locator found with XPath: //input[@name='email']
+2024-12-21 13:05:21  Locator found with XPath: //input[@name='subject']
+2024-12-21 13:05:21  Locator found with XPath: //input[@name='upload_file']
+2024-12-21 13:05:21  Locator found with XPath: [name='submit']
+2024-12-21 13:05:21  Locator found with XPath: #message
+2024-12-21 13:05:21  Locator found with XPath: .contact-info h2
+2024-12-21 13:05:21  Locator found with XPath: //div[@class='features_items']//img
+2024-12-21 13:05:21  Locator found with XPath: //div[@class='product-information']//h2
+2024-12-21 13:05:21  Locator found with XPath: //div[@class='product-information']//p[1]
+2024-12-21 13:05:21  Locator found with XPath: //div[@class='product-information']//span//span
+2024-12-21 13:05:21  Locator found with XPath: //div[@class='product-information']//span//label
+2024-12-21 13:05:21  Locator found with XPath: //div[@class='product-information']//p[2]
+2024-12-21 13:05:21  Locator found with XPath: //div[@class='product-information']//p[3]
+2024-12-21 13:05:21  Locator found with XPath: //div[@class='product-information']//p[4]
+2024-12-21 13:05:21  Locator found with XPath: .product-information button
+2024-12-21 13:05:21  Locator found with XPath: //div[@class='productinfo text-center']//p
+2024-12-21 13:05:21  Locator found with XPath: //div[@class='productinfo text-center']//img
+2024-12-21 13:05:21  Locator found with XPath: //div[@class='productinfo text-center']//h2
+2024-12-21 13:05:21  Locator found with XPath: //div[@class='product-information']//span//button
+2024-12-21 13:05:21  Locator found with XPath: .modal-body a
+2024-12-21 13:05:21  Locator found with XPath: #first_name
+2024-12-21 13:05:21  Locator found with XPath: #last_name
+2024-12-21 13:05:21  Locator found with XPath: #address1
+2024-12-21 13:05:21  Locator found with XPath: #city
+2024-12-21 13:05:21  Locator found with XPath: #mobile_number
+2024-12-21 13:05:21  Locator found with XPath: #password
+2024-12-21 13:05:21  Locator found with XPath: #state
+2024-12-21 13:05:21  Locator found with XPath: #zipcode
+2024-12-21 13:05:21  Locator found with XPath: #country
+2024-12-21 13:05:21  Locator found with XPath: .btn[data-qa='create-account']
+2024-12-21 13:05:21  Locator found with XPath: #cart_info_table
+2024-12-21 13:05:21  Locator found with XPath: #address_delivery h3
+2024-12-21 13:05:21  Locator found with XPath: #address_invoice h3
+2024-12-21 13:05:21  Locator found with XPath: textArea
+2024-12-21 13:05:21  Locator found with XPath: #address_delivery li:nth-child(4)
+2024-12-21 13:05:21  Locator found with XPath: #address_invoice li:nth-child(4)
+2024-12-21 13:05:21  Locator found with XPath: [name='name_on_card']
+2024-12-21 13:05:21  Locator found with XPath: [name='card_number']
+2024-12-21 13:05:21  Locator found with XPath: [name='cvc']
+2024-12-21 13:05:21  Locator found with XPath: [name='expiry_year']
+2024-12-21 13:05:21  Locator found with XPath: [name='expiry_month']
+2024-12-21 13:05:21  Locator found with XPath: #submit
+2024-12-21 13:05:21  Locator found with XPath: #success_message div
+2024-12-21 13:05:24  ****************test strated..PLACE ORDER WHILE REGISTER ACCOUNT*****************
+2024-12-21 13:05:25  locator('//ul[@class=\'nav navbar-nav\']//b')
+2024-12-21 13:05:25  page has the correct title.->
+2024-12-21 13:05:26  Logout
+2024-12-21 13:05:26  Locator found with XPath: //form[@action='/login']//input[@name='email']
+2024-12-21 13:05:26  Locator found with XPath: //form[@action='/login']//input[@name='password']
+2024-12-21 13:05:26  Locator found with XPath: //button[text()='Login']
+2024-12-21 13:05:26  Locator found with XPath: //form[@action='/signup']//input[@name='name']
+2024-12-21 13:05:26  Locator found with XPath: //form[@action='/signup']//input[@name='email']
+2024-12-21 13:05:26  Locator found with XPath: //button[text()='Signup']
+2024-12-21 13:05:26  Locator found with XPath: //ul[@class='nav navbar-nav']//b
+2024-12-21 13:05:26  Locator found with XPath: //div[@class='item active']//button[@type='button'][normalize-space()='Test Cases']
+2024-12-21 13:05:26  Locator found with XPath: #search_product
+2024-12-21 13:05:26  Locator found with XPath: #submit_search
+2024-12-21 13:05:26  Locator found with XPath: #susbscribe_email
+2024-12-21 13:05:26  Locator found with XPath: #subscribe
+2024-12-21 13:05:26  Locator found with XPath: .features_items
+2024-12-21 13:05:26  Locator found with XPath: //a
+2024-12-21 13:05:26  Locator found with XPath: .pull-right .btn
+2024-12-21 13:05:26  Locator found with XPath: .title b
+2024-12-21 13:05:26  Locator found with XPath: //input[@name='name']
+2024-12-21 13:05:26  Locator found with XPath: //input[@name='email']
+2024-12-21 13:05:26  Locator found with XPath: //input[@name='subject']
+2024-12-21 13:05:26  Locator found with XPath: //input[@name='upload_file']
+2024-12-21 13:05:26  Locator found with XPath: [name='submit']
+2024-12-21 13:05:26  Locator found with XPath: #message
+2024-12-21 13:05:26  Locator found with XPath: .contact-info h2
+2024-12-21 13:05:26  Locator found with XPath: //div[@class='features_items']//img
+2024-12-21 13:05:26  Locator found with XPath: //div[@class='product-information']//h2
+2024-12-21 13:05:26  Locator found with XPath: //div[@class='product-information']//p[1]
+2024-12-21 13:05:26  Locator found with XPath: //div[@class='product-information']//span//span
+2024-12-21 13:05:26  Locator found with XPath: //div[@class='product-information']//span//label
+2024-12-21 13:05:26  Locator found with XPath: //div[@class='product-information']//p[2]
+2024-12-21 13:05:26  Locator found with XPath: //div[@class='product-information']//p[3]
+2024-12-21 13:05:26  Locator found with XPath: //div[@class='product-information']//p[4]
+2024-12-21 13:05:26  Locator found with XPath: .product-information button
+2024-12-21 13:05:26  Locator found with XPath: //div[@class='productinfo text-center']//p
+2024-12-21 13:05:26  Locator found with XPath: //div[@class='productinfo text-center']//img
+2024-12-21 13:05:26  Locator found with XPath: //div[@class='productinfo text-center']//h2
+2024-12-21 13:05:26  Locator found with XPath: //div[@class='product-information']//span//button
+2024-12-21 13:05:26  Locator found with XPath: .modal-body a
+2024-12-21 13:05:26  Locator found with XPath: #first_name
+2024-12-21 13:05:26  Locator found with XPath: #last_name
+2024-12-21 13:05:26  Locator found with XPath: #address1
+2024-12-21 13:05:26  Locator found with XPath: #city
+2024-12-21 13:05:26  Locator found with XPath: #mobile_number
+2024-12-21 13:05:26  Locator found with XPath: #password
+2024-12-21 13:05:26  Locator found with XPath: #state
+2024-12-21 13:05:26  Locator found with XPath: #zipcode
+2024-12-21 13:05:26  Locator found with XPath: #country
+2024-12-21 13:05:26  Locator found with XPath: .btn[data-qa='create-account']
+2024-12-21 13:05:26  Locator found with XPath: #cart_info_table
+2024-12-21 13:05:26  Locator found with XPath: #address_delivery h3
+2024-12-21 13:05:26  Locator found with XPath: #address_invoice h3
+2024-12-21 13:05:26  Locator found with XPath: textArea
+2024-12-21 13:05:26  Locator found with XPath: #address_delivery li:nth-child(4)
+2024-12-21 13:05:26  Locator found with XPath: #address_invoice li:nth-child(4)
+2024-12-21 13:05:26  Locator found with XPath: [name='name_on_card']
+2024-12-21 13:05:26  Locator found with XPath: [name='card_number']
+2024-12-21 13:05:26  Locator found with XPath: [name='cvc']
+2024-12-21 13:05:26  Locator found with XPath: [name='expiry_year']
+2024-12-21 13:05:26  Locator found with XPath: [name='expiry_month']
+2024-12-21 13:05:26  Locator found with XPath: #submit
+2024-12-21 13:05:26  Locator found with XPath: #success_message div
+2024-12-21 13:05:26  ****************test strated..REMOVE ITEM*****************
+2024-12-21 13:05:27  click on header-- Logout
+2024-12-21 13:05:27  test finished..@Smoke Login to Application
+2024-12-21 13:05:29  Navigated to URL successfully.
+2024-12-21 13:05:29  getByText(/^New User Signup!/i)
+2024-12-21 13:05:29  Home
+2024-12-21 13:05:31  click on header-- Home
+2024-12-21 13:05:31  Locator found with XPath: //div[@class='features_items']//div[@class='productinfo text-center']//p[text()='Sleeveless Unicorn Patch Gown - Pink']//following::ul[1]//li[1]//a
+2024-12-21 13:05:32  Navigated to URL successfully.
+2024-12-21 13:05:32  Element with selector "locator('//div[@class=\'features_items\']//div[@class=\'productinfo text-center\']//p[text()=\'Sleeveless Unicorn Patch Gown - Pink\']//following::ul[1]//li[1]//a')" is within 20000ms.
+2024-12-21 13:05:32  Text Entered successfully.
+2024-12-21 13:05:32  Text Entered successfully.
+2024-12-21 13:05:33  Element highlight successfully.
+2024-12-21 13:05:34  locator('//button[text()=\'Login\']') hover and Element clicked successfully.
+2024-12-21 13:05:34  locator('//div[@class=\'product-information\']//span//button') hover and Element clicked successfully.
+2024-12-21 13:05:35  Locator found with XPath: //form[@action='/login']//input[@name='email']
+2024-12-21 13:05:35  Locator found with XPath: //form[@action='/login']//input[@name='password']
+2024-12-21 13:05:35  Locator found with XPath: //button[text()='Login']
+2024-12-21 13:05:35  Locator found with XPath: //form[@action='/signup']//input[@name='name']
+2024-12-21 13:05:35  Locator found with XPath: //form[@action='/signup']//input[@name='email']
+2024-12-21 13:05:35  Locator found with XPath: //button[text()='Signup']
+2024-12-21 13:05:35  Locator found with XPath: //ul[@class='nav navbar-nav']//b
+2024-12-21 13:05:35  Locator found with XPath: //div[@class='item active']//button[@type='button'][normalize-space()='Test Cases']
+2024-12-21 13:05:35  Locator found with XPath: #search_product
+2024-12-21 13:05:35  Locator found with XPath: #submit_search
+2024-12-21 13:05:35  Locator found with XPath: #susbscribe_email
+2024-12-21 13:05:35  Locator found with XPath: #subscribe
+2024-12-21 13:05:35  Locator found with XPath: .features_items
+2024-12-21 13:05:35  Locator found with XPath: //a
+2024-12-21 13:05:35  Locator found with XPath: .pull-right .btn
+2024-12-21 13:05:35  Locator found with XPath: .title b
+2024-12-21 13:05:35  Locator found with XPath: //input[@name='name']
+2024-12-21 13:05:35  Locator found with XPath: //input[@name='email']
+2024-12-21 13:05:35  Locator found with XPath: //input[@name='subject']
+2024-12-21 13:05:35  Locator found with XPath: //input[@name='upload_file']
+2024-12-21 13:05:35  Locator found with XPath: [name='submit']
+2024-12-21 13:05:35  Locator found with XPath: #message
+2024-12-21 13:05:35  Locator found with XPath: .contact-info h2
+2024-12-21 13:05:35  Locator found with XPath: //div[@class='features_items']//img
+2024-12-21 13:05:35  Locator found with XPath: //div[@class='product-information']//h2
+2024-12-21 13:05:35  Locator found with XPath: //div[@class='product-information']//p[1]
+2024-12-21 13:05:35  Locator found with XPath: //div[@class='product-information']//span//span
+2024-12-21 13:05:35  Locator found with XPath: //div[@class='product-information']//span//label
+2024-12-21 13:05:35  Locator found with XPath: //div[@class='product-information']//p[2]
+2024-12-21 13:05:35  Locator found with XPath: //div[@class='product-information']//p[3]
+2024-12-21 13:05:35  Locator found with XPath: //div[@class='product-information']//p[4]
+2024-12-21 13:05:35  Locator found with XPath: .product-information button
+2024-12-21 13:05:35  Locator found with XPath: //div[@class='productinfo text-center']//p
+2024-12-21 13:05:35  Locator found with XPath: //div[@class='productinfo text-center']//img
+2024-12-21 13:05:35  Locator found with XPath: //div[@class='productinfo text-center']//h2
+2024-12-21 13:05:35  Locator found with XPath: //div[@class='product-information']//span//button
+2024-12-21 13:05:35  Locator found with XPath: .modal-body a
+2024-12-21 13:05:35  Locator found with XPath: #first_name
+2024-12-21 13:05:35  Locator found with XPath: #last_name
+2024-12-21 13:05:35  Locator found with XPath: #address1
+2024-12-21 13:05:35  Locator found with XPath: #city
+2024-12-21 13:05:35  Locator found with XPath: #mobile_number
+2024-12-21 13:05:35  Locator found with XPath: #password
+2024-12-21 13:05:35  Locator found with XPath: #state
+2024-12-21 13:05:35  Locator found with XPath: #zipcode
+2024-12-21 13:05:35  Locator found with XPath: #country
+2024-12-21 13:05:35  Locator found with XPath: .btn[data-qa='create-account']
+2024-12-21 13:05:35  Locator found with XPath: #cart_info_table
+2024-12-21 13:05:35  Locator found with XPath: #address_delivery h3
+2024-12-21 13:05:35  Locator found with XPath: #address_invoice h3
+2024-12-21 13:05:35  Locator found with XPath: textArea
+2024-12-21 13:05:35  Locator found with XPath: #address_delivery li:nth-child(4)
+2024-12-21 13:05:35  Locator found with XPath: #address_invoice li:nth-child(4)
+2024-12-21 13:05:35  Locator found with XPath: [name='name_on_card']
+2024-12-21 13:05:35  Locator found with XPath: [name='card_number']
+2024-12-21 13:05:35  Locator found with XPath: [name='cvc']
+2024-12-21 13:05:35  Locator found with XPath: [name='expiry_year']
+2024-12-21 13:05:35  Locator found with XPath: [name='expiry_month']
+2024-12-21 13:05:35  Locator found with XPath: #submit
+2024-12-21 13:05:35  Locator found with XPath: #success_message div
+2024-12-21 13:05:35  ****************test strated..SEARCH PRODUCT AND VERIFY PRODUCT THE DETAILS*****************
+2024-12-21 13:05:35  Element with selector "getByText(/^Your product has been added to cart./i)" is within 5000ms.
+2024-12-21 13:05:36  getByText(/^Your product has been added to cart./i)
+2024-12-21 13:05:37  getByText(/^View Cart/i) hover and Element clicked successfully.
+2024-12-21 13:05:37  Text1 -Item,Description,Price,Quantity,Total, contains substringItem
+2024-12-21 13:05:37  Text1 -Item,Description,Price,Quantity,Total, contains substringDescription
+2024-12-21 13:05:37  Text1 -Item,Description,Price,Quantity,Total, contains substringPrice
+2024-12-21 13:05:37  Text1 -Item,Description,Price,Quantity,Total, contains substringQuantity
+2024-12-21 13:05:37  Text1 -Item,Description,Price,Quantity,Total, contains substringTotal
+2024-12-21 13:05:37  getByText(/^Proceed To Checkout/i) hover and Element clicked successfully.
+2024-12-21 13:05:37  getByText(/^Register \/ Login account to proceed on checkout./i)
+2024-12-21 13:05:39  locator('.modal-body a') hover and Element clicked successfully.
+2024-12-21 13:05:39  test fisnished..PLace Order while register account
+2024-12-21 13:05:40  locator('//ul[@class=\'nav navbar-nav\']//b')
+2024-12-21 13:05:40  page has the correct title.->
+2024-12-21 13:05:40  Home
+2024-12-21 13:05:41  Navigated to URL successfully.
+2024-12-21 13:05:41  Text Entered successfully.
+2024-12-21 13:05:42  Text Entered successfully.
+2024-12-21 13:05:42  click on header-- Home
+2024-12-21 13:05:42  Element with selector "locator('.features_items')" is within 5000ms.
+2024-12-21 13:05:42  Locator found with XPath: //div[@class='features_items']//div[@class='productinfo text-center']//p[text()='Pure Cotton Neon Green Tshirt']//following::ul[1]//li[1]//a
+2024-12-21 13:05:42  Element with selector "locator('//div[@class=\'features_items\']//div[@class=\'productinfo text-center\']//p[text()=\'Pure Cotton Neon Green Tshirt\']//following::ul[1]//li[1]//a')" is within 20000ms.
+2024-12-21 13:05:43  locator('//button[text()=\'Login\']') hover and Element clicked successfully.
+2024-12-21 13:05:44  Element highlight successfully.
+2024-12-21 13:05:44  locator('//div[@class=\'product-information\']//span//button') hover and Element clicked successfully.
+2024-12-21 13:05:45  Element with selector "getByText(/^Your product has been added to cart./i)" is within 5000ms.
+2024-12-21 13:05:45  getByText(/^Your product has been added to cart./i)
+2024-12-21 13:05:47  getByText(/^View Cart/i) hover and Element clicked successfully.
+2024-12-21 13:05:47  Total rows are:2
+2024-12-21 13:05:47  poduct Pure Cotton Neon Green Tshirt exists in the  cart
+2024-12-21 13:05:47  Total rows are in the cart:2
+2024-12-21 13:05:47  prod in cart is --
+2024-12-21 13:05:47  prod in cart is --
+2024-12-21 13:05:48  Pure Cotton Neon Green Tshirt deleted from cart
+2024-12-21 13:05:48  page has the correct title.->
+2024-12-21 13:05:48   Products
+2024-12-21 13:05:49  click on header-- Products
+2024-12-21 13:05:49  Text Entered successfully.
+2024-12-21 13:05:50  Locator found with XPath: //form[@action='/login']//input[@name='email']
+2024-12-21 13:05:50  Locator found with XPath: //form[@action='/login']//input[@name='password']
+2024-12-21 13:05:50  Locator found with XPath: //button[text()='Login']
+2024-12-21 13:05:50  Locator found with XPath: //form[@action='/signup']//input[@name='name']
+2024-12-21 13:05:50  Locator found with XPath: //form[@action='/signup']//input[@name='email']
+2024-12-21 13:05:50  Locator found with XPath: //button[text()='Signup']
+2024-12-21 13:05:50  Locator found with XPath: //ul[@class='nav navbar-nav']//b
+2024-12-21 13:05:50  Locator found with XPath: //div[@class='item active']//button[@type='button'][normalize-space()='Test Cases']
+2024-12-21 13:05:50  Locator found with XPath: #search_product
+2024-12-21 13:05:50  Locator found with XPath: #submit_search
+2024-12-21 13:05:50  Locator found with XPath: #susbscribe_email
+2024-12-21 13:05:50  Locator found with XPath: #subscribe
+2024-12-21 13:05:50  Locator found with XPath: .features_items
+2024-12-21 13:05:50  Locator found with XPath: //a
+2024-12-21 13:05:50  Locator found with XPath: .pull-right .btn
+2024-12-21 13:05:50  Locator found with XPath: .title b
+2024-12-21 13:05:50  Locator found with XPath: //input[@name='name']
+2024-12-21 13:05:50  Locator found with XPath: //input[@name='email']
+2024-12-21 13:05:50  Locator found with XPath: //input[@name='subject']
+2024-12-21 13:05:50  Locator found with XPath: //input[@name='upload_file']
+2024-12-21 13:05:50  Locator found with XPath: [name='submit']
+2024-12-21 13:05:50  Locator found with XPath: #message
+2024-12-21 13:05:50  Locator found with XPath: .contact-info h2
+2024-12-21 13:05:50  Locator found with XPath: //div[@class='features_items']//img
+2024-12-21 13:05:50  Locator found with XPath: //div[@class='product-information']//h2
+2024-12-21 13:05:50  Locator found with XPath: //div[@class='product-information']//p[1]
+2024-12-21 13:05:50  Locator found with XPath: //div[@class='product-information']//span//span
+2024-12-21 13:05:50  Locator found with XPath: //div[@class='product-information']//span//label
+2024-12-21 13:05:50  Locator found with XPath: //div[@class='product-information']//p[2]
+2024-12-21 13:05:50  Locator found with XPath: //div[@class='product-information']//p[3]
+2024-12-21 13:05:50  Locator found with XPath: //div[@class='product-information']//p[4]
+2024-12-21 13:05:50  Locator found with XPath: .product-information button
+2024-12-21 13:05:50  Locator found with XPath: //div[@class='productinfo text-center']//p
+2024-12-21 13:05:50  Locator found with XPath: //div[@class='productinfo text-center']//img
+2024-12-21 13:05:50  Locator found with XPath: //div[@class='productinfo text-center']//h2
+2024-12-21 13:05:50  Locator found with XPath: //div[@class='product-information']//span//button
+2024-12-21 13:05:50  Locator found with XPath: .modal-body a
+2024-12-21 13:05:50  Locator found with XPath: #first_name
+2024-12-21 13:05:50  Locator found with XPath: #last_name
+2024-12-21 13:05:50  Locator found with XPath: #address1
+2024-12-21 13:05:50  Locator found with XPath: #city
+2024-12-21 13:05:50  Locator found with XPath: #mobile_number
+2024-12-21 13:05:50  Locator found with XPath: #password
+2024-12-21 13:05:50  Locator found with XPath: #state
+2024-12-21 13:05:50  Locator found with XPath: #zipcode
+2024-12-21 13:05:50  Locator found with XPath: #country
+2024-12-21 13:05:50  Locator found with XPath: .btn[data-qa='create-account']
+2024-12-21 13:05:50  Locator found with XPath: #cart_info_table
+2024-12-21 13:05:50  Locator found with XPath: #address_delivery h3
+2024-12-21 13:05:50  Locator found with XPath: #address_invoice h3
+2024-12-21 13:05:50  Locator found with XPath: textArea
+2024-12-21 13:05:50  Locator found with XPath: #address_delivery li:nth-child(4)
+2024-12-21 13:05:50  Locator found with XPath: #address_invoice li:nth-child(4)
+2024-12-21 13:05:50  Locator found with XPath: [name='name_on_card']
+2024-12-21 13:05:50  Locator found with XPath: [name='card_number']
+2024-12-21 13:05:50  Locator found with XPath: [name='cvc']
+2024-12-21 13:05:50  Locator found with XPath: [name='expiry_year']
+2024-12-21 13:05:50  Locator found with XPath: [name='expiry_month']
+2024-12-21 13:05:50  Locator found with XPath: #submit
+2024-12-21 13:05:50  Locator found with XPath: #success_message div
+2024-12-21 13:05:50  locator('#submit_search') hover and Element clicked successfully.
+2024-12-21 13:05:50  ****************test strated..SIGN UP VERIFICATION*****************
+2024-12-21 13:05:51  locator('//div[@class=\'productinfo text-center\']//p')
+2024-12-21 13:05:51  locator('//div[@class=\'productinfo text-center\']//img')
+2024-12-21 13:05:51  locator('//div[@class=\'productinfo text-center\']//h2')
+2024-12-21 13:05:51  Element with selector "locator('//div[@class=\'productinfo text-center\']//h2')" is within 5000ms.
+2024-12-21 13:05:54  Locator found with XPath: //form[@action='/login']//input[@name='email']
+2024-12-21 13:05:54  Locator found with XPath: //form[@action='/login']//input[@name='password']
+2024-12-21 13:05:54  Locator found with XPath: //button[text()='Login']
+2024-12-21 13:05:54  Locator found with XPath: //form[@action='/signup']//input[@name='name']
+2024-12-21 13:05:54  Locator found with XPath: //form[@action='/signup']//input[@name='email']
+2024-12-21 13:05:54  Locator found with XPath: //button[text()='Signup']
+2024-12-21 13:05:54  Locator found with XPath: //ul[@class='nav navbar-nav']//b
+2024-12-21 13:05:54  Locator found with XPath: //div[@class='item active']//button[@type='button'][normalize-space()='Test Cases']
+2024-12-21 13:05:54  Locator found with XPath: #search_product
+2024-12-21 13:05:54  Locator found with XPath: #submit_search
+2024-12-21 13:05:54  Locator found with XPath: #susbscribe_email
+2024-12-21 13:05:54  Locator found with XPath: #subscribe
+2024-12-21 13:05:54  Locator found with XPath: .features_items
+2024-12-21 13:05:54  Locator found with XPath: //a
+2024-12-21 13:05:54  Locator found with XPath: .pull-right .btn
+2024-12-21 13:05:54  Locator found with XPath: .title b
+2024-12-21 13:05:54  Locator found with XPath: //input[@name='name']
+2024-12-21 13:05:54  Locator found with XPath: //input[@name='email']
+2024-12-21 13:05:54  Locator found with XPath: //input[@name='subject']
+2024-12-21 13:05:54  Locator found with XPath: //input[@name='upload_file']
+2024-12-21 13:05:54  Locator found with XPath: [name='submit']
+2024-12-21 13:05:54  Locator found with XPath: #message
+2024-12-21 13:05:54  Locator found with XPath: .contact-info h2
+2024-12-21 13:05:54  Locator found with XPath: //div[@class='features_items']//img
+2024-12-21 13:05:54  Locator found with XPath: //div[@class='product-information']//h2
+2024-12-21 13:05:54  Locator found with XPath: //div[@class='product-information']//p[1]
+2024-12-21 13:05:54  Locator found with XPath: //div[@class='product-information']//span//span
+2024-12-21 13:05:54  Locator found with XPath: //div[@class='product-information']//span//label
+2024-12-21 13:05:54  Locator found with XPath: //div[@class='product-information']//p[2]
+2024-12-21 13:05:54  Locator found with XPath: //div[@class='product-information']//p[3]
+2024-12-21 13:05:54  Locator found with XPath: //div[@class='product-information']//p[4]
+2024-12-21 13:05:54  Locator found with XPath: .product-information button
+2024-12-21 13:05:54  Locator found with XPath: //div[@class='productinfo text-center']//p
+2024-12-21 13:05:54  Locator found with XPath: //div[@class='productinfo text-center']//img
+2024-12-21 13:05:54  Locator found with XPath: //div[@class='productinfo text-center']//h2
+2024-12-21 13:05:54  Locator found with XPath: //div[@class='product-information']//span//button
+2024-12-21 13:05:54  Locator found with XPath: .modal-body a
+2024-12-21 13:05:54  Locator found with XPath: #first_name
+2024-12-21 13:05:54  Locator found with XPath: #last_name
+2024-12-21 13:05:54  Locator found with XPath: #address1
+2024-12-21 13:05:54  Locator found with XPath: #city
+2024-12-21 13:05:54  Locator found with XPath: #mobile_number
+2024-12-21 13:05:54  Locator found with XPath: #password
+2024-12-21 13:05:54  Locator found with XPath: #state
+2024-12-21 13:05:54  Locator found with XPath: #zipcode
+2024-12-21 13:05:54  Locator found with XPath: #country
+2024-12-21 13:05:54  Locator found with XPath: .btn[data-qa='create-account']
+2024-12-21 13:05:54  Locator found with XPath: #cart_info_table
+2024-12-21 13:05:54  Locator found with XPath: #address_delivery h3
+2024-12-21 13:05:54  Locator found with XPath: #address_invoice h3
+2024-12-21 13:05:54  Locator found with XPath: textArea
+2024-12-21 13:05:54  Locator found with XPath: #address_delivery li:nth-child(4)
+2024-12-21 13:05:54  Locator found with XPath: #address_invoice li:nth-child(4)
+2024-12-21 13:05:54  Locator found with XPath: [name='name_on_card']
+2024-12-21 13:05:54  Locator found with XPath: [name='card_number']
+2024-12-21 13:05:54  Locator found with XPath: [name='cvc']
+2024-12-21 13:05:54  Locator found with XPath: [name='expiry_year']
+2024-12-21 13:05:54  Locator found with XPath: [name='expiry_month']
+2024-12-21 13:05:54  Locator found with XPath: #submit
+2024-12-21 13:05:54  Locator found with XPath: #success_message div
+2024-12-21 13:05:54  ****************test strated..VERIFY PRODUCT ADDED SUCCESSFULLY FUNCTIONALITY*****************
+2024-12-21 13:05:56  Navigated to URL successfully.
+2024-12-21 13:05:56  getByText(/^New User Signup!/i)
+2024-12-21 13:05:56  Signup / Login
+2024-12-21 13:05:57  click on header-- Signup / Login
+2024-12-21 13:05:57  Text Entered successfully.
+2024-12-21 13:05:57  Text Entered successfully.
+2024-12-21 13:05:58  locator('//button[text()=\'Signup\']') hover and Element clicked successfully.
+2024-12-21 13:05:58  Text Entered successfully.
+2024-12-21 13:05:58  Text Entered successfully.
+2024-12-21 13:05:58  Text Entered successfully.
+2024-12-21 13:05:58  Text Entered successfully.
+2024-12-21 13:05:58  Text Entered successfully.
+2024-12-21 13:05:58  Text Entered successfully.
+2024-12-21 13:05:58  Text Entered successfully.
+2024-12-21 13:05:58  Text Entered successfully.
+2024-12-21 13:05:59  Navigated to URL successfully.
+2024-12-21 13:05:59  Text Entered successfully.
+2024-12-21 13:05:59  Text Entered successfully.
+2024-12-21 13:05:59  Option selected successfully.
+2024-12-21 13:06:01  locator('//button[text()=\'Login\']') hover and Element clicked successfully.
+2024-12-21 13:06:01  locator('.btn[data-qa=\'create-account\']') hover and Element clicked successfully.
+2024-12-21 13:06:02  getByText(/^Account Created!/i)
+2024-12-21 13:06:03  Locator found with XPath: //form[@action='/login']//input[@name='email']
+2024-12-21 13:06:03  Locator found with XPath: //form[@action='/login']//input[@name='password']
+2024-12-21 13:06:03  Locator found with XPath: //button[text()='Login']
+2024-12-21 13:06:03  Locator found with XPath: //form[@action='/signup']//input[@name='name']
+2024-12-21 13:06:03  Locator found with XPath: //form[@action='/signup']//input[@name='email']
+2024-12-21 13:06:03  Locator found with XPath: //button[text()='Signup']
+2024-12-21 13:06:03  Locator found with XPath: //ul[@class='nav navbar-nav']//b
+2024-12-21 13:06:03  Locator found with XPath: //div[@class='item active']//button[@type='button'][normalize-space()='Test Cases']
+2024-12-21 13:06:03  Locator found with XPath: #search_product
+2024-12-21 13:06:03  Locator found with XPath: #submit_search
+2024-12-21 13:06:03  Locator found with XPath: #susbscribe_email
+2024-12-21 13:06:03  Locator found with XPath: #subscribe
+2024-12-21 13:06:03  Locator found with XPath: .features_items
+2024-12-21 13:06:03  Locator found with XPath: //a
+2024-12-21 13:06:03  Locator found with XPath: .pull-right .btn
+2024-12-21 13:06:03  Locator found with XPath: .title b
+2024-12-21 13:06:03  Locator found with XPath: //input[@name='name']
+2024-12-21 13:06:03  Locator found with XPath: //input[@name='email']
+2024-12-21 13:06:03  Locator found with XPath: //input[@name='subject']
+2024-12-21 13:06:03  Locator found with XPath: //input[@name='upload_file']
+2024-12-21 13:06:03  Locator found with XPath: [name='submit']
+2024-12-21 13:06:03  Locator found with XPath: #message
+2024-12-21 13:06:03  Locator found with XPath: .contact-info h2
+2024-12-21 13:06:03  Locator found with XPath: //div[@class='features_items']//img
+2024-12-21 13:06:03  Locator found with XPath: //div[@class='product-information']//h2
+2024-12-21 13:06:03  Locator found with XPath: //div[@class='product-information']//p[1]
+2024-12-21 13:06:03  Locator found with XPath: //div[@class='product-information']//span//span
+2024-12-21 13:06:03  Locator found with XPath: //div[@class='product-information']//span//label
+2024-12-21 13:06:03  Locator found with XPath: //div[@class='product-information']//p[2]
+2024-12-21 13:06:03  Locator found with XPath: //div[@class='product-information']//p[3]
+2024-12-21 13:06:03  Locator found with XPath: //div[@class='product-information']//p[4]
+2024-12-21 13:06:03  Locator found with XPath: .product-information button
+2024-12-21 13:06:03  Locator found with XPath: //div[@class='productinfo text-center']//p
+2024-12-21 13:06:03  Locator found with XPath: //div[@class='productinfo text-center']//img
+2024-12-21 13:06:03  Locator found with XPath: //div[@class='productinfo text-center']//h2
+2024-12-21 13:06:03  Locator found with XPath: //div[@class='product-information']//span//button
+2024-12-21 13:06:03  Locator found with XPath: .modal-body a
+2024-12-21 13:06:03  Locator found with XPath: #first_name
+2024-12-21 13:06:03  Locator found with XPath: #last_name
+2024-12-21 13:06:03  Locator found with XPath: #address1
+2024-12-21 13:06:03  Locator found with XPath: #city
+2024-12-21 13:06:03  Locator found with XPath: #mobile_number
+2024-12-21 13:06:03  Locator found with XPath: #password
+2024-12-21 13:06:03  Locator found with XPath: #state
+2024-12-21 13:06:03  Locator found with XPath: #zipcode
+2024-12-21 13:06:03  Locator found with XPath: #country
+2024-12-21 13:06:03  Locator found with XPath: .btn[data-qa='create-account']
+2024-12-21 13:06:03  Locator found with XPath: #cart_info_table
+2024-12-21 13:06:03  Locator found with XPath: #address_delivery h3
+2024-12-21 13:06:03  Locator found with XPath: #address_invoice h3
+2024-12-21 13:06:03  Locator found with XPath: textArea
+2024-12-21 13:06:03  Locator found with XPath: #address_delivery li:nth-child(4)
+2024-12-21 13:06:03  Locator found with XPath: #address_invoice li:nth-child(4)
+2024-12-21 13:06:03  Locator found with XPath: [name='name_on_card']
+2024-12-21 13:06:03  Locator found with XPath: [name='card_number']
+2024-12-21 13:06:03  Locator found with XPath: [name='cvc']
+2024-12-21 13:06:03  Locator found with XPath: [name='expiry_year']
+2024-12-21 13:06:03  Locator found with XPath: [name='expiry_month']
+2024-12-21 13:06:03  Locator found with XPath: #submit
+2024-12-21 13:06:03  Locator found with XPath: #success_message div
+2024-12-21 13:06:04  ****************test strated..REMOVE ITEM*****************
+2024-12-21 13:06:06  page has the correct title.->
+2024-12-21 13:06:06   Products
+2024-12-21 13:06:07  click on header-- Products
+2024-12-21 13:06:07  34
+2024-12-21 13:06:07  Locator found with XPath: //div[@class='productinfo text-center']//p[text()="Premium Polo T-Shirts"]//following::ul[1]
+2024-12-21 13:06:09  locator('//div[@class=\'product-information\']//h2')
+2024-12-21 13:06:09  locator('//div[@class=\'product-information\']//p[2]')
+2024-12-21 13:06:09  locator('//div[@class=\'product-information\']//span//label')
+2024-12-21 13:06:09  locator('//div[@class=\'product-information\']//p[4]')
+2024-12-21 13:06:09  locator('//div[@class=\'product-information\']//p[3]')
+2024-12-21 13:06:09  locator('//div[@class=\'product-information\']//span//span')
+2024-12-21 13:06:09  locator('//div[@class=\'product-information\']//p[1]')
+2024-12-21 13:06:10  Locator found with XPath: //form[@action='/login']//input[@name='email']
+2024-12-21 13:06:10  Locator found with XPath: //form[@action='/login']//input[@name='password']
+2024-12-21 13:06:10  Locator found with XPath: //button[text()='Login']
+2024-12-21 13:06:10  Locator found with XPath: //form[@action='/signup']//input[@name='name']
+2024-12-21 13:06:10  Locator found with XPath: //form[@action='/signup']//input[@name='email']
+2024-12-21 13:06:10  Locator found with XPath: //button[text()='Signup']
+2024-12-21 13:06:10  Locator found with XPath: //ul[@class='nav navbar-nav']//b
+2024-12-21 13:06:10  Locator found with XPath: //div[@class='item active']//button[@type='button'][normalize-space()='Test Cases']
+2024-12-21 13:06:10  Locator found with XPath: #search_product
+2024-12-21 13:06:10  Locator found with XPath: #submit_search
+2024-12-21 13:06:10  Locator found with XPath: #susbscribe_email
+2024-12-21 13:06:10  Locator found with XPath: #subscribe
+2024-12-21 13:06:10  Locator found with XPath: .features_items
+2024-12-21 13:06:10  Locator found with XPath: //a
+2024-12-21 13:06:10  Locator found with XPath: .pull-right .btn
+2024-12-21 13:06:10  Locator found with XPath: .title b
+2024-12-21 13:06:10  Locator found with XPath: //input[@name='name']
+2024-12-21 13:06:10  Locator found with XPath: //input[@name='email']
+2024-12-21 13:06:10  Locator found with XPath: //input[@name='subject']
+2024-12-21 13:06:10  Locator found with XPath: //input[@name='upload_file']
+2024-12-21 13:06:10  Locator found with XPath: [name='submit']
+2024-12-21 13:06:10  Locator found with XPath: #message
+2024-12-21 13:06:10  Locator found with XPath: .contact-info h2
+2024-12-21 13:06:10  Locator found with XPath: //div[@class='features_items']//img
+2024-12-21 13:06:10  Locator found with XPath: //div[@class='product-information']//h2
+2024-12-21 13:06:10  Locator found with XPath: //div[@class='product-information']//p[1]
+2024-12-21 13:06:10  Locator found with XPath: //div[@class='product-information']//span//span
+2024-12-21 13:06:10  Locator found with XPath: //div[@class='product-information']//span//label
+2024-12-21 13:06:10  Locator found with XPath: //div[@class='product-information']//p[2]
+2024-12-21 13:06:10  Locator found with XPath: //div[@class='product-information']//p[3]
+2024-12-21 13:06:10  Locator found with XPath: //div[@class='product-information']//p[4]
+2024-12-21 13:06:10  Locator found with XPath: .product-information button
+2024-12-21 13:06:10  Locator found with XPath: //div[@class='productinfo text-center']//p
+2024-12-21 13:06:10  Locator found with XPath: //div[@class='productinfo text-center']//img
+2024-12-21 13:06:10  Locator found with XPath: //div[@class='productinfo text-center']//h2
+2024-12-21 13:06:10  Locator found with XPath: //div[@class='product-information']//span//button
+2024-12-21 13:06:10  Locator found with XPath: .modal-body a
+2024-12-21 13:06:10  Locator found with XPath: #first_name
+2024-12-21 13:06:10  Locator found with XPath: #last_name
+2024-12-21 13:06:10  Locator found with XPath: #address1
+2024-12-21 13:06:10  Locator found with XPath: #city
+2024-12-21 13:06:10  Locator found with XPath: #mobile_number
+2024-12-21 13:06:10  Locator found with XPath: #password
+2024-12-21 13:06:10  Locator found with XPath: #state
+2024-12-21 13:06:10  Locator found with XPath: #zipcode
+2024-12-21 13:06:10  Locator found with XPath: #country
+2024-12-21 13:06:10  Locator found with XPath: .btn[data-qa='create-account']
+2024-12-21 13:06:10  Locator found with XPath: #cart_info_table
+2024-12-21 13:06:10  Locator found with XPath: #address_delivery h3
+2024-12-21 13:06:10  Locator found with XPath: #address_invoice h3
+2024-12-21 13:06:10  Locator found with XPath: textArea
+2024-12-21 13:06:10  Locator found with XPath: #address_delivery li:nth-child(4)
+2024-12-21 13:06:10  Locator found with XPath: #address_invoice li:nth-child(4)
+2024-12-21 13:06:10  Locator found with XPath: [name='name_on_card']
+2024-12-21 13:06:10  Locator found with XPath: [name='card_number']
+2024-12-21 13:06:10  Locator found with XPath: [name='cvc']
+2024-12-21 13:06:10  Locator found with XPath: [name='expiry_year']
+2024-12-21 13:06:10  Locator found with XPath: [name='expiry_month']
+2024-12-21 13:06:10  Locator found with XPath: #submit
+2024-12-21 13:06:10  Locator found with XPath: #success_message div
+2024-12-21 13:06:10  ****************test strated..LOGIN WITH NEWLY CREATED ACCOUNT*****************
+2024-12-21 13:06:10  locator('.product-information button') hover and Element clicked successfully.
+2024-12-21 13:06:11  getByText(/^Your product has been added to cart./i)
+2024-12-21 13:06:11  Navigated to URL successfully.
+2024-12-21 13:06:11  Text Entered successfully.
+2024-12-21 13:06:11  Text Entered successfully.
+2024-12-21 13:06:13  locator('//button[text()=\'Login\']') hover and Element clicked successfully.
+2024-12-21 13:06:15  Navigated to URL successfully.
+2024-12-21 13:06:16  locator('//ul[@class=\'nav navbar-nav\']//b')
+2024-12-21 13:06:16  page has the correct title.->
+2024-12-21 13:06:16  Home
+2024-12-21 13:06:17  click on header-- Home
+2024-12-21 13:06:17  Element with selector "locator('.features_items')" is within 5000ms.
+2024-12-21 13:06:17  Locator found with XPath: //div[@class='features_items']//div[@class='productinfo text-center']//p[text()='Pure Cotton Neon Green Tshirt']//following::ul[1]//li[1]//a
+2024-12-21 13:06:18  Element with selector "locator('//div[@class=\'features_items\']//div[@class=\'productinfo text-center\']//p[text()=\'Pure Cotton Neon Green Tshirt\']//following::ul[1]//li[1]//a')" is within 20000ms.
+2024-12-21 13:06:18  Navigated to URL successfully.
+2024-12-21 13:06:18  Text Entered successfully.
+2024-12-21 13:06:18  Text Entered successfully.
+2024-12-21 13:06:19  Locator found with XPath: //form[@action='/login']//input[@name='email']
+2024-12-21 13:06:19  Locator found with XPath: //form[@action='/login']//input[@name='password']
+2024-12-21 13:06:19  Locator found with XPath: //button[text()='Login']
+2024-12-21 13:06:19  Locator found with XPath: //form[@action='/signup']//input[@name='name']
+2024-12-21 13:06:19  Locator found with XPath: //form[@action='/signup']//input[@name='email']
+2024-12-21 13:06:19  Locator found with XPath: //button[text()='Signup']
+2024-12-21 13:06:19  Locator found with XPath: //ul[@class='nav navbar-nav']//b
+2024-12-21 13:06:19  Locator found with XPath: //div[@class='item active']//button[@type='button'][normalize-space()='Test Cases']
+2024-12-21 13:06:19  Locator found with XPath: #search_product
+2024-12-21 13:06:19  Locator found with XPath: #submit_search
+2024-12-21 13:06:19  Locator found with XPath: #susbscribe_email
+2024-12-21 13:06:19  Locator found with XPath: #subscribe
+2024-12-21 13:06:19  Locator found with XPath: .features_items
+2024-12-21 13:06:19  Locator found with XPath: //a
+2024-12-21 13:06:19  Locator found with XPath: .pull-right .btn
+2024-12-21 13:06:19  Locator found with XPath: .title b
+2024-12-21 13:06:19  Locator found with XPath: //input[@name='name']
+2024-12-21 13:06:19  Locator found with XPath: //input[@name='email']
+2024-12-21 13:06:19  Locator found with XPath: //input[@name='subject']
+2024-12-21 13:06:19  Locator found with XPath: //input[@name='upload_file']
+2024-12-21 13:06:19  Locator found with XPath: [name='submit']
+2024-12-21 13:06:19  Locator found with XPath: #message
+2024-12-21 13:06:19  Locator found with XPath: .contact-info h2
+2024-12-21 13:06:19  Locator found with XPath: //div[@class='features_items']//img
+2024-12-21 13:06:19  Locator found with XPath: //div[@class='product-information']//h2
+2024-12-21 13:06:19  Locator found with XPath: //div[@class='product-information']//p[1]
+2024-12-21 13:06:19  Locator found with XPath: //div[@class='product-information']//span//span
+2024-12-21 13:06:19  Locator found with XPath: //div[@class='product-information']//span//label
+2024-12-21 13:06:19  Locator found with XPath: //div[@class='product-information']//p[2]
+2024-12-21 13:06:19  Locator found with XPath: //div[@class='product-information']//p[3]
+2024-12-21 13:06:19  Locator found with XPath: //div[@class='product-information']//p[4]
+2024-12-21 13:06:19  Locator found with XPath: .product-information button
+2024-12-21 13:06:19  Locator found with XPath: //div[@class='productinfo text-center']//p
+2024-12-21 13:06:19  Locator found with XPath: //div[@class='productinfo text-center']//img
+2024-12-21 13:06:19  Locator found with XPath: //div[@class='productinfo text-center']//h2
+2024-12-21 13:06:19  Locator found with XPath: //div[@class='product-information']//span//button
+2024-12-21 13:06:19  Locator found with XPath: .modal-body a
+2024-12-21 13:06:19  Locator found with XPath: #first_name
+2024-12-21 13:06:19  Locator found with XPath: #last_name
+2024-12-21 13:06:19  Locator found with XPath: #address1
+2024-12-21 13:06:19  Locator found with XPath: #city
+2024-12-21 13:06:19  Locator found with XPath: #mobile_number
+2024-12-21 13:06:19  Locator found with XPath: #password
+2024-12-21 13:06:19  Locator found with XPath: #state
+2024-12-21 13:06:19  Locator found with XPath: #zipcode
+2024-12-21 13:06:19  Locator found with XPath: #country
+2024-12-21 13:06:19  Locator found with XPath: .btn[data-qa='create-account']
+2024-12-21 13:06:19  Locator found with XPath: #cart_info_table
+2024-12-21 13:06:19  Locator found with XPath: #address_delivery h3
+2024-12-21 13:06:19  Locator found with XPath: #address_invoice h3
+2024-12-21 13:06:19  Locator found with XPath: textArea
+2024-12-21 13:06:19  Locator found with XPath: #address_delivery li:nth-child(4)
+2024-12-21 13:06:19  Locator found with XPath: #address_invoice li:nth-child(4)
+2024-12-21 13:06:19  Locator found with XPath: [name='name_on_card']
+2024-12-21 13:06:19  Locator found with XPath: [name='card_number']
+2024-12-21 13:06:19  Locator found with XPath: [name='cvc']
+2024-12-21 13:06:19  Locator found with XPath: [name='expiry_year']
+2024-12-21 13:06:19  Locator found with XPath: [name='expiry_month']
+2024-12-21 13:06:19  Locator found with XPath: #submit
+2024-12-21 13:06:19  Locator found with XPath: #success_message div
+2024-12-21 13:06:19  ****************test strated..VERIFY  SUBSCRIPTION MESSAGE-*****************
+2024-12-21 13:06:20  Element highlight successfully.
+2024-12-21 13:06:20  locator('//button[text()=\'Login\']') hover and Element clicked successfully.
+2024-12-21 13:06:22  locator('//div[@class=\'product-information\']//span//button') hover and Element clicked successfully.
+2024-12-21 13:06:22  Element with selector "getByText(/^Your product has been added to cart./i)" is within 5000ms.
+2024-12-21 13:06:22  getByText(/^Your product has been added to cart./i)
+2024-12-21 13:06:24  getByText(/^View Cart/i) hover and Element clicked successfully.
+2024-12-21 13:06:24  Total rows are:2
+2024-12-21 13:06:24  poduct Pure Cotton Neon Green Tshirt exists in the  cart
+2024-12-21 13:06:25  Total rows are in the cart:2
+2024-12-21 13:06:25  prod in cart is --
+2024-12-21 13:06:26  prod in cart is --
+2024-12-21 13:06:26  Pure Cotton Neon Green Tshirt deleted from cart
+2024-12-21 13:06:26  Navigated to URL successfully.
+2024-12-21 13:06:27  Text Entered successfully.
+2024-12-21 13:06:27  Text Entered successfully.
+2024-12-21 13:06:28  locator('//ul[@class=\'nav navbar-nav\']//b')
+2024-12-21 13:06:28  page has the correct title.->
+2024-12-21 13:06:28  locator('//button[text()=\'Login\']') hover and Element clicked successfully.
+2024-12-21 13:06:28  Logout
+2024-12-21 13:06:30  click on header-- Logout
+2024-12-21 13:06:31  Home
+2024-12-21 13:06:32  click on header-- Home
+2024-12-21 13:06:33  Text Entered successfully.
+2024-12-21 13:06:33  locator('#subscribe') hover and Element clicked successfully.
+2024-12-21 13:06:34  getByText(/^You have been successfully subscribed!/i)
+2024-12-21 13:06:36  Locator found with XPath: //form[@action='/login']//input[@name='email']
+2024-12-21 13:06:36  Locator found with XPath: //form[@action='/login']//input[@name='password']
+2024-12-21 13:06:36  Locator found with XPath: //button[text()='Login']
+2024-12-21 13:06:36  Locator found with XPath: //form[@action='/signup']//input[@name='name']
+2024-12-21 13:06:36  Locator found with XPath: //form[@action='/signup']//input[@name='email']
+2024-12-21 13:06:36  Locator found with XPath: //button[text()='Signup']
+2024-12-21 13:06:36  Locator found with XPath: //ul[@class='nav navbar-nav']//b
+2024-12-21 13:06:36  Locator found with XPath: //div[@class='item active']//button[@type='button'][normalize-space()='Test Cases']
+2024-12-21 13:06:36  Locator found with XPath: #search_product
+2024-12-21 13:06:36  Locator found with XPath: #submit_search
+2024-12-21 13:06:36  Locator found with XPath: #susbscribe_email
+2024-12-21 13:06:36  Locator found with XPath: #subscribe
+2024-12-21 13:06:36  Locator found with XPath: .features_items
+2024-12-21 13:06:36  Locator found with XPath: //a
+2024-12-21 13:06:36  Locator found with XPath: .pull-right .btn
+2024-12-21 13:06:36  Locator found with XPath: .title b
+2024-12-21 13:06:36  Locator found with XPath: //input[@name='name']
+2024-12-21 13:06:36  Locator found with XPath: //input[@name='email']
+2024-12-21 13:06:36  Locator found with XPath: //input[@name='subject']
+2024-12-21 13:06:36  Locator found with XPath: //input[@name='upload_file']
+2024-12-21 13:06:36  Locator found with XPath: [name='submit']
+2024-12-21 13:06:36  Locator found with XPath: #message
+2024-12-21 13:06:36  Locator found with XPath: .contact-info h2
+2024-12-21 13:06:36  Locator found with XPath: //div[@class='features_items']//img
+2024-12-21 13:06:36  Locator found with XPath: //div[@class='product-information']//h2
+2024-12-21 13:06:36  Locator found with XPath: //div[@class='product-information']//p[1]
+2024-12-21 13:06:36  Locator found with XPath: //div[@class='product-information']//span//span
+2024-12-21 13:06:36  Locator found with XPath: //div[@class='product-information']//span//label
+2024-12-21 13:06:36  Locator found with XPath: //div[@class='product-information']//p[2]
+2024-12-21 13:06:36  Locator found with XPath: //div[@class='product-information']//p[3]
+2024-12-21 13:06:36  Locator found with XPath: //div[@class='product-information']//p[4]
+2024-12-21 13:06:36  Locator found with XPath: .product-information button
+2024-12-21 13:06:36  Locator found with XPath: //div[@class='productinfo text-center']//p
+2024-12-21 13:06:36  Locator found with XPath: //div[@class='productinfo text-center']//img
+2024-12-21 13:06:36  Locator found with XPath: //div[@class='productinfo text-center']//h2
+2024-12-21 13:06:36  Locator found with XPath: //div[@class='product-information']//span//button
+2024-12-21 13:06:36  Locator found with XPath: .modal-body a
+2024-12-21 13:06:36  Locator found with XPath: #first_name
+2024-12-21 13:06:36  Locator found with XPath: #last_name
+2024-12-21 13:06:36  Locator found with XPath: #address1
+2024-12-21 13:06:36  Locator found with XPath: #city
+2024-12-21 13:06:36  Locator found with XPath: #mobile_number
+2024-12-21 13:06:36  Locator found with XPath: #password
+2024-12-21 13:06:36  Locator found with XPath: #state
+2024-12-21 13:06:36  Locator found with XPath: #zipcode
+2024-12-21 13:06:36  Locator found with XPath: #country
+2024-12-21 13:06:36  Locator found with XPath: .btn[data-qa='create-account']
+2024-12-21 13:06:36  Locator found with XPath: #cart_info_table
+2024-12-21 13:06:36  Locator found with XPath: #address_delivery h3
+2024-12-21 13:06:36  Locator found with XPath: #address_invoice h3
+2024-12-21 13:06:36  Locator found with XPath: textArea
+2024-12-21 13:06:36  Locator found with XPath: #address_delivery li:nth-child(4)
+2024-12-21 13:06:36  Locator found with XPath: #address_invoice li:nth-child(4)
+2024-12-21 13:06:36  Locator found with XPath: [name='name_on_card']
+2024-12-21 13:06:36  Locator found with XPath: [name='card_number']
+2024-12-21 13:06:36  Locator found with XPath: [name='cvc']
+2024-12-21 13:06:36  Locator found with XPath: [name='expiry_year']
+2024-12-21 13:06:36  Locator found with XPath: [name='expiry_month']
+2024-12-21 13:06:36  Locator found with XPath: #submit
+2024-12-21 13:06:36  Locator found with XPath: #success_message div
+2024-12-21 13:06:42  Navigated to URL successfully.
+2024-12-21 13:06:42  Text Entered successfully.
+2024-12-21 13:06:42  Text Entered successfully.
+2024-12-21 13:06:43  locator('//button[text()=\'Login\']') hover and Element clicked successfully.
+2024-12-21 13:06:51  locator('//div[@class=\'item active\']//button[@type=\'button\'][normalize-space()=\'Test Cases\']') hover and Element clicked successfully.
+2024-12-21 13:06:52  locator('.title b')
+2024-12-21 13:06:52  locator('.panel-group')

@@ -3,17 +3,17 @@
 //page as a fixture
 //export it
 import { Page,BrowserContext, Browser,test as basetest } from '@playwright/test'
-import { Loginpage } from '../pages/Loginpage';
-import { Homepage } from '../pages/Homepage'
-import { OrderInfo } from '../pages/OrderInfo';
-import { PlaceOrder } from '../pages/PlaceOrder';
-import { ContactUs } from '../pages/Contactuspage';
-import {AllProducts} from '../pages/ALLProductpage';
-import { viewProduct } from '../pages/ViewProductDetailpage';
-import { searchResults } from '../pages/SearchProductResultspage';
-import { Signuppage } from '../pages/SignUppage';
-import { Checkoutpage } from '../pages/Checkoutpage';
-import {Paymentpage} from '../pages/Paymentpage';
+import { Loginpage } from '../Pages/LoginPage'
+import { Homepage } from '../Pages/HomePage'
+import { OrderInfo } from '../Pages/OrderInfo';
+import { PlaceOrder } from '../Pages/PlaceOrder';
+import { ContactUs } from  '../Pages/ContactusPage'
+import {AllProducts} from '../Pages/ALLProductPage';
+import { viewProduct } from '../Pages/ViewProductDetailPage';
+import { searchResults } from '../Pages/SearchProductResultsPage';
+import { Signuppage } from '../Pages/SignUpPage';
+import { Checkoutpage } from '../Pages/CheckoutPage';
+import {Paymentpage} from '../Pages/PaymentPage';
 import fs  from 'fs';
 
 // let page: page;

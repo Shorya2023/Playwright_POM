@@ -20,7 +20,9 @@ export class OrderInfo{
 
     constructor(demo_page:Page)
     {    
-            this.demo_page= demo_page;    
+            this.demo_page= demo_page;   
+            console.log('OrderINfoPAge instance created with page:',page);
+ 
             this.input_Name= Actions.getCustomLocator("xpath_css","//label[@for='name']//following::input[@id='name']");
             this.input_Country=Actions.getCustomLocator("xpath_css","//input[@id='country']")
             this.input_City=Actions.getCustomLocator("xpath_css","//input[@id='city']")

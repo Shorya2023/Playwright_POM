@@ -9,7 +9,7 @@ import { OrderInfo } from '../Pages/OrderInfo';
 import { PlaceOrder } from '../Pages/PlaceOrder';
 import { ContactUs } from  '../Pages/ContactusPage'
 import {AllProducts} from '../Pages/ALLProductPage';
-import { viewProduct } from '../Pages/ViewProductDetailPage';
+import { viewProduct } from '../Pages/ViewProductDetailPage';``
 import { searchResults } from '../Pages/SearchProductResultsPage';
 import { Signuppage } from '../Pages/SignUpPage';
 import { Checkoutpage } from '../Pages/CheckoutPage';

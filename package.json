@@ -15,7 +15,10 @@
     "RegressionOnChrome": "npx playwright test --grep @Regression --project=chromium",
     "SmokeOnFirefox": "npx playwright test --grep @Smoke --project=Firefox",
     "RegressionOnFirefox": "npx playwright test --grep @Regression --project=Firefox",
-    "Failed": "npx playwright test --last-failed --project=chromium"
+    "FailedOnChrome": "npx playwright test --last-failed --project=chromium",
+    "FailedOnFirefox": "npx playwright test --last-failed --project=Firefox",
+    "FailedOnSafari": "npx playwright test --last-failed --project=Webkit"
+
   },
   "keywords": [],
   "author": "",
@@ -31,6 +34,7 @@
   "dependencies": {
     "allure-playwright": "^3.0.6",
     "browserstack-automate": "^1.0.2",
+    "browserstack-local": "^1.5.6",
     "dotenv": "^16.4.5",
     "playwright": "^1.49.0",
     "winston": "^3.17.0"

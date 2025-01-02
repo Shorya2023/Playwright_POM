@@ -18,7 +18,7 @@ export default defineConfig({
     viewport: { width: 1920, height: 1080 },
     
     headless:true,
-    screenshot:'only-on-failure',
+    screenshot:'on',
     trace: 'on',  
     video: {
               mode:'retain-on-failure',
@@ -41,7 +41,21 @@ export default defineConfig({
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
-    },
+    }, {
+      name: 'chrome@latest:Windows 10',
+      use: {
+        browserName: 'chromium',
+        browserStack: {
+          os: 'Windows',
+          osVersion: '10',
+          browserVersion: 'latest',
+          user: "shoryabeohar_xPozbC", // BrowserStack username
+          key: "mrsahaH6sJoySYHYH1ya", // BrowserStack access key
+          buildName: 'playwright-build', // Optional build name
+          sessionName: 'playwright-session', // Optional session name
+        },
+      },
+    }
 
     /* Test against mobile viewports. */
     // {

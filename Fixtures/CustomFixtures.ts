@@ -21,7 +21,7 @@ import fs  from 'fs';
 // let sharedbowser: Browser;
 
 
-
+let filepath="./playwright/.auth/auth.json"
 let page:Page;
 let context:BrowserContext;
 
@@ -72,12 +72,13 @@ export const test = basetest.extend<Fixtures>({
     LoginFixture: async ({ pages }, use) => {
         await use((username: string, password: string) =>
                     pages.objloginpage.loginToApp(username, password))
+    
     },
 
     //logout fixture
     LogoutFixture: async ({ pages,browser}, use) => {
         await use(() => pages.objhomepage.Logout());
-         await page.close();
+          await page.close();
     },
 
 })

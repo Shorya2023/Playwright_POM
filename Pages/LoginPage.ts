@@ -37,8 +37,7 @@ import { Page ,Locator} from 'playwright';
 
     async loginToApp(username:string, password:string)
     {
-      page.on('request---',request=>console.log("******",request.url()));
-      page.on('request---',response=>console.log("*******",response.url(),response.status()));
+     
          logstep("1.Launch browser &  Navigate to url 'http://automationexercise.com'")
          await Actions.navigateToURL(LoginDetails.url);
 

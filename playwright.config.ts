@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import type { GitHubActionOptions } from '@estruyf/github-actions-reporter';
 
 export default defineConfig({
   testDir: './tests',
@@ -11,7 +12,11 @@ export default defineConfig({
 
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : 3,
-  reporter:[['html'], ['allure-playwright', { resultsDir: 'allure-results' }]],
+  reporter:[['html'],['@estruyf/github-actions-reporter', <GitHubActionOptions>{
+    title: 'My custom title',
+    useDetails: true,
+    showError: true
+  }], ['allure-playwright', { resultsDir: 'allure-results' }]],
  
   // reporter:[['html'], ['allure-playwright', { resultsDir: 'allure-results' }],['./Util/custom-reporter.ts']],
   use: {
@@ -29,18 +34,26 @@ export default defineConfig({
 
   projects: [
     {
+      name:'setup', 
+      testMatch: '**/*.setup.spec.ts',
+    },
+    {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'], 
-    }},
+      use: { ...devices['Desktop Chrome'],
+    },
+      // dependencies: ['setup'],
+  },
 
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
+      dependencies: ['setup'],
     },
 
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
+      dependencies: ['setup'],
     }, {
       name: 'chrome@latest:Windows 10',
       use: {

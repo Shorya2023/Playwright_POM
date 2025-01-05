@@ -11,14 +11,17 @@
     "Chrome": "npx playwright test --project=chromium",
     "Firefox": "npx playwright test --project=Firefox",
     "Safari": "npx playwright test --project=Webkit",
+    "Chrome_serial": "npx playwright test --workers=1 --project=chromium",
+    "Firefox_serial": "npx playwright test --workers=1 --project=Firefox",
+    "Safari_serial": "npx playwright test --workers=1 --project=Webkit",
     "SmokeOnChrome": "npx playwright test --grep @Smoke --project=chromium",
     "RegressionOnChrome": "npx playwright test --grep @Regression --project=chromium",
     "SmokeOnFirefox": "npx playwright test --grep @Smoke --project=Firefox",
     "RegressionOnFirefox": "npx playwright test --grep @Regression --project=Firefox",
     "FailedOnChrome": "npx playwright test --last-failed --project=chromium",
     "FailedOnFirefox": "npx playwright test --last-failed --project=Firefox",
-    "FailedOnSafari": "npx playwright test --last-failed --project=Webkit"
-
+    "FailedOnSafari": "npx playwright test --last-failed --project=Webkit",
+    "RunOnBrowserStack": "npx playwright test --project=chrome@latest:Windows 10"
   },
   "keywords": [],
   "author": "",
@@ -32,6 +35,7 @@
     "typescript": "^5.6.3"
   },
   "dependencies": {
+    "@estruyf/github-actions-reporter": "^1.9.2",
     "allure-playwright": "^3.0.6",
     "browserstack-automate": "^1.0.2",
     "browserstack-local": "^1.5.6",

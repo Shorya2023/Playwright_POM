@@ -1,4 +1,3 @@
-
 import {page,test,expect} from '../Fixtures/CustomFixtures'
 import {LoginDetails} from '../Testdata/Data.json'
 import { Assert } from '../Util/Assert';
@@ -33,5 +32,7 @@ test("Search product and Verify product the details",{annotation:
     Assert.expectToBeVisible(  pages.objsearchResulsProduct.Product_name);
     Assert.expectToBeVisible( pages.objsearchResulsProduct.Product_image);
     Assert.expectToBeVisible( pages.objsearchResulsProduct.Product_price);
+
+    await LogoutFixture();
 
 });

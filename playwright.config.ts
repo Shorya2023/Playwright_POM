@@ -16,17 +16,17 @@ export default defineConfig({
     title: 'My custom title',
     useDetails: true,
     showError: true
-  }], ['allure-playwright', { resultsDir: 'allure-results' }]],
+  }], ['allure-playwright', { resultsDir: 'allure-results' }],['list'],['line']],
  
   // reporter:[['html'], ['allure-playwright', { resultsDir: 'allure-results' }],['./Util/custom-reporter.ts']],
   use: {
     viewport: { width: 1920, height: 1080 },
     
     headless:true,
-    screenshot:'on',
-    trace: 'on',  
+    screenshot:'only-on-failure',
+    trace: 'on-all-retries',  
     video: {
-              mode:'retain-on-failure',
+              mode:'on-first-retry',
               size: {width:640, height:480}
           }
  

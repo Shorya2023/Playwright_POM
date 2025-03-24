@@ -20,14 +20,21 @@ steps:
 - script: npx playwright install --with-deps
   displayName: 'Install Playwright browsers'
 
+# First run - execute all tests
 - script: npx playwright test
-  displayName: 'Run Playwright tests'
-
-- script: npx playwright test --last-failed
-  displayName: 'ReRun only failed Playwright tests'
+  displayName: 'Run all Playwright tests'
   env:
     CI: 'true'
+  continueOnError: true  # Continue even if tests fail
 
+# Second run - only retry failed tests
+- script: npx playwright test --last-failed
+  displayName: 'Re-run failed Playwright tests'
+  env:
+    CI: 'true'
+  condition: failed()  # Only run this step if previous test step failed
+
+# Upload report regardless of test results
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: 'playwright-report'

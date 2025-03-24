@@ -22,6 +22,9 @@ steps:
 
 - script: npx playwright test
   displayName: 'Run Playwright tests'
+
+- script: npx playwright test --last-failed
+  displayName: 'ReRun only failed Playwright tests'
   env:
     CI: 'true'
 
